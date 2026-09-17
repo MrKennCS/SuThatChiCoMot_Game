@@ -1,4 +1,6 @@
-// --- CẤU HÌNH API ---
+// ==========================================
+// GAME SCRIPT - BẢN DEPLOY NETLIFY (KHÔNG CHỨA API KEY)
+// ==========================================
 
 let DATABASE_SCENARIOS = []; 
 let currentScenario = null;
@@ -10,21 +12,18 @@ let isTyping = {};
 const MAX_ATTEMPTS = 3;
 
 // ==========================================
-// HỆ THỐNG ÂM THANH (AUDIO CONTEXT) - ĐÃ BỎ TIẾNG BÍP KHI CLICK
+// HỆ THỐNG ÂM THANH (AUDIO CONTEXT) - KHÔNG CÓ TIẾNG BÍP
 // ==========================================
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let isSoundEnabled = true;
 
-// Mở khóa AudioContext khi người chơi click lần đầu
 document.body.addEventListener('click', () => { if(audioCtx.state === 'suspended') audioCtx.resume(); }, {once: true});
 
 document.getElementById('soundToggle').addEventListener('change', (e) => {
     isSoundEnabled = e.target.checked;
-    // Bật lại thì kêu tiếng Ting một cái để báo hiệu
     if(isSoundEnabled) playNotifySound();
 });
 
-// Hàm tạo sóng âm thanh cơ bản
 function playTone(freq, type, duration, vol=0.1) {
     if (!isSoundEnabled) return;
     const osc = audioCtx.createOscillator();
@@ -39,31 +38,29 @@ function playTone(freq, type, duration, vol=0.1) {
     osc.stop(audioCtx.currentTime + duration);
 }
 
-// Các loại âm thanh trong Game (Giữ lại thông báo và kết quả)
 function playNotifySound() { 
     playTone(800, 'sine', 0.1, 0.1); 
-    setTimeout(() => playTone(1200, 'sine', 0.15, 0.1), 100); // Tiếng Ting-Ting
+    setTimeout(() => playTone(1200, 'sine', 0.15, 0.1), 100); 
 }
 function playWinSound() {
     playTone(400, 'triangle', 0.1, 0.1);
     setTimeout(() => playTone(500, 'triangle', 0.1, 0.1), 100);
     setTimeout(() => playTone(600, 'triangle', 0.1, 0.1), 200);
-    setTimeout(() => playTone(800, 'triangle', 0.4, 0.1), 300); // Tiếng Ting ting ting Tíng (Ăn mừng)
+    setTimeout(() => playTone(800, 'triangle', 0.4, 0.1), 300); 
 }
 function playLoseSound() {
     playTone(300, 'sawtooth', 0.3, 0.1);
-    setTimeout(() => playTone(250, 'sawtooth', 0.5, 0.1), 300); // Tiếng Tè Tò (Thất bại)
+    setTimeout(() => playTone(250, 'sawtooth', 0.5, 0.1), 300); 
 }
 
 // ==========================================
-// HỆ THỐNG THÔNG BÁO (NOTIFICATION TOAST) NHƯ MESSENGER
+// HỆ THỐNG THÔNG BÁO (NOTIFICATION TOAST)
 // ==========================================
 function showNotification(name, text) {
     const container = document.getElementById('notificationArea');
     const toast = document.createElement('div');
     toast.className = "toast-bg bg-gray-800/95 border border-gray-600 rounded-xl p-3 shadow-2xl flex items-center gap-3 toast-enter backdrop-blur-md";
     
-    // Cắt bớt chữ nếu tin nhắn quá dài
     const shortText = text.length > 50 ? text.substring(0, 50) + '...' : text;
     
     toast.innerHTML = `
@@ -74,9 +71,8 @@ function showNotification(name, text) {
         </div>
     `;
     container.appendChild(toast);
-    playNotifySound(); // Phát âm thanh Ting-Ting
+    playNotifySound(); 
 
-    // Tự động trượt lên và biến mất sau 3.5 giây
     setTimeout(() => {
         toast.classList.replace('toast-enter', 'toast-exit');
         setTimeout(() => toast.remove(), 300);
@@ -128,8 +124,6 @@ document.getElementById('btnStartGame').onclick = async () => {
         setTimeout(() => {
             screens.loading.classList.remove('flex'); 
             screens.loading.classList.add('hidden');
-            
-            // [ĐÃ FIX LỖI UI]: Xóa opacity-0 và BẮT BUỘC phải add lại class 'flex' để chia 3 cột
             screens.game.classList.remove('hidden', 'opacity-0'); 
             screens.game.classList.add('flex', 'fade-in'); 
         }, 2000);
@@ -260,7 +254,7 @@ function updateAttemptUI() {
 }
 
 // ==========================================
-// GỌI API ĐA LUỒNG + NOTIFICATION
+// GỌI API THÔNG QUA NETLIFY FUNCTION MẬT
 // ==========================================
 async function askAI(question, targetId) {
     const targetSuspect = currentScenario.suspects[targetId];
@@ -283,6 +277,7 @@ Câu hỏi: "${question}"`;
     let lastErrorMsg = "";
 
     try {
+        // [QUAN TRỌNG]: GỌI VÀO API ẨN CỦA NETLIFY THAY VÌ GOOGLE
         const response = await fetch("/api/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -346,7 +341,7 @@ document.getElementById('btnAccuse').onclick = () => {
     document.getElementById('btnAccuse').disabled = true;
 
     if(selectedKiller === currentScenario.killer_id) {
-        playWinSound(); // [ÂM THANH THẮNG]
+        playWinSound(); 
         screens.result.classList.remove('hidden'); screens.result.classList.add('flex');
         resultContent.classList.remove('modal-pop'); void resultContent.offsetWidth; resultContent.classList.add('modal-pop');
         resultContent.className = "glass-panel p-10 rounded-3xl border-4 border-emerald-500/50 flex flex-col items-center text-center max-w-xl mx-4 modal-pop bg-emerald-950/40 shadow-[0_0_50px_rgba(16,185,129,0.3)]";
@@ -356,14 +351,14 @@ document.getElementById('btnAccuse').onclick = () => {
         btnPlayAgainText.innerText = "TIẾP NHẬN VỤ MỚI"; btnPlayAgainDirect.className = "w-full py-4 rounded-xl font-black uppercase tracking-widest transition-all bg-emerald-600 hover:bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.5)]";
         var duration = 4 * 1000; var end = Date.now() + duration; (function frame() { confetti({ particleCount: 7, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#10b981', '#34d399', '#fcd34d', '#ffffff'] }); confetti({ particleCount: 7, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#10b981', '#34d399', '#fcd34d', '#ffffff'] }); if (Date.now() < end) { requestAnimationFrame(frame); } }());
     } else {
-        playLoseSound(); // [ÂM THANH THUA]
+        playLoseSound(); 
         screens.game.classList.remove('collapse-anim'); void screens.game.offsetWidth; screens.game.classList.add('collapse-anim');
         setTimeout(() => {
             screens.result.classList.remove('hidden'); screens.result.classList.add('flex');
             resultContent.classList.remove('modal-pop'); void resultContent.offsetWidth; resultContent.classList.add('modal-pop');
             resultContent.className = "glass-panel p-10 rounded-3xl border-4 border-red-600/50 flex flex-col items-center text-center max-w-xl mx-4 modal-pop bg-red-950/60 shadow-[0_0_50px_rgba(220,38,38,0.4)]";
             resultIcon.innerHTML = "🚨"; resultTitle.innerText = "KẾT ÁN SAI LẦM"; resultTitle.className = "text-4xl font-black uppercase tracking-widest mb-3 text-red-500 glitch-effect";
-            resultMessage.innerHTML = `Bạn đã tống giam một người vô tội. Hung thủ thực sự là <b>${currentScenario.suspects[currentScenario.killer_id].name}</b> đã cao chạy xa bay!<br><br><span class="text-red-400 font-bold">Bạn bị tước huy hiệu và sa thải khỏi cục cảnh sát.</span>`;
+            resultMessage.innerHTML = `Bạn đã tống giam một người vô tội. Hung thủ thực sự là <b>${currentScenario.suspects[currentScenario.killer_id].name}</b> đã cao chạy xa bay!<br><br><span class="text-red-400 font-bold">Bạn bị tước huy hiệu.</span>`;
             resultScore.innerText = "0.0"; resultScore.className = "text-7xl font-black text-red-500 glitch-effect mt-2";
             btnPlayAgainText.innerText = "LÀM LẠI CUỘC ĐỜI"; btnPlayAgainDirect.className = "w-full py-4 rounded-xl font-black uppercase tracking-widest transition-all bg-red-700 hover:bg-red-500 shadow-[0_0_20px_rgba(220,38,38,0.5)]";
         }, 800);
@@ -374,7 +369,6 @@ function resetGameBoard() {
     screens.game.classList.remove('collapse-anim');
     document.getElementById('btnOpenAccuse').disabled = false;
     
-    // [ĐÃ FIX] Mở khóa lại nút Chốt Án và Dropdown cho ván mới
     document.getElementById('btnAccuse').disabled = false;
     document.getElementById('btnAccuse').classList.replace('bg-gray-600', 'bg-red-600');
     UI.accuseSelect.disabled = false;
@@ -393,7 +387,6 @@ document.getElementById('btnBackToMenu').onclick = () => { resetGameBoard(); scr
 const canvas = document.getElementById('traceCanvas');
 const ctx = canvas.getContext('2d');
 
-// Khởi tạo kích thước Canvas bằng toàn màn hình
 function resizeCanvas() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
@@ -401,84 +394,53 @@ function resizeCanvas() {
 window.addEventListener('resize', resizeCanvas);
 resizeCanvas();
 
-// Mảng chứa các hạt (particles)
 let particles = [];
-// Bộ ký tự ma trận trinh thám
 const chars = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ@#$%&*?'; 
-
-// Theo dõi tọa độ chuột
 let mouse = { x: null, y: null };
 
-// Lắng nghe sự kiện di chuyển chuột trên toàn cửa sổ (để chỉ hoạt động ở Main Menu)
 window.addEventListener('mousemove', (e) => {
-    // Chỉ tạo hiệu ứng nếu Main Menu đang hiển thị (chưa bị add class 'hidden')
     if (!screens.menu.classList.contains('hidden')) {
         mouse.x = e.x;
         mouse.y = e.y;
-        
-        // Thêm hạt mới mỗi khi chuột di chuyển (Giảm mật độ bằng Math.random)
         if (Math.random() > 0.4) { 
             particles.push(new Particle(mouse.x, mouse.y));
         }
     }
 });
 
-// Lớp khởi tạo Hạt (Ký tự)
 class Particle {
     constructor(x, y) {
-        // Tọa độ sinh ra hơi lệch so với mũi chuột một chút cho tự nhiên
         this.x = x + (Math.random() - 0.5) * 30; 
         this.y = y + (Math.random() - 0.5) * 30;
-        // Bốc random 1 chữ cái/số
         this.char = chars[Math.floor(Math.random() * chars.length)];
-        // Kích thước font random từ 12px đến 24px
         this.size = Math.random() * 12 + 12;
-        // Vận tốc nổi lên trên
         this.vy = Math.random() * -1 - 0.5; 
-        // Độ mờ ban đầu (Life)
         this.life = 1; 
-        // Tốc độ mờ dần (Decay) - Giúp chữ biến mất nhanh hay chậm
         this.decay = Math.random() * 0.02 + 0.015; 
     }
 
     update() {
-        this.y += this.vy; // Bay lên từ từ
-        this.life -= this.decay; // Mờ dần đi
+        this.y += this.vy; 
+        this.life -= this.decay; 
     }
 
     draw() {
-        // Kiểm tra xem đang ở Dark Theme hay Light Theme
         const isLight = document.body.classList.contains('light-theme');
-        
-        // Màu sắc: Light Mode -> Đen chì | Dark Mode -> Tím Neon
-        ctx.fillStyle = isLight ? `rgba(15, 23, 42, ${this.life})` : `rgba(168, 85, 247, ${this.life})`;
-        
+        ctx.fillStyle = isLight ? `rgba(76, 29, 149, ${this.life})` : `rgba(168, 85, 247, ${this.life})`;
         ctx.font = `bold ${this.size}px monospace`;
         ctx.textAlign = 'center';
-        
-        // Hiệu ứng bóng phát sáng (Glow)
         ctx.shadowBlur = 10;
-        ctx.shadowColor = isLight ? `rgba(15, 23, 42, ${this.life})` : `rgba(168, 85, 247, ${this.life})`;
-        
-        // Vẽ chữ ra màn hình
+        ctx.shadowColor = isLight ? `rgba(107, 33, 168, ${this.life})` : `rgba(168, 85, 247, ${this.life})`;
         ctx.fillText(this.char, this.x, this.y);
-        
-        // Reset shadow để không lag
         ctx.shadowBlur = 0; 
     }
 }
 
-// Vòng lặp render liên tục 60fps
 function animateTrace() {
-    // Xóa khung hình cũ (dùng fillRect với màu trong suốt để tạo bóng mờ nhẹ)
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-    // Cập nhật và vẽ từng hạt
     for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();
-        
-        // Nếu hạt đã mờ hết -> Xóa khỏi mảng để nhẹ RAM máy tính
         if (particles[i].life <= 0) {
             particles.splice(i, 1);
             i--;
@@ -486,6 +448,4 @@ function animateTrace() {
     }
     requestAnimationFrame(animateTrace);
 }
-
-// Khởi động vòng lặp Animation
 animateTrace();
