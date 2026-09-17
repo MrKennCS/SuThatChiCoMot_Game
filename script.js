@@ -1,7 +1,4 @@
-// ==========================================
-// GAME SCRIPT - BẢN DEPLOY NETLIFY (KHÔNG CHỨA API KEY)
-// ==========================================
-
+// --- CẤU HÌNH API ---
 let DATABASE_SCENARIOS = []; 
 let currentScenario = null;
 let currentSuspect = null;
@@ -12,16 +9,20 @@ let isTyping = {};
 const MAX_ATTEMPTS = 3;
 
 // ==========================================
-// HỆ THỐNG ÂM THANH (AUDIO CONTEXT) - KHÔNG CÓ TIẾNG BÍP
+// HỆ THỐNG ÂM THANH (AUDIO CONTEXT)
 // ==========================================
 const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 let isSoundEnabled = true;
 
+// Mở khóa AudioContext khi người chơi click lần đầu
 document.body.addEventListener('click', () => { if(audioCtx.state === 'suspended') audioCtx.resume(); }, {once: true});
 
 document.getElementById('soundToggle').addEventListener('change', (e) => {
     isSoundEnabled = e.target.checked;
-    if(isSoundEnabled) playNotifySound();
+    if(isSoundEnabled) {
+        if(audioCtx.state === 'suspended') audioCtx.resume();
+        playNotifySound();
+    }
 });
 
 function playTone(freq, type, duration, vol=0.1) {
@@ -71,7 +72,6 @@ function showNotification(name, text) {
         </div>
     `;
     container.appendChild(toast);
-    playNotifySound(); 
 
     setTimeout(() => {
         toast.classList.replace('toast-enter', 'toast-exit');
@@ -111,15 +111,27 @@ document.getElementById('btnCloseAccuse').onclick = () => { screens.accuse.child
 // ==========================================
 document.getElementById('btnStartGame').onclick = async () => {
     screens.menu.style.opacity = '0';
+    
+    // [ĐÃ FIX LOGIC 1]: Reset thanh Progress Bar về 0% ngay lập tức
+    const progressBar = document.getElementById('progressBar');
+    progressBar.style.transitionDuration = '0s';
+    progressBar.style.width = '0%';
+
     try {
         const response = await fetch('./data.json');
         DATABASE_SCENARIOS = await response.json();
-    } catch (error) { alert("Lỗi tải Data! Đảm bảo bạn đang dùng Live Server."); return; }
+    } catch (error) { alert("Lỗi tải Data! Đảm bảo bạn đang dùng Live Server hoặc đã push lên Netlify."); return; }
 
     setTimeout(() => {
         screens.menu.classList.add('hidden');
         screens.loading.classList.remove('hidden'); screens.loading.classList.add('flex');
-        setTimeout(() => { document.getElementById('progressBar').style.width = '100%'; }, 100);
+        
+        // [ĐÃ FIX LOGIC 1]: Bật lại animation chạy 5 giây cho thanh Progress
+        setTimeout(() => { 
+            progressBar.style.transitionDuration = '5s';
+            progressBar.style.width = '100%'; 
+        }, 50);
+        
         setupRandomScenario();
         setTimeout(() => {
             screens.loading.classList.remove('flex'); 
@@ -277,7 +289,6 @@ Câu hỏi: "${question}"`;
     let lastErrorMsg = "";
 
     try {
-        // [QUAN TRỌNG]: GỌI VÀO API ẨN CỦA NETLIFY THAY VÌ GOOGLE
         const response = await fetch("/api/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -304,11 +315,18 @@ Câu hỏi: "${question}"`;
 
     if (success) { 
         addMessage("nghi phạm", aiResponse, targetId); 
+        
+        // [ĐÃ FIX LOGIC 2]: LUÔN KÊU TING TING KHI CÓ TIN NHẮN (Bất kể ở tab nào)
+        playNotifySound(); 
+
+        // Nếu đang ở phòng của người khác, thì mới văng thêm cái bảng thông báo xuống
         if(!currentSuspect || currentSuspect.id !== targetId) {
             showNotification(targetSuspect.name, aiResponse);
         }
     } else {
         addMessage("hệ thống", `[LỖI]: ${lastErrorMsg}`, targetId);
+        playLoseSound(); // Kêu tiếng Tè Tò báo lỗi mạng
+
         attempts[targetId]--; 
         score += 0.5; 
         UI.scoreDisplay.innerText = score.toFixed(1); 
@@ -341,7 +359,7 @@ document.getElementById('btnAccuse').onclick = () => {
     document.getElementById('btnAccuse').disabled = true;
 
     if(selectedKiller === currentScenario.killer_id) {
-        playWinSound(); 
+        playWinSound(); // [ÂM THANH THẮNG]
         screens.result.classList.remove('hidden'); screens.result.classList.add('flex');
         resultContent.classList.remove('modal-pop'); void resultContent.offsetWidth; resultContent.classList.add('modal-pop');
         resultContent.className = "glass-panel p-10 rounded-3xl border-4 border-emerald-500/50 flex flex-col items-center text-center max-w-xl mx-4 modal-pop bg-emerald-950/40 shadow-[0_0_50px_rgba(16,185,129,0.3)]";
@@ -351,14 +369,14 @@ document.getElementById('btnAccuse').onclick = () => {
         btnPlayAgainText.innerText = "TIẾP NHẬN VỤ MỚI"; btnPlayAgainDirect.className = "w-full py-4 rounded-xl font-black uppercase tracking-widest transition-all bg-emerald-600 hover:bg-emerald-500 shadow-[0_0_20px_rgba(16,185,129,0.5)]";
         var duration = 4 * 1000; var end = Date.now() + duration; (function frame() { confetti({ particleCount: 7, angle: 60, spread: 55, origin: { x: 0 }, colors: ['#10b981', '#34d399', '#fcd34d', '#ffffff'] }); confetti({ particleCount: 7, angle: 120, spread: 55, origin: { x: 1 }, colors: ['#10b981', '#34d399', '#fcd34d', '#ffffff'] }); if (Date.now() < end) { requestAnimationFrame(frame); } }());
     } else {
-        playLoseSound(); 
+        playLoseSound(); // [ÂM THANH THUA]
         screens.game.classList.remove('collapse-anim'); void screens.game.offsetWidth; screens.game.classList.add('collapse-anim');
         setTimeout(() => {
             screens.result.classList.remove('hidden'); screens.result.classList.add('flex');
             resultContent.classList.remove('modal-pop'); void resultContent.offsetWidth; resultContent.classList.add('modal-pop');
             resultContent.className = "glass-panel p-10 rounded-3xl border-4 border-red-600/50 flex flex-col items-center text-center max-w-xl mx-4 modal-pop bg-red-950/60 shadow-[0_0_50px_rgba(220,38,38,0.4)]";
             resultIcon.innerHTML = "🚨"; resultTitle.innerText = "KẾT ÁN SAI LẦM"; resultTitle.className = "text-4xl font-black uppercase tracking-widest mb-3 text-red-500 glitch-effect";
-            resultMessage.innerHTML = `Bạn đã tống giam một người vô tội. Hung thủ thực sự là <b>${currentScenario.suspects[currentScenario.killer_id].name}</b> đã cao chạy xa bay!<br><br><span class="text-red-400 font-bold">Bạn bị tước huy hiệu.</span>`;
+            resultMessage.innerHTML = `Bạn đã tống giam một người vô tội. Hung thủ thực sự là <b>${currentScenario.suspects[currentScenario.killer_id].name}</b> đã cao chạy xa bay!<br><br><span class="text-red-400 font-bold">Bạn bị tước huy hiệu và sa thải khỏi cục cảnh sát.</span>`;
             resultScore.innerText = "0.0"; resultScore.className = "text-7xl font-black text-red-500 glitch-effect mt-2";
             btnPlayAgainText.innerText = "LÀM LẠI CUỘC ĐỜI"; btnPlayAgainDirect.className = "w-full py-4 rounded-xl font-black uppercase tracking-widest transition-all bg-red-700 hover:bg-red-500 shadow-[0_0_20px_rgba(220,38,38,0.5)]";
         }, 800);
@@ -368,7 +386,6 @@ document.getElementById('btnAccuse').onclick = () => {
 function resetGameBoard() {
     screens.game.classList.remove('collapse-anim');
     document.getElementById('btnOpenAccuse').disabled = false;
-    
     document.getElementById('btnAccuse').disabled = false;
     document.getElementById('btnAccuse').classList.replace('bg-gray-600', 'bg-red-600');
     UI.accuseSelect.disabled = false;
