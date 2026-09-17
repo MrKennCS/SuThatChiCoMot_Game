@@ -289,12 +289,13 @@ Câu hỏi: "${question}"`;
     let lastErrorMsg = "";
 
     try {
-        const response = await fetch("/api/chat", {
+// [ĐÃ FIX]: Gọi thẳng vào thư mục ẩn của Netlify Function
+        const response = await fetch("/.netlify/functions/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: prompt })
         });
-
+        
         const data = await response.json();
         if (response.ok && data.reply) {
             aiResponse = data.reply;
