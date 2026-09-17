@@ -1,0 +1,1598 @@
+[
+    {
+        "case_id": "CASE-01",
+        "title": "BẢN GIAO HƯỞNG ÁNH TRĂNG",
+        "victim": "Kawashima Hideo (56 tuổi) & Kuroiwa Tatsuji (56 tuổi)",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Đảo Tsukikage. <strong>Thời gian:</strong> 19:30, đêm trăng tròn tháng 5.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 7 | Anime Ep 11</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE ĐÊM ÁN MẠNG ĐẦU TIÊN:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>19:30:</strong> Lễ tưởng niệm bắt đầu tại hội trường. Kawashima xin ra ngoài hóng gió.</li><li><strong>20:10:</strong> Bản nhạc 'Ánh Trăng' chương I vang lên từ phòng piano biệt lập.</li><li><strong>20:13:</strong> Nhóm Mori phá cửa phòng đàn: Kawashima đã chết gục trên phím đàn, người ướt sũng nước biển.</li><li><strong>20:30:</strong> Khám nghiệm: Nạn nhân chết do ngạt nước biển khoảng 30–45 phút trước khi thi thể được đưa vào phòng.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT & RED HERRINGS:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Ánh hoàng hôn trên đảo Tsukikage chìm dần vào bóng tối đặc quánh của biển cả khi sương đêm bắt đầu dâng lên... Đúng 20 giờ 10 phút, một âm thanh rùng rợn xé toạc không gian tĩnh mịch: những giai điệu trầm buồn, ai oán của chương I bản giao hưởng \"Ánh Trăng\" réo rắt vang lên từ căn phòng piano bỏ hoang... Khi nhóm Mori phá tung cánh cửa, cảnh tượng khiến ai nấy chết lặng: Kawashima Hideo nằm bất động, đầu gục xuống những phím đàn phủ bụi, toàn thân ướt sũng nước mặn, mắt mở trừng trừng vô hồn.<br><br><strong>Yếu tố gây nhiễu (Red Herrings):</strong><br>- Bí mật ma túy của Hirata: Lén lút quanh cây đàn ban đêm.<br>- Hành tung sửa đàn của Murasawa.<br>- Hội chứng hoảng loạn của Nishimoto làm chệch hướng điều tra sang bệnh lý tâm thần.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Bác sĩ Asai Narumi (26)", 
+                "role": "Bác sĩ duy nhất trên đảo", 
+                "psycho": {
+                    "trait": "Dịu dàng, chu đáo, toát lên vẻ trí thức ấm áp; che giấu nội tâm giằng xé, cô độc và ngọn lửa thù hận chôn giấu suốt 12 năm ròng.",
+                    "pronouns": "Xưng 'cháu', gọi nạn nhân 'các bác / ngài thị trưởng', giữ lễ độ tuyệt đối của một bác sĩ tỉnh lẻ.",
+                    "behavior": "Bình tĩnh, rành rọt, dùng thuật ngữ y khoa giải thích vết thương với giọng trầm buồn đầy xót xa giả tạo. *Đẩy gọng kính, thở dài*"
+                },
+                "initial": "Nạn nhân đã ngạt nước biển trước khi đưa vào phòng... thật đáng tiếc! Lúc 19:30 tôi cũng xin phép ra ngoài giải quyết công việc y tế.", 
+                "truth": "Sự thật: Narumi (Aso Seiji) là HUNG THỦ. TRICK: Cô ta dìm chết nạn nhân dưới biển, kéo xác qua cửa sổ. Dùng máy cassette (chế độ auto-reverse) với đoạn băng trắng im lặng ở đầu để hẹn giờ phát nhạc lúc 20:10 khi đã quay lại đám đông. Khám nghiệm tử thi là LỜI KHAI GIẢ để làm sai lệch giờ chết thực sự.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Hirata Kazuaki (31)", 
+                "role": "Thư ký thị trưởng",
+                "psycho": {
+                    "trait": "Nhút nhát, thần kinh yếu, hay giật mình thảng thốt, mang tâm lý sợ bóng sợ gió nhưng bên trong lại tham lam và hám lợi.",
+                    "pronouns": "Xưng 'tôi', khúm núm phục tùng.",
+                    "behavior": "Nói năng lấp bắp, nuốt nước bọt liên tục, hai tay xua lia lịa. *Đảo mắt liên tục nhìn xung quanh*"
+                },
+                "initial": "Không... không phải tôi! Tôi đâu có biết gì về cây đàn ma ám đó đâu! Tôi ở trong hội trường suốt!", 
+                "truth": "Sự thật: Hirata vô tội. Hắn khai man và sợ hãi vì hắn dùng khoang bí mật dưới đàn piano làm điểm trung chuyển ma túy lậu.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Murasawa Shuichi (27)", 
+                "role": "Hôn phu của Reiko", 
+                "psycho": {
+                    "trait": "Lầm lì, khép kín, cá tính mạnh, căm ghét thói đạo đức giả của giới chính trị gia địa phương.",
+                    "pronouns": "Xưng 'tôi' cộc lốc, bất cần; tỏ rõ thái độ khinh miệt đối với nạn nhân.",
+                    "behavior": "Khoanh tay trước ngực, mắt nhìn nghiêng tỏ vẻ bất hợp tác. *Hừ lạnh một tiếng*"
+                },
+                "initial": "Mấy người muốn nghĩ sao thì tùy, tôi không rảnh đôi co! Lão ta chết thì liên quan gì đến tôi?", 
+                "truth": "Sự thật: Vô tội. Anh ta lén vào phòng piano ban đêm chỉ để sửa lại cây đàn bị hỏng do cha anh ta từng là người lên dây đàn cho Aso Keiji.", 
+                "is_killer": false 
+            },
+            "s4": { 
+                "name": "Nishimoto Ken (55)", 
+                "role": "Cựu tài phiệt đảo",
+                "psycho": {
+                    "trait": "Tinh thần suy sụp hoàn toàn, hoang tưởng cực độ, luôn sống trong trạng thái dằn vặt và nỗi kinh hoàng.",
+                    "pronouns": "Lẩm bẩm ngắt quãng, xưng hô hỗn loạn.",
+                    "behavior": "Thở dốc, ôm đầu gào thét mất kiểm soát mỗi khi nghe nhắc đến bản nhạc. *Run rẩy lùi lại*"
+                },
+                "initial": "Keiji... hắn đã về đòi mạng chúng ta! Bóng ma của hắn đang ở đây!", 
+                "truth": "Sự thật: Vô tội trong vụ này. Hắn hoảng loạn vì tội ác 12 năm trước ép Aso Keiji buôn ma túy rồi phóng hỏa diệt khẩu.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-02",
+        "title": "KẺ SÁT NHÂN GIẤU MẶT SAU LỚP BĂNG GẠC",
+        "victim": "Ikeda Chikako (21 tuổi) - Đạo diễn, biên kịch trẻ",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Biệt thự trên núi nhà Suzuki. <strong>Thời gian:</strong> Mùa thu, mưa bão.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 5 | Anime Ep 34-35</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>17:30:</strong> Chikako nổi giận cãi vã và bỏ ra rừng dạo một mình.</li><li><strong>19:00:</strong> Cả nhóm ngồi phòng khách; Takahashi đang sửa mái nhà ngoài trời.</li><li><strong>19:15:</strong> Kẻ quấn băng bế thi thể Chikako bay ngang qua cửa sổ trong chớp mắt.</li><li><strong>19:30:</strong> Phát hiện thi thể bị chặt đứt lìa trong rừng; cầu treo bị chặt đứt.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Đúng 19 giờ 15 phút... một vệt sét chói lòa bỗng xé toạc màn đêm. Ngay trong khoảnh khắc định mệnh ấy, một bóng đen trùm áo choàng rộng thùng thình, đầu quấn băng trắng toát chỉ để lộ hai hốc mắt điên dại, bế ngang thân hình mềm rũ của Chikako bay lướt qua khung cửa sổ với tốc độ kinh hoàng như một bóng ma bay trên không trung... Lát sau, mọi người bàng hoàng tìm thấy thi thể bị cắt rời tàn bạo trong rừng sâu.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Ohta ép Ran đi dạo trong rừng lúc giông bão khiến anh ta bị nghi ngờ.<br>- Kakutani lúng túng che giấu các đoạn băng quay lén.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Takahashi Ryoichi", 
+                "role": "Bạn đại học", 
+                "psycho": {
+                    "trait": "Bề ngoài đóng vai một gã mập khù khờ, vụng về để che giấu một kẻ sát nhân máu lạnh tính toán cơ học tỉ mỉ.",
+                    "pronouns": "Xưng 'mình - cậu', nhún nhường, sẵn sàng nhận việc nặng để tạo vỏ bọc vô hại.",
+                    "behavior": "Giọng run rẩy, vờ lúng túng sợ hãi tột độ. *Quệt mồ hôi trên trán, giả vờ thở dốc*"
+                },
+                "initial": "Trời ơi... hắn mang chiếc rìu... hắn sẽ giết sạch tất cả chúng ta mất! Lúc 19:00 mình đang sửa mái nhà ngoài mưa cơ mà!", 
+                "truth": "Sự thật: Takahashi là HUNG THỦ. TRICK: Hắn thực chất có thân hình mảnh khảnh nhưng độn lượng lớn bông gòn trong bụng áo. Sau khi giết và chặt xác nạn nhân, hắn giấu ĐẦU nạn nhân vào trong bụng rồi quay về. Hắn dùng dây thép căng từ mái nhà sang cây đối diện, dùng ròng rọc kéo ma-nơ-canh bay qua cửa sổ tạo alibi ngoại phạm.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Ohta Masaru", 
+                "role": "Nam diễn viên",
+                "psycho": {
+                    "trait": "Đẹp trai, kiêu ngạo, thô lỗ, thích thể hiện bản lĩnh đàn ông và coi thường người khác.",
+                    "pronouns": "Xưng 'anh - em' cợt nhả với Ran; xưng 'tôi / tao - chúng mày' khi nổi cáu.",
+                    "behavior": "Hút thuốc bất cần, thái độ chống đối. *Phả khói thuốc, khoanh tay*"
+                },
+                "initial": "Tôi ra ngoài rừng hóng gió thì liên quan quái gì đến các người? Chẳng lẽ nghi ngờ tôi?", 
+                "truth": "Sự thật: Ohta vô tội. Anh ta chỉ là một gã trai thích tán tỉnh linh tinh và ra ngoài để rủ rê Ran, vô tình làm mình trở nên khả nghi.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Kakutani Hiroki", 
+                "role": "Quay phim", 
+                "psycho": {
+                    "trait": "Si tình mù quáng, rụt rè, luôn núp sau ống kính máy quay để trốn tránh thực tế.",
+                    "pronouns": "Xưng 'mình', hay bảo vệ nạn nhân.",
+                    "behavior": "Ấp úng, mắt nhìn xuống chân, lúng túng vò đầu bứt tai. *Ôm chặt máy quay*"
+                },
+                "initial": "Cầu treo cháy thì liên quan quái gì đến bộ bài của tôi? Đừng có vớ vẩn!", 
+                "truth": "Sự thật: Kakutani vô tội. Anh ta lúng túng vì muốn giấu giếm các đoạn băng quay lén nữ sinh trong quá khứ.", 
+                "is_killer": false 
+            },
+            "s4": { 
+                "name": "Suzuki Ayako", 
+                "role": "Hội trưởng Hội Điện ảnh",
+                "psycho": {
+                    "trait": "Hiền hậu, chu đáo, luôn đóng vai người chị cả hòa giải mọi xung đột.",
+                    "pronouns": "Xưng 'mình - các bạn' lịch thiệp.",
+                    "behavior": "Nghẹn ngào tự trách bản thân, lấy tay che miệng khóc. *Rơm rớm nước mắt*"
+                },
+                "initial": "Tất cả là lỗi của mình... nếu mình không tổ chức buổi họp mặt này thì đã không có ai phải chết...", 
+                "truth": "Sự thật: Ayako vô tội và hoàn toàn không biết gì về mưu đồ của Takahashi.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-03",
+        "title": "PHÒNG KÍN NHÀ NGOẠI GIAO",
+        "victim": "Tsujimura Isao (54 tuổi) - Nhà ngoại giao cấp cao",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Thư viện tầng 2 dinh thự Tsujimura. <strong>Thời gian:</strong> 15:30 chiều mùa đông.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 10 | Anime Ep 48-49</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>15:30:</strong> Nhóm Mori đến dinh thự; quản gia báo ông Isao đang ở thư viện.</li><li><strong>15:45:</strong> Bà Kimie mở khóa cửa thư viện trước mặt mọi người. Nhạc opera mở lớn, ông Isao gục đầu trên bàn.</li><li><strong>15:47:</strong> Bà Kimie lay gọi chồng; ông Isao ngã lăn xuống sàn chết vì độc cá nóc (Tetrodotoxin).</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Bà Kimie tra chìa vào ổ khóa cửa gỗ dày cộp, xoay một vòng dứt khoát mở toang căn phòng kín. Nạn nhân ngồi tựa cằm vào tay trên chiếc bàn bọc da đồ sộ. Bà Kimie chậm rãi rảo bước vào phòng... ngay khi ngón tay bà vừa chạm khẽ vào bờ vai, cả thân hình nặng nề của ngài ngoại giao bỗng đổ sụp xuống sàn nhà. Dưới vành tai sau gáy là một chấm đỏ li ti còn rỉ máu tươi. Căn phòng hoàn toàn khóa kín, chiếc chìa khóa duy nhất nằm yên vị sâu bên trong túi quần tây của nạn nhân.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Lưỡi câu và dây cước của ông cụ Toshimitsu để quên làm Heiji suy luận sai về thủ thuật kéo chìa khóa.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Bà Tsujimura Kimie", 
+                "role": "Vợ nạn nhân", 
+                "psycho": {
+                    "trait": "Quý phái, sắc sảo, lạnh lùng, kiểm soát cảm xúc tuyệt hảo.",
+                    "pronouns": "Với thám tử xưng 'tôi - các vị' lịch lãm.",
+                    "behavior": "Gào khóc lay gọi chồng cực kỳ tự nhiên, diễn xuất hoàn hảo để che đậy sự thật. *Lấy tay che mặt khóc*"
+                },
+                "initial": "Trời ơi mình ơi! Có chuyện gì thế này! Xin các vị thám tử hãy cứu chồng tôi!", 
+                "truth": "Sự thật: Bà Kimie là HUNG THỦ. TRICK: Bà ta chuốc thuốc ngủ chồng từ trước, bỏ chìa khóa vào túi quần ông rồi khóa cửa đi ra ngoài. Khi dẫn mọi người vào mở cửa, bà ta giả vờ lay gọi chồng dậy, nhưng thực chất lúc đó mới lén cắm cây kim tẩm độc giấu trong móc khóa vào gáy nạn nhân ngay trước mắt mọi người. Chồng bà ta lúc đó mới thực sự chết (máu còn tươi, người còn ấm).", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Tsujimura Takayoshi", 
+                "role": "Con trai riêng của Isao",
+                "psycho": {
+                    "trait": "Nhu nhược, sợ cha nhưng ngấm ngầm chống đối.",
+                    "pronouns": "Khép nép, sợ sệt khi nói chuyện.",
+                    "behavior": "Tái mét mặt mày, lắp bắp chối quanh, trán toát mồ hôi. *Lấy khăn lau mồ hôi*"
+                },
+                "initial": "Tôi... tôi không biết gì hết! Tôi đâu có vào phòng của bố tôi!", 
+                "truth": "Sự thật: Vô tội. Takayoshi lúng túng vì sợ cảnh sát phát hiện việc anh ta định lẻn vào phòng để trộm con dấu ngoại giao.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Katsuragi Yukiko", 
+                "role": "Bạn gái của Takayoshi", 
+                "psycho": {
+                    "trait": "Xinh đẹp, thông minh, kiên cường, tự trọng cao.",
+                    "pronouns": "Xưng 'cháu - thưa bác/cảnh sát' lễ phép.",
+                    "behavior": "Khúc chiết, mạch lạc, nhìn thẳng vào mắt thám tử. *Giọng điệu bình tĩnh*"
+                },
+                "initial": "Cháu và anh Takayoshi ở ngoài vườn suốt, chúng cháu không hề có chìa khóa để vào thư viện ạ.", 
+                "truth": "Sự thật: Cô gái vô tội. Cô không hề biết mình chính là con gái ruột bị thất lạc của bà Kimie, và việc bà Kimie sát hại chồng là để ngăn cản bi kịch loạn luân do Isao sắp đặt.", 
+                "is_killer": false 
+            },
+            "s4": { 
+                "name": "Ông cụ Toshimitsu", 
+                "role": "Bố của nạn nhân",
+                "psycho": {
+                    "trait": "Lập dị, khép kín, mê cờ vây, cay nghiệt với con trai.",
+                    "pronouns": "Xưng 'ta - mày' cộc lốc, 'lão già này' bất cần.",
+                    "behavior": "Dửng dưng bấm cờ vây, không thèm nhìn thi thể. *Nhấp ngụm trà mát lạnh*"
+                },
+                "initial": "Chết rồi à? Hừ, cái thứ độc ác như nó thì chết cũng đáng đời! Đừng làm phiền ta chơi cờ.", 
+                "truth": "Sự thật: Ông cụ vô tội. Bộ dây cước câu cá của ông chỉ là sự trùng hợp vô tình bị bỏ quên trong phòng.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-04",
+        "title": "HUYỀN THOẠI QUÁI VẬT TENGU",
+        "victim": "Đại đức Ten'ei (52 tuổi) - Trụ trì tu viện Sannikkyo",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Tu viện trên vách đá, Saitama. <strong>Thời gian:</strong> Đêm mưa bão đầu xuân.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 11 | Anime Ep 52</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>21:00:</strong> Trụ trì Ten'ei lên phòng tu luyện tịnh tâm, khóa cửa ngoài.</li><li><strong>06:30 sáng:</strong> Phá cửa phòng: Sàn ướt sũng, trụ trì bị treo cổ lơ lửng trên xà nhà cao 10 mét. Vách gỗ sát mái nhà bị vỡ toang.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Một cảnh tượng siêu nhiên đến rợn tóc gáy phơi bày: trong căn phòng trống trải cao vút như một tòa tháp cổ, thi thể trụ trì Ten'ei đang đung đưa lơ lửng trên thanh xà ngang sát trần nhà ở độ cao gần 10 mét. Dưới sàn nhà bằng gỗ thông tuyệt nhiên không hề có thang xếp, không có bàn ghế hay vật dụng nào để leo lên. Kỳ lạ hơn, toàn bộ mặt sàn gỗ trơn trượt, ướt sũng nước và thoang thoảng mùi rong rêu. Các đệ tử tin rằng móng vuốt của quỷ Kiri Tengu đã xé vách gỗ bay vào trừng phạt vị trụ trì.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Kankai lén thiêu hủy tài liệu công đức khiến cảnh sát nghĩ động cơ là tham ô.<br>- Căn phòng cao 10m không điểm tựa tạo ảo giác ma quỷ.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Nhà sư Shunen", 
+                "role": "Đệ tử trẻ", 
+                "psycho": {
+                    "trait": "Thông minh, kín đáo, kiên định nhẫn nhục tu hành 2 năm để chờ ngày phục thù cho anh trai.",
+                    "pronouns": "Xưng 'con - bạch thầy/cảnh sát' cung kính để giấu ngọn lửa hận thù.",
+                    "behavior": "Điềm tĩnh, đối đáp rành rọt bằng giáo lý nhà Phật, ánh mắt không chớp. *Chắp tay niệm Phật*"
+                },
+                "initial": "Nam mô a di đà Phật. Con ở trong phòng tụng kinh suốt đêm, không hề bước ra ngoài thưa ngài thám tử.", 
+                "truth": "Sự thật: Shunen là HUNG THỦ. TRICK LỢI DỤNG SỨC NƯỚC: Hắn dùng băng keo dán kín các khe hở, dẫn nước thác chảy tràn vào phòng tu luyện biến căn phòng thành bể nước cao 10 mét. Hắn dùng bè cao su nổi lên mặt nước, tới gần xà nhà buộc dây treo cổ nạn nhân rồi đập vỡ vách gỗ xả hàng chục tấn nước ra ngoài vách núi như thác đổ. Nước rút đi để lại thi thể trên cao.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Nhà sư Kankai", 
+                "role": "Đệ tử cả",
+                "psycho": {
+                    "trait": "Bảo thủ, cứng nhắc, tôn sùng giáo quy mù quáng.",
+                    "pronouns": "Xưng 'ta - các đệ' hách dịch, với người ngoài thì cáu kỉnh.",
+                    "behavior": "Gắt gỏng, khó chịu khi bị cảnh sát soi mói. *Vung tay áo, quay mặt đi*"
+                },
+                "initial": "Đó là thanh danh nơi cửa Phật, người trần tục các người đừng có soi mói! Kiri Tengu đã trừng phạt kẻ có tội!", 
+                "truth": "Sự thật: Kankai vô tội. Ông ta lén đốt sổ sách vì sợ vụ tham ô của chùa bị lộ, vô tình làm cảnh sát nghi ngờ sai hướng.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Nhà sư Mokunen", 
+                "role": "Đệ tử", 
+                "psycho": {
+                    "trait": "Bộc trực, nóng nảy, ruột để ngoài da.",
+                    "pronouns": "Xưng 'tôi' bỗ bã.",
+                    "behavior": "Nói to, gãi đầu bứt tai vì sợ bị phạt tội lười biếng. *Gãi đầu ngượng ngùng*"
+                },
+                "initial": "Tối qua tôi chỉ lẻn đi vệ sinh một lát thôi chứ có làm gì mờ ám đâu!", 
+                "truth": "Sự thật: Mokunen vô tội, chỉ là lười biếng bỏ ca gác đêm.", 
+                "is_killer": false 
+            },
+            "s4": { 
+                "name": "Nhà sư Tainen", 
+                "role": "Đệ tử mới",
+                "psycho": {
+                    "trait": "Nhút nhát, sợ ma quỷ, mê tín dị đoan tột độ.",
+                    "pronouns": "Lí nhí, run rẩy.",
+                    "behavior": "Quỳ sụp lạy Phật, mặt tái mét. *Run rẩy chắp tay*"
+                },
+                "initial": "Móng vuốt của Kiri Tengu... Quái vật đã về trừng phạt chúng ta! Chạy đi mọi người ơi!", 
+                "truth": "Sự thật: Tainen hoàn toàn vô tội và tin sái cổ vào truyền thuyết ma quỷ.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-05",
+        "title": "BIỆT THỰ BÚP BÊ TOTTORI",
+        "victim": "Takeda Nobukazu (42 tuổi) - Trưởng gia tộc Takeda",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Nhà kho búp bê truyền thống vùng núi Tottori. <strong>Thời gian:</strong> Đêm tối tăm.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 25 | Anime Ep 166-168</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>19:30:</strong> Cả nhà ăn tối xong. Nobukazu ra nhà kho búp bê một mình.</li><li><strong>20:45:</strong> Tiếng còi xe tải kêu inh ỏi ở sân sau liên tục.</li><li><strong>21:00:</strong> Mọi người chạy ra nhà kho: Nobukazu bị treo cổ lơ lửng giữa mạng nhện đan chằng chịt bằng hàng trăm sợi dây cước câu cá.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Ánh đèn pin quét qua làm hiện lên một khung cảnh hãi hùng như bước ra từ tranh vẽ địa ngục. Takeda Nobukazu đang lơ lửng giữa không trung, chiếc thòng lọng siết chặt lấy cần cổ. Toàn bộ thân hình nạn nhân bị quấn chặt bởi vô số sợi dây cước trắng tinh đan chéo chằng chịt khắp bốn góc tường, trông hệt như một con mồi xấu số đang giãy giụa trong mạng nhện khổng lồ. Hàng trăm sợi dây cước lấp lánh phản chiếu ánh trăng mờ ảo, rung lên bần bật theo từng cơn gió luồn qua khe cửa sổ.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Lời nguyền nhện độc báo oán khiến bà lão Chiyo ngất xỉu.<br>- Mâu thuẫn anh em trong đường dây buôn ma túy làm Heiji suy đoán lệch hướng băng đảng.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Robert Taylor", 
+                "role": "Nhiếp ảnh gia Mỹ", 
+                "psycho": {
+                    "trait": "Chân thành, đôn hậu bề ngoài nhưng nội tâm tan nát, u uất vì cái chết của người con gái anh yêu (Misa).",
+                    "pronouns": "Nói tiếng Nhật lơ lớ, xưng 'tôi - các vị' khiêm nhường.",
+                    "behavior": "Bình thản, hợp tác nhiệt tình, ánh mắt đượm buồn. *Nhìn xuống đất, thở dài*"
+                },
+                "initial": "Lúc đó tôi đang ở trong phòng rửa ảnh. Tôi nghe tiếng còi xe tải mới chạy ra cùng mọi người. Thật kinh khủng!", 
+                "truth": "Sự thật: Robert là HUNG THỦ. TRICK MẠNG NHỆN: Anh ta trói nạn nhân vào mạng lưới dây cước nối với trục bánh sau chiếc xe tải bên ngoài. Anh ta chèn đá vào còi xe tải cho nó kêu inh ỏi. Khi có người nổ máy lùi xe để tắt còi, chuyển động của bánh xe tải vô tình kéo căng toàn bộ mạng lưới dây cước, nhấc bổng thi thể nạn nhân lên không trung tạo thành mạng nhện hoàn hảo ngay trước mắt nhân chứng.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Takeda Ryuji", 
+                "role": "Em trai nạn nhân",
+                "psycho": {
+                    "trait": "Bất cần đời, lạnh lùng, ghét thói giả tạo và sự độc đoán của anh trai.",
+                    "pronouns": "Xưng 'tôi - anh' lạnh nhạt, cộc cằn.",
+                    "behavior": "Thản nhiên nhả khói thuốc, không bộc lộ chút thương xót nào. *Hút thuốc, nhếch mép*"
+                },
+                "initial": "Chết rồi thì thôi, tôi chẳng rảnh để ý lão ta đi đâu làm gì! Các người đi mà hỏi vợ lão ấy!", 
+                "truth": "Sự thật: Ryuji vô tội. Anh ta không ưa anh trai vì vụ buôn ma túy ngầm, nhưng không hề giết người.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Takeda Yoko", 
+                "role": "Vợ của Ryuji", 
+                "psycho": {
+                    "trait": "U uất, cam chịu, sống khép kín trong đau khổ của gia tộc Takeda.",
+                    "pronouns": "Xưng 'tôi' nhẫn nhục, giọng nói luôn nhỏ nhẹ.",
+                    "behavior": "Cúi gầm mặt, sợ hãi khi nói chuyện với cảnh sát. *Nắm chặt vạt áo*"
+                },
+                "initial": "Lúc đó tôi ở trong bếp dọn dẹp... tôi không biết gì về mạng nhện cả thưa ngài...", 
+                "truth": "Sự thật: Yoko vô tội. Cô ta chỉ là người phụ nữ đáng thương cam chịu trong gia đình.", 
+                "is_killer": false 
+            },
+            "s4": { 
+                "name": "Bà lão Chiyo", 
+                "role": "Mẹ nạn nhân",
+                "psycho": {
+                    "trait": "Mê tín dị đoan, thần kinh hoảng loạn vì những cái chết liên tục trong gia đình.",
+                    "pronouns": "Xưng 'già này', lẩm bẩm lời nguyền rủa.",
+                    "behavior": "Ngã quỵ xuống đất, lẩm bẩm run rẩy. *Ôm mặt khóc*"
+                },
+                "initial": "Nhện thần... nhện thần đã về báo oán gia tộc Takeda rồi! Chạy đi, chạy đi!", 
+                "truth": "Sự thật: Bà lão vô tội và bị ảo giác tâm lý ám ảnh.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-06",
+        "title": "ÁN MẠNG BIỆT THỰ ĐỒI TUYẾT",
+        "victim": "Bác sĩ Okiya Masanori (46 tuổi) - Trưởng khoa ngoại danh tiếng",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Biệt thự nghỉ dưỡng trên đỉnh núi. <strong>Thời gian:</strong> Nửa đêm mùa đông bão tuyết.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 10 | Anime Ep 46</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>20:00:</strong> Giáo sư Okiya về phòng riêng làm việc và khóa cửa.</li><li><strong>21:00:</strong> Bác sĩ Asai mang thuốc ngủ lên phòng cho giáo sư.</li><li><strong>23:15:</strong> Bão tuyết đỉnh điểm, mất điện.</li><li><strong>23:45:</strong> Phá cửa phòng: Giáo sư bị siết cổ trên ghế bành, cửa sổ mở toang, ban công phủ tuyết trắng tinh.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Ngọn lửa từ lò sưởi bập bùng hắt những cái bóng chập chờn lên bức tường gỗ mun... Đúng 23h15, toàn bộ hệ thống điện phụt tắt hoàn toàn. Khi ánh nến leo lét được thắp lại, mọi người đạp tung cánh cửa gỗ sồi. Khung cảnh lạnh sống lưng: ngài giáo sư quyền uy gục chết trên chiếc ghế bành, cần cổ bị siết chặt bởi một sợi dây cước. Cánh cửa sổ ban công mở toang hoác. Lớp tuyết dày hơn ba mươi phân phủ kín ngoài ban công tuyệt nhiên không hề có lấy một dấu chân người qua lại. Căn phòng biến thành một pháo đài cô lập giữa bão tuyết.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Takahashi lén cạy cửa phòng nạn nhân xóa dấu vết hồ sơ kỷ luật.<br>- Lớp tuyết không dấu chân khiến giả thuyết đột nhập bị phá sản.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Bác sĩ Asai", 
+                "role": "Trợ lý phẫu thuật cấp cao", 
+                "psycho": {
+                    "trait": "Điềm tĩnh, cẩn trọng, u uất; nhẫn nhục chịu đựng sự sỉ nhục của giáo sư để chờ cơ hội thanh trừng.",
+                    "pronouns": "Luôn xưng 'tôi - giáo sư/ngài viện sĩ' với vẻ phục tùng tuyệt đối, không bao giờ ngắt lời.",
+                    "behavior": "Bình tĩnh phân tích tổn thương y khoa rành rọt. Khi bị hỏi cung thì đẩy gọng kính, nói chậm rãi. *Chỉnh lại kính, thở dài*"
+                },
+                "initial": "Nạn nhân đã chết ngạt... Lúc 21:00 tôi mang thuốc ngủ lên, ông ấy vẫn còn sống và mắng tôi.", 
+                "truth": "Sự thật: Asai là HUNG THỦ. TRICK PHÒNG KÍN & THỜI GIAN: Hắn đã giết nạn nhân lúc 21:00. Hắn dùng sợi chỉ nha khoa đặc chế luồn qua rãnh khóa cửa sổ ban công để kéo chốt từ bên ngoài. Để thao túng giờ tử vong, hắn bật máy sưởi điện chĩa vào thi thể để giữ thân nhiệt ấm áp. Khi cúp điện lúc 23:15, máy sưởi tắt, thân nhiệt mới bắt đầu giảm, đánh lừa pháp y.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Trợ lý Takahashi", 
+                "role": "Bác sĩ cấp dưới",
+                "psycho": {
+                    "trait": "Nóng nảy, kích động, hoảng loạn sợ mất việc do từng có sự cố y khoa.",
+                    "pronouns": "Xưng 'tôi - các người' gắt gỏng, sau lưng gọi nạn nhân là 'lão già độc ác'.",
+                    "behavior": "Toát mồ hôi hột, hai tay vung vẩy tức giận khi bị nghi ngờ. *Lau mồ hôi trán, trừng mắt*"
+                },
+                "initial": "Tôi chỉ lên tìm tập hồ sơ kỷ luật của tôi thôi! Mấy người đừng có chụp mũ tôi giết người!", 
+                "truth": "Sự thật: Vô tội. Hắn lén cạy cửa chỉ để ăn trộm hồ sơ y án của chính mình nhằm khỏi bị đuổi việc.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Matsubara", 
+                "role": "Thực tập sinh", 
+                "psycho": {
+                    "trait": "Nhút nhát, trầm mặc, mang nỗi đau mất bạn gái (y tá bị giáo sư vu oan đến tự sát).",
+                    "pronouns": "Xưng 'cháu - ngài/giáo sư' lí nhí, ánh mắt lảng tránh.",
+                    "behavior": "Lẩm bẩm về quả báo, hay nhìn chằm chằm xuống đất. *Cúi gầm mặt, giọng u ám*"
+                },
+                "initial": "Ông ta chết là do trời phạt... một kẻ đạo đức giả như thế không xứng đáng sống!", 
+                "truth": "Sự thật: Vô tội. Cậu ta căm thù nạn nhân nhưng không dám ra tay.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-07",
+        "title": "QUÁN ẢO THUẬT TRONG TUYẾT",
+        "victim": "Sugimoto Doji - Chủ biệt thự, Ảo thuật gia nghiệp dư",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Biệt thự biệt lập giữa rừng thông. <strong>Thời gian:</strong> Mùa đông bão tuyết.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 16 | Anime Ep 132-134</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>18:00:</strong> Cầu treo duy nhất nối với đất liền bốc cháy dữ dội.</li><li><strong>20:30:</strong> Sugimoto ra sân sau biểu diễn ảo thuật thoát hiểm trên nền tuyết.</li><li><strong>21:15:</strong> Phát hiện Sugimoto chết giữa vũng máu, lưng cắm mũi tên. Bán kính 20m xung quanh tuyệt nhiên KHÔNG CÓ DẤU CHÂN.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Đúng 21 giờ 15 phút... một cảnh tượng kinh hoàng đập thẳng vào mắt mọi người từ khung cửa kính: Sugimoto nằm sấp bất động trên nền tuyết lạnh giá, chiếc nỏ bằng thép xuyên thẳng qua lưng găm chặt ông xuống đất. Điều khiến tất cả chết lặng là một bán kính rộng hơn 20 mét tuyết phẳng lặng mịn màng, không một vết chân, không một rãnh trượt! Tựa như nạn nhân từ trên trời rơi thẳng xuống hoặc bị một thế lực siêu nhiên nhấc bổng qua không trung.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Bóng ma 'Kagehoushi' (Thầy đồ bóng đêm) chát đe dọa trên mạng.<br>- Katsuki lén giấu chiếc bật lửa và đạo cụ bị cháy.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Tanaka Kikue", 
+                "role": "Thành viên Câu lạc bộ Ảo thuật", 
+                "psycho": {
+                    "trait": "Bề ngoài ngây ngô, hậu đậu nhưng bên trong là một thiên tài ảo thuật cơ học và thao túng tâm lý.",
+                    "pronouns": "Xưng 'em - các anh chị' nhũn nhặn, luôn miệng khen ngợi người khác.",
+                    "behavior": "Ngơ ngác, hoảng loạn tột độ, hay rơm rớm nước mắt tạo vỏ bọc yếu đuối. *Lùi lại, ôm mặt khóc nấc*"
+                },
+                "initial": "Em sợ lắm... bóng ma Kagehoushi ngoài rừng tuyết sẽ giết hết chúng ta mất! Có phải ma không anh?", 
+                "truth": "Sự thật: Kikue là HUNG THỦ (bí danh Kagehoushi). TRICK BAY TRÊN TUYẾT: Cô ta dùng dây cước và hệ thống ròng rọc nối từ ban công sang ngọn cây thông bên kia sân tuyết. Đặt thi thể lên tấm bạt trượt qua dây cáp trên không trung, đến giữa sân thì nhả chốt cho thi thể rơi thẳng xuống nền tuyết rồi dùng máy cuộn thu hồi dây cáp và tấm bạt.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Doil", 
+                "role": "Thành viên kỳ cựu",
+                "psycho": {
+                    "trait": "Lịch lãm, thông thái, đam mê tâm lý học ảo thuật.",
+                    "pronouns": "Xưng 'tôi - quý vị', ăn nói đĩnh đạc như quý ông Anh quốc.",
+                    "behavior": "Điềm đạm, mỉm cười nhẹ, hay chống tay lên cằm suy luận. *Khẽ nhấp ngụm trà*"
+                },
+                "initial": "Thưa ngài thám tử, mọi màn ảo thuật đều có điểm mù của nó. Kẻ thủ ác chỉ đang chơi đùa với thị giác của chúng ta thôi.", 
+                "truth": "Sự thật: Vô tội. Ông ta chỉ đam mê phân tích mánh khóe tâm lý học.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Katsuki Genji", 
+                "role": "Thành viên nghiện ảo thuật bài", 
+                "psycho": {
+                    "trait": "Cộc cằn, nóng nảy, tự phụ.",
+                    "pronouns": "Xưng 'tôi - mấy người' gắt gỏng; gọi nạn nhân là 'tên khoác lác'.",
+                    "behavior": "Lớn tiếng, cau mày, tay luôn đút túi quần hoặc nghịch bộ bài. *Trợn mắt, chỉ tay*"
+                },
+                "initial": "Cầu treo cháy thì liên quan quái gì đến bộ bài của tôi? Đừng có vớ vẩn mà nghi ngờ lung tung!", 
+                "truth": "Sự thật: Vô tội. Anh ta lúng túng giấu bộ bài và bật lửa vì sợ bị nghi là người đốt cầu treo, nhưng thực chất chỉ là vô tình.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-08",
+        "title": "LỜI NGUYỀN NÀNG TIÊN CÁ",
+        "victim": "Ebihara Saori, Kuroe Naoko, Kimishima Toshimi",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Đảo Bikuni. <strong>Thời gian:</strong> Đêm Lễ hội Nàng Tiên Cá.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 28 | Anime Ep 222-224</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>18:00:</strong> Lễ bốc thăm Mũi Tên Tiên Cá bắt đầu tại đền thờ.</li><li><strong>20:00:</strong> Thi thể Saori bị phát hiện treo lơ lửng trên thác nước.</li><li><strong>22:30:</strong> Naoko bị siết cổ trên lưới đánh cá giữa biển.</li><li><strong>00:00:</strong> Đền thờ bốc cháy; thi thể cháy đen được cho là của vu nữ Kimie.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Ba mũi tên thần Dugong – biểu tượng của sự bất tử – được chuẩn bị trao tặng dưới bàn tay run rẩy của bà cụ Mikoto (được đồn đại đã sống 130 tuổi). Bỗng một tiếng la hét thất thanh từ phía thác nước xé tan tiếng trống. Dưới ánh trăng, thi thể của Saori đang treo lơ lửng giữa dòng thác cuồn cuộn, mái tóc dài rủ xuống như chiếc đuôi cá ma quái. Đêm đó, đền thờ bốc cháy ngùn ngụt, để lại một bộ hài cốt cháy đen không thể nhận dạng cùng chiếc thẻ căn cước của vu nữ Kimie...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Bà cụ 130 tuổi và vu nữ Kimie xuất hiện cùng lúc tạo chứng cứ ngoại phạm tuyệt đối.<br>- Yếu tố tâm linh về lời nguyền thịt tiên cá.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Shimabukuro Kimie", 
+                "role": "Vu nữ đền thờ", 
+                "psycho": {
+                    "trait": "Xinh đẹp, thanh thoát, hiền thục; nhưng bên trong gánh vác nỗi đau mất mẹ tột cùng và áp lực duy trì danh dự truyền thuyết hòn đảo.",
+                    "pronouns": "Xưng 'tôi - các bạn/thám tử' hòa nhã. Khi đóng giả bà cụ thì xưng 'Ta', giọng thều thào uy nghiêm.",
+                    "behavior": "Điềm tĩnh, đôi mắt buồn thăm thẳm nhìn ra biển, cười nhẹ nhàng. *Cúi đầu chào, nụ cười buồn*"
+                },
+                "initial": "Mũi tên này sẽ bảo hộ linh hồn các người... (Giọng bà cụ). Tôi thực sự không biết ai đã nhẫn tâm sát hại Saori thưa anh Heiji.", 
+                "truth": "Sự thật: Kimie là HUNG THỦ. TRICK ĐÓNG HAI VAI: Bà cụ 130 tuổi đã chết từ lâu. Các thế hệ phụ nữ nhà Shimabukuro đã thay nhau hóa trang (độn giày, đi khom lưng, mủ cao su) để đóng vai bà cụ. Kimie đã giết 2 người bạn để trả thù cho mẹ. Thi thể cháy đen trong đền thờ thực chất là xác của nạn nhân thứ ba (Toshimi) bị Kimie tráo thẻ căn cước để ngụy tạo cái chết của chính mình.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Kuroe Naoko", 
+                "role": "Nạn nhân 2",
+                "psycho": {
+                    "trait": "Tham lam, ích kỷ, cuồng loạn vì sợ chết, luôn khao khát sắc đẹp vĩnh cửu.",
+                    "pronouns": "Xưng 'tôi - các người', gọi Kimie là 'con bé phù thủy'.",
+                    "behavior": "Mắt trợn trừng, gào thét, luôn bấu víu vào những truyền thuyết. *Nắm chặt lấy mũi tên, lùi lại*"
+                },
+                "initial": "Nếu không có mũi tên, tiên cá sẽ róc thịt tao ra mất! Chúng mày tránh xa tao ra!", 
+                "truth": "Sự thật: Là nạn nhân. Cô ta từng tham gia vụ phóng hỏa thiêu chết mẹ Kimie 3 năm trước vì muốn thử xem 'bà cụ' có bất tử thật không.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Kimishima Toshimi", 
+                "role": "Nạn nhân 3 (Bị thiêu)", 
+                "psycho": {
+                    "trait": "Hoang tưởng, sống trong dằn vặt tội lỗi vì vụ hỏa hoạn năm xưa.",
+                    "pronouns": "Quỳ lạy xưng 'cháu - bà cụ'.",
+                    "behavior": "Lắp bắp, cắn móng tay liên tục vì sợ hồn ma dưới biển đòi mạng. *Run lẩy bẩy, cắn móng tay*"
+                },
+                "initial": "Xin bà hãy ban cho cháu mũi tên... Cháu không muốn bị nguyền rủa!", 
+                "truth": "Sự thật: Nạn nhân bị thiêu chết trong đền thờ để Kimie thế xác.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-09",
+        "title": "BIỆT THỰ HOÀNG HÔN",
+        "victim": "Đại thám tử ẩm thực Ogami Shukuzen",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Tòa lâu đài Karasuma, Nagano. <strong>Thời gian:</strong> Đêm giông bão.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 30 | Anime Ep 219 (Tập 2 giờ)</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>18:00:</strong> 6 đại thám tử đến biệt thự. Cầu duy nhất bị nổ tung cắt đứt đường lui.</li><li><strong>20:00:</strong> Tiệc tối bắt đầu dưới sự chỉ dẫn của hình nhân ma-nơ-canh có giọng nói điện tử.</li><li><strong>20:45:</strong> Ogami cắn vào đồng xu khi chơi bài, ngã gục sùi bọt mép chết vì Xyanua.</li><li><strong>21:30:</strong> Camera bị cắt đứt; các thám tử chia nhau săn lùng kẻ chủ mưu.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Giữa lúc căng thẳng leo thang, đại thám tử ẩm thực Ogami vẫn thản nhiên tham gia ván bài poker với vẻ mặt ngạo nghễ. Ông ta đưa tay nhặt chiếc đồng xu bạc trên bàn đưa lên miệng cắn để kiểm tra độ thật giả theo thói quen cố hữu. Chỉ trong chớp mắt, sắc mặt Ogami biến đổi kinh hoàng; toàn thân giật nảy lên, hai mắt trợn ngược, bọt mép trào ra trắng xóa trước khi ngã đập đầu xuống mặt bàn... Cả phòng rơi vào hỗn loạn khi năm bộ óc siêu việt còn lại lập tức rút vũ khí lùi xa nhau. Kẻ chủ mưu đang ngồi ngay trong bàn tiệc này!<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Lời đe dọa tàn sát lẫn nhau để giành kho báu.<br>- Màn kịch 'giả chết' đẫm máu của các thám tử để lừa camera của hung thủ.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Bà Senma Furuyo", 
+                "role": "Thám tử lão làng", 
+                "psycho": {
+                    "trait": "Già dặn, thông thái, sắc sảo; ẩn sau vẻ ngoài hiền từ là một bộ óc mưu lược báo thù cho cha suốt 40 năm.",
+                    "pronouns": "Xưng 'bà già này - các cô cậu thám tử trẻ'. Giọng hiền từ nhưng thâm thúy.",
+                    "behavior": "Bình tĩnh, trầm ngâm, dùng phương pháp loại trừ logic chặt chẽ để hướng các thám tử vào bí mật. *Phe phẩy quạt giấy, cười mỉm*"
+                },
+                "initial": "Một màn kịch hoàn hảo nhỉ? Bà già này chỉ đến đây vì tò mò thôi. Ai ngờ lại thành con mồi.", 
+                "truth": "Sự thật: Bà Senma là KẺ CHỦ MƯU (Hung thủ). TRICK: Bà ta biết thói quen cắn móng tay và cắn đồng xu của Ogami. Bà lén bôi Xyanua lên núm vặn ga của bật lửa và đồng xu. Khi Ogami cắn đồng xu, chất độc phát tác. Sau đó, bà ta giả vờ bị nổ tung trong xe cùng thám tử Mori để thoát khỏi sự nghi ngờ, rồi lẩn trốn vào mật đạo trong tường.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Mogi Harufumi", 
+                "role": "Cựu cảnh sát ngầm",
+                "psycho": {
+                    "trait": "Phong trần, từng trải, ngổ ngáo, nhạy bén.",
+                    "pronouns": "Xưng 'tôi - các vị' cộc lốc, hay chêm từ lóng.",
+                    "behavior": "Ngậm xì gà chưa châm, đút tay túi quần, nhún vai bất cần. *Châm xì gà, nhướng mày*"
+                },
+                "initial": "Tôi đến đây kiếm tiền thưởng chứ không rảnh chơi trò thám tử đạo đức giả với mấy người! Đừng hòng dọa tôi.", 
+                "truth": "Sự thật: Vô tội. Ông ta phối hợp cùng Shinichi diễn màn kịch bắn nhau giả chết để lừa kẻ chủ mưu lộ diện.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Hakuba Saguru", 
+                "role": "Thám tử học sinh London", 
+                "psycho": {
+                    "trait": "Quý tộc, kiêu hãnh, chuẩn xác đến từng phần trăm giây, tôn sùng duy lý tuyệt đối.",
+                    "pronouns": "Xưng 'tôi - quý vị', dùng từ ngữ hoa mỹ của giới thượng lưu.",
+                    "behavior": "Thường xuyên nhìn đồng hồ quả quýt, nhíu mày trước những suy luận vô căn cứ. *Mở nắp đồng hồ cạch một tiếng*"
+                },
+                "initial": "Vụ án mạng xảy ra vào đúng 20:45:12... Mọi suy đoán không có dữ liệu hiện trường đều là rác rưởi!", 
+                "truth": "Sự thật: Vô tội. Anh ta đại diện cho sự lý trí sắc bén và phát hiện ra vết máu trên đồng xu.", 
+                "is_killer": false 
+            },
+            "s4": { 
+                "name": "Ogami Shukuzen", 
+                "role": "Nạn nhân",
+                "psycho": {
+                    "trait": "Phàm ăn, kiêu căng, ngạo mạn, vô lễ.",
+                    "pronouns": "Xưng 'ta - các người', gọi người hầu là 'đồ vô dụng'.",
+                    "behavior": "Nhai ngấu nghiến, cười hô hố tự mãn. *Cầm đồng xu lên cắn*"
+                },
+                "initial": "Chất độc à? Không có thứ độc nào qua mắt được cái lưỡi của ta đâu! Hahaha!", 
+                "truth": "Sự thật: Là nạn nhân nhưng cũng là đồng phạm ban đầu của bà Senma trong việc tổ chức bữa tiệc này, vì lòng tham mà bị bà Senma diệt trừ.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-10",
+        "title": "LÂU ĐÀI LỬA XANH",
+        "victim": "Bà lão tàn phế / Đại phu nhân thật sự",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Lâu đài kiểu Đức của gia đình Mamiya. <strong>Thời gian:</strong> Chiều tà đến đêm tối.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 20 | Anime Ep 136-137</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>17:30:</strong> Conan giải mã mật mã bàn cờ, bước vào cánh cửa bí mật sau bức tranh và bị đánh bất tỉnh.</li><li><strong>19:00:</strong> Bác Agasa đi tìm Conan và cũng bị tấn công gục ngã dưới tầng hầm.</li><li><strong>21:00:</strong> Kẻ sát nhân cầm dao rượt đuổi Haibara và lũ trẻ trong hệ thống mật đạo tối tăm.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Khi màn đêm ngự trị, chỉ còn lại Haibara Ai cùng nhóm bạn nhí bơ vơ giữa mê cung mật đạo ẩm mốc nghẹt thở nằm sâu trong lòng bức tường đá. Tiếng bước chân lê lết nặng nề hòa cùng tiếng thở dốc điên dại của kẻ sát nhân đang bám sát ngay sau lưng họ. Cuộc rượt đuổi lên đến đỉnh điểm trên gác xép ngọn tháp cấm. Dưới ánh chớp rạch ngang trời, kẻ thủ ác hiện hình chính là bà lão tàn phế ngồi xe lăn, nay đang ĐỨNG THẲNG dậy bằng hai chân, tay lăm lăm con dao găm, đôi mắt long sòng sọc man dại của lòng tham tột cùng...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Bàn cờ khổng lồ ngoài vườn đánh lạc hướng vị trí kho báu.<br>- Sự tàn phế giả tạo của bà lão.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Mamiya Nishiki", 
+                "role": "Bà lão ngồi xe lăn", 
+                "psycho": {
+                    "trait": "Điên loạn, tham lam tột cùng, kiên nhẫn một cách quái đản; sẵn sàng hủy hoại tuổi thanh xuân để sống trong lốt bà lão gớm ghiếc chục năm.",
+                    "pronouns": "Giả giọng khàn đặc the thé xưng 'ta - các ngươi'. Khi tức giận thì gầm rít điên dại.",
+                    "behavior": "Ngồi xe lăn gõ cọc cạch. Khi lộ diện thì đứng bật dậy vung dao chém loạn xạ. *Nhe hàm răng khấp khểnh, cười the thé*"
+                },
+                "initial": "Lũ chuột nhắt các ngươi làm ồn cái gì đấy? Cút ra khỏi lâu đài của ta ngay!", 
+                "truth": "Sự thật: Ả là HUNG THỦ. Ả vốn là một cô hầu gái, đã giết phu nhân thật, phẫu thuật gọt mặt bẻ răng để giả làm bà cụ tàn phế nhằm danh chính ngôn thuận tìm kho báu giấu trong lâu đài. LỖ HỔNG: Ả ăn bằng tay trái, khác thói quen thuận tay phải của bà lớn ngày xưa.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Mamiya Masayo", 
+                "role": "Con rể",
+                "psycho": {
+                    "trait": "Thực dụng, bất tài, nợ nần cờ bạc, luôn thèm khát tài sản dòng họ vợ.",
+                    "pronouns": "Xưng 'con - mẹ' khúm núm với bà lão; xưng 'tôi - ông' trịch thượng với người làm.",
+                    "behavior": "Ấp úng, lúng túng khi bị hỏi về nợ nần, hay đổ mồ hôi. *Lảng tránh ánh mắt, gắt gỏng vặt*"
+                },
+                "initial": "Tôi không biết lũ trẻ đi đâu! Tôi bận làm việc trong phòng, các người phiền phức quá!", 
+                "truth": "Sự thật: Vô tội. Hắn cư xử đáng ngờ vì muốn lén tìm kho báu để trả nợ cờ bạc chứ không giết ai.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Người làm vườn", 
+                "role": "Phục vụ lâu năm", 
+                "psycho": {
+                    "trait": "Thật thà, chất phác, nhưng mang nỗi sợ hãi mơ hồ về bà chủ nhà.",
+                    "pronouns": "Xưng 'con - thưa bà lớn', xưng 'tôi - các chú công an'.",
+                    "behavior": "Ngập ngừng, gãi đầu gãi tai, có vẻ bồn chồn. *Cúi đầu khép nép*"
+                },
+                "initial": "Sau vụ cháy tháp năm xưa, bà lớn đột nhiên ăn bằng tay trái và quên sạch các thói quen cũ... tôi thấy lạ lắm nhưng không dám nói.", 
+                "truth": "Sự thật: Vô tội. Ông ta là người duy nhất tinh ý nhận ra sự giả mạo của bà lão nhưng quá sợ hãi để tố giác.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-11",
+        "title": "NỤ CƯỜI LẠNH CỦA MẶT NẠ NGUYỀN RỦA",
+        "victim": "Suou Beniko (60 tuổi) - Nhà từ thiện nổi tiếng giả tạo",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Biệt thự của Suou Beniko. <strong>Thời gian:</strong> Nửa đêm.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Anime Special Ep 184 (Tập 1 giờ)</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>21:00:</strong> Bà Beniko khóa trái cửa phòng ngủ, bật hệ thống chống trộm điện tử hai lớp.</li><li><strong>00:00:</strong> Điện thoại phòng khách reo vang; giọng nói bí ẩn tuyên bố 'Mặt nạ nguyền rủa đã uống máu'.</li><li><strong>00:15:</strong> Phá cửa phòng ngủ: Bà Beniko bị đâm xuyên họng, xung quanh thi thể phủ kín 200 chiếc mặt nạ cười dính máu.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Khi cánh cửa nặng nề bật mở, cảnh tượng rùng rợn bên trong khiến tất cả nhân chứng rụng rời tay chân: bà Beniko nằm bất động trên giường, một con dao găm cắm thẳng xuyên qua yết hầu. Điều kinh hoàng hơn cả là toàn bộ 200 chiếc mặt nạ cười Shokuro đã biến mất khỏi phòng triển lãm và nay nằm phủ kín xung quanh thi thể nạn nhân thành một vòng tròn hoàn hảo, từng chiếc vấy máu đỏ thẫm như đang nở nụ cười giễu cợt. Khe thông gió trên cửa sổ chỉ rộng chưa đầy hai mươi phân, hoàn toàn không bóng người nào có thể lọt qua.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Lời nguyền 200 chiếc mặt nạ cười dính máu bao vây thi thể làm mọi người sợ hãi ma quỷ.<br>- Vết cạy tủ trong thư viện của Matsuya đánh lạc hướng thành vụ cướp của giết người.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Aikawa Aoi", 
+                "role": "Nhiếp ảnh gia", 
+                "psycho": {
+                    "trait": "Lạnh lùng, điềm đạm, ánh mắt u uất đượm buồn; tính toán cơ học tinh xảo để biến lời nguyền thành án mạng phòng kín hoàn hảo để trả thù cho mẹ.",
+                    "pronouns": "Xưng 'tôi - thưa phu nhân/thám tử' rất mực thước, phong thái nghệ sĩ.",
+                    "behavior": "Chậm rãi, từ tốn, giọng điệu có phần tâm linh. *Bình thản chỉnh lại ống kính máy ảnh*"
+                },
+                "initial": "Tôi chỉ là người chụp ảnh dạo, mặt nạ nguyền rủa muốn trừng phạt ai thì đó là ý trời thôi! Tôi không có khả năng đi xuyên tường.", 
+                "truth": "Sự thật: Aikawa là HUNG THỦ. TRICK DÂY CAO SU: Hắn xâu 200 chiếc mặt nạ bằng hai sợi dây cao su tạo thành ống trụ rỗng dài luồn qua ô thoáng cửa sổ. Đầu ống gắn dao găm. Hắn kéo căng dây cao su từ bên ngoài rồi buông chốt: lực đàn hồi phóng con dao cắm phập vào cổ bà Beniko. Cắt đứt dây khiến 200 mặt nạ bung ra rải đều quanh thi thể.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Matsuya", 
+                "role": "Vận động viên",
+                "psycho": {
+                    "trait": "Bộp chộp, nông cạn, bốc đồng, nợ nần cờ bạc ngập đầu.",
+                    "pronouns": "Xưng 'cháu - thưa bà' nịnh bợ xin tiền; nhưng bị hỏi cung thì xưng 'tôi - các người' gắt gỏng.",
+                    "behavior": "Vò đầu bứt tai, quát tháo, hay chỉ trỏ vào mặt người khác. *Cau mày, vung tay tức giận*"
+                },
+                "initial": "Tôi lục thư viện tìm giấy nợ của tôi thôi, đừng có chụp mũ tôi giết người! Mụ già keo kiệt đó chết đi cho rảnh nợ!", 
+                "truth": "Sự thật: Vô tội. Hắn chỉ lợi dụng lúc hỗn loạn đi ăn trộm giấy ghi nợ của chính mình.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Yuri", 
+                "role": "Cháu gái kiêm trợ lý", 
+                "psycho": {
+                    "trait": "Yếu đuối, nhút nhát, sợ hãi người cô độc đoán và đặc biệt khiếp sợ những chiếc mặt nạ.",
+                    "pronouns": "Xưng 'cháu - thưa cô/cảnh sát' khép nép, run rẩy.",
+                    "behavior": "Khóc nấc ôm mặt, co rúm người lại. *Run rẩy, nước mắt giàn giụa*"
+                },
+                "initial": "Cháu đã can cô đừng mang những chiếc mặt nạ ma quái đó về rồi mà cô không nghe... Huhuhu...", 
+                "truth": "Sự thật: Cô gái hoàn toàn vô tội và bị ám ảnh tâm lý bởi án mạng.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-12",
+        "title": "ÁN MẠNG PHÒNG THU TRUYỀN HÌNH",
+        "victim": "Suwa Yuji - Nghệ sĩ, đồng sản xuất chương trình",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Đài truyền hình Nichiuri TV, Tokyo. <strong>Thời gian:</strong> Giờ phát sóng trực tiếp.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 13 | Anime Ep 31</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>15:00:</strong> Chương trình trực tiếp bắt đầu phát sóng.</li><li><strong>15:35:</strong> Giải lao 4 phút chiếu quảng cáo.</li><li><strong>15:38:</strong> Tiếng súng nổ vang tại phòng đạo cụ tầng 4; nạn nhân bị bắn trúng trán.</li><li><strong>15:39:</strong> MC Matsuo quay lại vị trí trước máy quay tầng 1, tươi cười dẫn tiếp.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Ngay khi buổi phát sóng vừa kết thúc, một tiếng la hét thất thanh từ tầng 4 dội xuống: thi thể của nhà sản xuất Suwa Yuji được tìm thấy trong phòng kho đạo cụ bị khóa trái, một viên đạn súng lục găm thẳng vào giữa trán. Khoảng cách từ trường quay tầng 1 lên phòng kho tầng 4 đòi hỏi ít nhất 7-8 phút chạy bộ qua nhiều lớp cửa an ninh, khiến cho bằng chứng ngoại phạm của MC Matsuo Takashi trở nên vững chắc như một bức tường thép vì anh ta chỉ có 4 phút quảng cáo để làm mọi chuyện.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Alibi phát sóng trực tiếp hoàn hảo của Matsuo khiến cảnh sát quay sang nghi ngờ nhân viên hậu đài.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Matsuo Takashi", 
+                "role": "MC Dẫn chương trình", 
+                "psycho": {
+                    "trait": "Tự tin, lịch lãm, tài hoa, phản xạ ngôn từ cực nhanh; lòng tự trọng nghề nghiệp cực cao, uất hận vì bị gạt khỏi chương trình tâm huyết.",
+                    "pronouns": "Xưng 'tôi', gọi thám tử là 'ngài'. Lịch sự nhưng trịch thượng ngầm.",
+                    "behavior": "Nở nụ cười sân khấu rạng rỡ, giọng điệu ấm áp, tự tin tuyệt đối. *Chỉnh lại cà vạt, mỉm cười tự tin*"
+                },
+                "initial": "Thưa thanh tra Megure, hàng triệu khán giả truyền hình vừa chứng kiến tôi dẫn chương trình trực tiếp, tôi làm sao phân thân lên tầng 4 được?", 
+                "truth": "Sự thật: Matsuo là HUNG THỦ. TRICK BẮN TỪ XA: Hắn gọi điện thoại từ cửa sổ tầng thượng (tầng trên tầng 4), dọa nhảy lầu để ép nạn nhân ngó đầu ra ngoài cửa sổ tầng 4 nhìn lên. Hắn bắn thẳng xuống trán nạn nhân, sau đó dùng cáp trượt từ ban công tầng thượng đáp thẳng xuống cầu thang thoát hiểm tầng 1 chỉ trong vài chục giây của 4 phút quảng cáo.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Đạo diễn chương trình", 
+                "role": "Tổng đạo diễn",
+                "psycho": {
+                    "trait": "Nóng tính, cầu toàn, áp lực công việc cao độ.",
+                    "pronouns": "Quát nhân viên 'chúng mày - tao', với cảnh sát xưng 'tôi' nóng vội.",
+                    "behavior": "Cuống cuồng, liên tục nhìn đồng hồ, giục giã mọi người. *Vỗ trán, đi đi lại lại*"
+                },
+                "initial": "Làm ơn nhanh lên các anh cảnh sát, lịch phát sóng của đài chúng tôi sắp bị gián đoạn rồi! Ai giết thì bắt đi!", 
+                "truth": "Sự thật: Vô tội. Ông ta chỉ quan tâm đến rating và tiến độ phát sóng của nhà đài.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-13",
+        "title": "ÁN MẠNG PHÒNG TRÀ BẾ TẮC",
+        "victim": "Nữ đại sư phụ trà đạo - Bị siết cổ",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Trà thất phong cách Nhật Bản. <strong>Thời gian:</strong> Chiều tối một ngày mưa thu.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 26 | Anime Ep 196</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>16:00:</strong> Nạn nhân vào phòng trà tĩnh tâm một mình.</li><li><strong>17:15:</strong> Cửa phòng trà khóa trái; bóng nạn nhân ngồi thiền bất động in trên vách giấy.</li><li><strong>17:45:</strong> Phá cửa giấy: Nạn nhân đã bị siết cổ chết từ lâu, then cài gỗ bên trong vẫn gài chặt.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Khi thọc ngón tay xé rách một góc giấy bồi cửa trượt Shoji để nhìn vào, một cảnh tượng kinh hoàng hiện ra: vị đại sư phụ gục đầu trên bàn trà, sợi dây thừng siết chặt quanh cổ. Bốn bức tường gỗ kín mít, sàn chiếu tatami nguyên vẹn không dấu vết cạy phá, và chiếc then cài gỗ dày cộp được đóng chốt cẩn mật từ phía bên trong. Cả ba môn đồ đều có bằng chứng ngoại phạm khi cùng ngồi ở gian bếp đối diện suốt hơn hai tiếng đồng hồ. Cơ chế phòng kín truyền thống khiến việc điều tra rơi vào bế tắc.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Cửa dán giấy bồi Shoji hoàn toàn nguyên vẹn, không có khe hở để đẩy chốt.<br>- Hai môn đồ cố tình giấu chiếc kéo tỉa cành vì sợ liên lụy.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Môn đồ trưởng", 
+                "role": "Học trò lâu năm", 
+                "psycho": {
+                    "trait": "Khắc kỷ, chịu thương chịu khó, tôn thờ nghệ thuật trà đạo nhưng uất ức vì bị sư phụ cướp bằng sáng chế tác phẩm gốm.",
+                    "pronouns": "Xưng 'con - thưa ngài', nói năng mực thước.",
+                    "behavior": "Nhỏ nhẹ, từ tốn, hay quỳ gối cúi đầu. Đôi mắt thỉnh thoảng lộ vẻ lạnh lẽo. *Cúi gập người, hai tay chắp trước bụng*"
+                },
+                "initial": "Cánh cửa phòng trà cài chốt gỗ từ bên trong, chúng con đều ngồi chuẩn bị bánh ở gian ngoài, làm sao có thể bước vào phòng sư phụ được ạ?", 
+                "truth": "Sự thật: Môn đồ trưởng là HUNG THỦ. TRICK PHÒNG KÍN: Ả đã siết cổ sư phụ từ trước. Ả buộc dây cước câu cá mảnh quanh then cài cửa gỗ rồi luồn qua khe cực nhỏ giữa hai cánh cửa Shoji ra ngoài. Đứng ngoài đóng cửa, ả kéo mạnh dây cước để then cài trượt vào chốt khóa rồi giật mạnh đứt dây cước thu hồi hung khí.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Hai môn đồ thứ", 
+                "role": "Học trò",
+                "psycho": {
+                    "trait": "Ghen ghét, đố kỵ lẫn nhau, luôn tìm cách lấy lòng sư phụ để tranh đoạt vị trí kế thừa.",
+                    "pronouns": "Xưng 'tôi - cô' bóng gió, mỉa mai lẫn nhau.",
+                    "behavior": "Đổ lỗi quanh co, chỉ trỏ vào mặt nhau, vội vã đưa bằng chứng ngoại phạm. *Hất tóc, bĩu môi*"
+                },
+                "initial": "Chắc chắn là cô ta làm! Tôi nãy giờ ở trong bếp làm sao mà giết người được!", 
+                "truth": "Sự thật: Vô tội. Họ giấu chiếc kéo tỉa cành để làm khó cảnh sát vì sợ bị lôi vào vụ án.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-14",
+        "title": "ÁN MẠNG PHÒNG TẮM KHÓA KÍN",
+        "victim": "Aoshima Masayo - Bị cắt cổ tay trong bồn tắm",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Căn hộ chung cư cao cấp. <strong>Thời gian:</strong> Buổi tối cuối tuần.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 24 | Anime Ep 121-122</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>18:00:</strong> Hai chị em đi xem hòa nhạc; cô chị Masayo về nhà trước tắm gội.</li><li><strong>20:30:</strong> Cô em Mina cùng nhóm thám tử Mori về đến căn hộ.</li><li><strong>20:45:</strong> Phát hiện cửa phòng tắm dán kín băng dính; rạch cửa phát hiện Masayo đã chết trong bồn tắm đầy máu.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Trước mắt thám tử Mori là một cảnh tượng vô cùng quái dị: toàn bộ các mép cửa phòng tắm từ trên xuống dưới, kể cả khe hở dưới chân cửa và các lỗ thông gió, đều bị niêm phong chằng chịt bởi những dải băng dính đóng hàng màu nâu dày đặc TỪ MẶT PHÍA BÊN TRONG. Khi Mori dùng dao rạch đứt các lớp băng dính để xông vào, Masayo nằm bất động trong bồn tắm tràn ngập nước nhuộm đỏ thẫm, cổ tay trái bị một vết rạch sâu hoắm, con dao lam sắc lẹm nằm dưới đáy bồn. Cảnh sát Megure khẳng định 100% đây là vụ tự sát phòng kín hoàn hảo.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Hiện trường dán kín băng dính từ bên trong tuyệt đối không có khe hở.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Aoshima Mina", 
+                "role": "Em gái nạn nhân", 
+                "psycho": {
+                    "trait": "Tự ti, nhạy cảm, cố chấp, chìm đắm trong tình yêu đơn phương với vị hôn phu của chị gái, biến đố kỵ thành sát tâm.",
+                    "pronouns": "Xưng 'em - chị' ngọt ngào ngoài mặt nhưng bên trong cay đắng.",
+                    "behavior": "Bật khóc nức nở, giả vờ gục ngã ôm mặt đau đớn. *Nấc nghẹn, lau nước mắt*"
+                },
+                "initial": "Chị Masayo ơi... sao chị lại dại dột tự tử như thế này... chị sắp làm cô dâu cơ mà! Huhuhu...", 
+                "truth": "Sự thật: Mina là HUNG THỦ. TRICK BĂNG DÍNH TỪ XA: Cô ta chuốc thuốc mê chị, rạch cổ tay. Trước khi ra ngoài đóng cửa, cô ta dán sẵn các dải băng dính lên khung cửa bên trong, chừa đuôi dán dính vào một tấm bạt nilon mỏng luồn ra ngoài qua khe cửa. Khi đóng cửa, chỉ cần kéo tấm nilon từ bên ngoài, các dải băng dính sẽ bị vuốt chặt vào mép cửa, hoàn tất phòng kín từ xa. Lỗ hổng: Vết keo sót lại trên góc cửa.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Vị hôn phu", 
+                "role": "Chồng sắp cưới của nạn nhân",
+                "psycho": {
+                    "trait": "Thật thà, chung thủy, đau đớn tột cùng khi mất người yêu ngay trước ngày cưới.",
+                    "pronouns": "Xưng 'anh - em' tha thiết, tuyệt vọng.",
+                    "behavior": "Bàng hoàng, đứng chết trân tại chỗ, hai tay ôm đầu. *Gục xuống khóc không thành tiếng*"
+                },
+                "initial": "Masayo... tại sao em lại bỏ anh mà đi? Thiệp cưới chúng ta vừa gửi xong mà...", 
+                "truth": "Sự thật: Anh ta vô tội. Bi kịch tột cùng là Masayo vốn đã chuẩn bị dọn ra đi để nhường vị hôn phu cho em gái vì biết em mình yêu anh ta, nhưng người em không biết điều đó nên đã lỡ tay giết chị.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-15",
+        "title": "CÁI CHẾT CỦA TEQUILA (ÁO ĐEN)",
+        "victim": "Tequila - Thành viên khổng lồ của Tổ chức Áo Đen",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Khách sạn Daikoku, Tokyo. <strong>Thời gian:</strong> Buổi chiều, Triển lãm Trò chơi Điện tử.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 12 | Anime Ep 54</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>15:00:</strong> Tequila nhận vali đen tại quầy gửi đồ sau khi đổi thẻ số với Nakajima.</li><li><strong>15:07:</strong> Tequila vào buồng vệ sinh tầng hầm mở vali; bom kích nổ xé xác hắn thành trăm mảnh.</li><li><strong>15:30:</strong> Khách sạn bị phong tỏa; Tổ chức Áo Đen nổ bom quán bar Cocktail phi tang dấu vết.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Người đàn ông khổng lồ mang mật danh Tequila bước vào buồng vệ sinh thứ ba và chốt chặt cửa bên trong để kiểm tra chiếc vali vừa lấy. Đúng 15 giờ 07 phút, một tiếng nổ kinh thiên động địa bùng lên xé toạc không gian tầng hầm! Sóng xung kích khổng lồ hất văng Conan, khói lửa ngùn ngụt bao trùm. Cánh cửa buồng vệ sinh bị thổi bay thành trăm mảnh sắt vụn. Thi thể của gã khổng lồ Tequila bị xé nát hoàn toàn, chỉ còn sót lại chiếc đế giày cháy xém dính chặt vào góc tường.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Sự xuất hiện của Tổ chức Áo Đen khiến Conan lầm tưởng đây là vụ thanh trừng nội bộ để bịt đầu mối, làm lu mờ động cơ cá nhân của các lập trình viên.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Takeshita", 
+                "role": "Trưởng nhóm lập trình", 
+                "psycho": {
+                    "trait": "Lầm lì, thâm trầm, bề ngoài điềm đạm nhưng nội tâm nung nấu ngọn lửa phục thù vì người yêu tự sát do gã đồng nghiệp tồi tệ.",
+                    "pronouns": "Xưng 'tôi - cậu' bình thản, vỗ vai cười nói như bạn thân để đối phương không nghi ngờ.",
+                    "behavior": "Lạnh lùng, giữ thái độ dửng dưng không quan tâm. *Nhún vai, đút tay túi quần*"
+                },
+                "initial": "Vụ nổ ở nhà vệ sinh thì liên quan gì đến ba người chúng tôi đang chơi game ở hội trường chứ? Mấy viên cảnh sát buồn cười thật.", 
+                "truth": "Sự thật: Takeshita là HUNG THỦ đánh bom. TRICK: Hắn gài bom vào vali kích hoạt bằng công tắc ngắt mạch khi mở khóa số, cố tình đổi thẻ gửi đồ để đồng nghiệp Nakajima nhận nhầm. Nhưng Nakajima lại dùng chính thẻ đó giao dịch bán phần mềm cho Tequila (Áo Đen), biến sát thủ Áo Đen thành kẻ chết thay.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Nakajima Hideaki", 
+                "role": "Lập trình viên (Kẻ bán độ)",
+                "psycho": {
+                    "trait": "Sở khanh, thực dụng, hám tiền, nghiện cờ bạc nợ nần, tự phụ.",
+                    "pronouns": "Xưng 'tôi - các anh' ngạo mạn; nhưng nhắc đến gã khổng lồ đen thì giọng lí nhí run rẩy.",
+                    "behavior": "Mặt cắt không còn giọt máu, chân tay run lẩy bẩy, dáo dác nhìn quanh vì sợ Áo Đen thanh toán bịt đầu mối. *Cắn móng tay, nhìn lấm lét*"
+                },
+                "initial": "Tôi... tôi không biết gì hết! Cái vali đó là của tôi nhưng tôi thề tôi không bỏ bom! Các người phải bảo vệ tôi!", 
+                "truth": "Sự thật: Hắn vô tội trong vụ đánh bom, nhưng hắn là kẻ đê tiện bán thông tin công ty cho Tổ chức Áo Đen để trả nợ cờ bạc. Nhờ tráo thẻ mà hắn thoát chết trong gang tấc.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Ueda", 
+                "role": "Lập trình viên đối thủ", 
+                "psycho": {
+                    "trait": "Ganh đua, hẹp hòi, hay săm soi thành quả của người khác.",
+                    "pronouns": "Xưng 'tôi - cậu' hằn học.",
+                    "behavior": "Vội vã thanh minh, đẩy trách nhiệm cho người khác. *Khoanh tay, nhướng mày*"
+                },
+                "initial": "Lúc nổ bom tôi đang đấu game với ông râu kẽm (Mori) ở trên này mà, mọi người đều thấy! Tìm người khác mà nghi ngờ đi.", 
+                "truth": "Sự thật: Vô tội. Hắn chỉ ganh tị tài năng của đồng nghiệp chứ không có gan giết người.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-16",
+        "title": "PHÒNG KÍN NGHỆ NHÂN GỐM SỨ",
+        "victim": "Nàng dâu trưởng Masayo - Bị treo cổ trong phòng kho",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Dinh thự và lò gốm gia tộc Kikuemon. <strong>Thời gian:</strong> Chiều tối một ngày thu.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 30-31 | Anime Ep 228-229</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>16:00:</strong> Masayo lên phòng kho kiểm kê đồ gốm và không trở xuống.</li><li><strong>18:00:</strong> Mọi người lên gọi cửa nhưng cửa bị khóa trái.</li><li><strong>18:15:</strong> Phá cửa sổ: Masayo bị treo cổ lơ lửng, dưới chân là mảnh vỡ chiếc bình gốm vỡ tan.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Khi nhìn qua ô cửa kính thông gió phía trên, một cảnh tượng kinh hoàng hiện ra dưới ánh trăng mờ ảo: Masayo đang đung đưa lơ lửng giữa không trung, chiếc thòng lọng siết chặt lấy cổ, trong khi ngay dưới chân thi thể là những mảnh vỡ vụn của chiếc bình gốm cổ vô giá nằm ngổn ngang trên sàn nhà. Cánh cửa chỉ có thể hé mở được vài phân vì ngay sau cánh cửa là một chồng bình gốm tinh xảo được xếp cao ngất ngưởng, chỉ cần đẩy mạnh là toàn bộ số cổ vật sẽ vỡ tan tành. Căn phòng kho biến thành một pháo đài phòng kín nghệ thuật bất khả xâm phạm.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Chồng bình gốm quý xếp sát cửa tạo ấn tượng phòng kín bất khả xâm phạm.<br>- Alibi uống trà của Seto suốt buổi chiều trước mặt thám tử Mori.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Seto Ryusuke", 
+                "role": "Đệ tử trẻ", 
+                "psycho": {
+                    "trait": "Cần mẫn, nhẫn nhục, đam mê gốm sứ cháy bỏng nhưng bị dồn vào chân tường khi bị nàng dâu bóc lột và sỉ nhục.",
+                    "pronouns": "Xưng 'tôi - các ngài', khép nép, cúi đầu nhận lỗi.",
+                    "behavior": "Nghẹn ngào, bàn tay dính đất sét run rẩy. *Cúi gầm mặt, giọng uất ức*"
+                },
+                "initial": "Tôi... cả buổi chiều tôi ngồi đàm đạo uống trà với thầy ở phòng khách, làm sao có thể bước vào căn phòng kho chứa đầy bình gốm quý đó được chứ?", 
+                "truth": "Sự thật: Seto là HUNG THỦ. TRICK ĐẤT SÉT: Hắn sát hại nạn nhân từ trước, dùng chiếc bình gốm mới tạo hình bằng 'đất sét ướt chưa nung' làm bục đứng cho nạn nhân. Dưới sức nặng cơ thể và độ ẩm không khí, chiếc bình đất sét từ từ bị lún xẹp và biến dạng dần, khiến nạn nhân từ từ bị treo cổ ngạt thở trong lúc hung thủ ung dung uống trà ở tầng dưới để tạo alibi. Mảnh vỡ ở hiện trường là của một chiếc bình khác bị đập vỡ để đánh lừa.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Đại nghệ nhân Kikuemon", 
+                "role": "Bố chồng nạn nhân",
+                "psycho": {
+                    "trait": "Tự phụ, gia trưởng, yêu gốm sứ hơn mạng sống, coi trọng danh tiếng hơn cả gia đình.",
+                    "pronouns": "Xưng 'ta - các người', uy quyền và áp đặt.",
+                    "behavior": "Đau đớn ôm mảnh vỡ bình gốm gào thét, không thèm nhìn thi thể con dâu. *Ôm chặt mảnh gốm, nước mắt giàn giụa*"
+                },
+                "initial": "Trời ơi! Bình gốm vô giá của ta... Tác phẩm tâm huyết của ta bị hủy hoại hết rồi... cả con dâu ta nữa!", 
+                "truth": "Sự thật: Vô tội. Ông ta chỉ quan tâm đến nghệ thuật và đau xót cho bình gốm hơn là cái chết của người con dâu cay nghiệt.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Hai môn đồ thứ", 
+                "role": "Học trò", 
+                "psycho": {
+                    "trait": "Ghen ghét, đố kỵ, luôn tìm cách lấy lòng sư phụ để tranh đoạt vị trí kế thừa.",
+                    "pronouns": "Xưng 'chúng tôi', nói móc mỉa.",
+                    "behavior": "Đổ lỗi quanh co, vội vã đưa ra bằng chứng ngoại phạm. *Nhún vai, ánh mắt lấm lét*"
+                },
+                "initial": "Cô ta chết là đáng đời! Đồ đàn bà độc đoán. Nhưng không phải chúng tôi làm đâu nhé, lúc đó chúng tôi đang nhóm lò nung!", 
+                "truth": "Sự thật: Bọn họ vô tội, chỉ có ác cảm với nạn nhân.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-17",
+        "title": "ÁN MẠNG TÀU ĐÊM BẮC ĐẨU (HOKUTOSEI)",
+        "victim": "Izumo Katori - Chủ tiệm kim hoàn",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Chuyến tàu tốc hành Hokutosei đi Hokkaido. <strong>Thời gian:</strong> Đêm mùa đông bão tuyết.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 22 | Anime Ep 144-145</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>23:00:</strong> Tàu rời ga Ueno hướng về phương Bắc.</li><li><strong>04:15:</strong> Tiếng súng nổ tại toa ăn uống; Izumo bị bắn chết trong vũng máu.</li><li><strong>04:30:</strong> Bóng đen áo choàng đỏ bị Mori rượt đuổi đến đuôi tàu và gieo mình xuống đường ray tuyết.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Mori cùng Conan lao qua các cánh cửa nối toa. Cảnh tượng bên trong toa ăn uống khiến ai nấy bàng hoàng: chủ tiệm kim hoàn giàu có Izumo Katori nằm gục bên chiếc bàn ăn phủ khăn trắng tinh, ngực áo loang lổ vết máu tươi từ ba phát đạn. Ngay lúc đó, một bóng đen trùm áo choàng đỏ kín mít, tay cầm khẩu súng lục sáng loáng, bất ngờ lao vụt qua hành lang tăm tối hướng thẳng về phía đuôi tàu. Khi bị truy đuổi đến đường cùng, kẻ sát nhân đã trèo lên lan can sắt, nở một nụ cười ma quái rồi buông tay gieo mình thẳng xuống hẻm núi sâu thẳm dưới chân cầu sắt.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Ảo ảnh kẻ sát nhân nhảy khỏi đoàn tàu khiến cảnh sát tin rằng hung thủ đã chết dưới vực sâu.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Kano", 
+                "role": "Nữ nhân viên phục vụ toa tàu", 
+                "psycho": {
+                    "trait": "Nhẹ nhàng, ân cần, bề ngoài chu đáo của một tiếp viên chuyên nghiệp nhưng nội tâm giấu kín sự toan tính lạnh lùng.",
+                    "pronouns": "Xưng 'cháu - thưa quý khách' hoặc 'em - anh/chị' ngọt ngào, lễ phép.",
+                    "behavior": "Điềm tĩnh, phối hợp nhiệt tình với cảnh sát, tỏ ra sợ hãi chân thật. *Lấy tay ôm ngực, thở dốc sợ hãi*"
+                },
+                "initial": "Trời ơi đáng sợ quá! Cháu vừa bưng khay đi ngang qua thì thấy một người mặc áo choàng đỏ dính máu chạy vụt qua! Hắn lao ra đuôi tàu rồi ạ!", 
+                "truth": "Sự thật: Kano là HUNG THỦ. TRICK ẢO ẢNH: Cô ta đã đánh cắp bản thảo tiểu thuyết trinh thám của nhà văn Kudo Yusaku để thực hiện án mạng mô phỏng 100% trang sách. Kẻ nhảy xuống đường ray chỉ là chiếc áo khoác gắn hình nhân ma-nơ-canh có dù nhỏ kéo trôi theo gió tuyết. Kano thật nhanh tay cởi bỏ lớp ngụy trang ở khúc quanh tối, trượt vào phòng riêng giả vờ là nhân viên vừa bị đánh thức. LỖ HỔNG: Vết muội súng dính trên bật lửa của cô ta.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Asama", 
+                "role": "Tên cướp năm xưa",
+                "psycho": {
+                    "trait": "Hung hãn, liều lĩnh, từng là đồng bọn của nạn nhân trong vụ cướp tiệm vàng.",
+                    "pronouns": "Xưng 'tao - mày'.",
+                    "behavior": "Luôn hành tung bí ẩn, lẩn khuất trong các toa tàu. *Kéo sụp nón che mặt*"
+                },
+                "initial": "Tao không giết lão ta! Tao lên tàu chỉ để đòi phần tiền của tao thôi!", 
+                "truth": "Sự thật: Hắn là con tốt thí mạng. Kano đã sát hại Asama từ trước, sau đó dùng áo choàng của hắn khoác lên ma-nơ-canh để đổ tội cho hắn, tạo hiện trường giả hắn tự sát nhảy khỏi tàu.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-18",
+        "title": "CHUYẾN TÀU TỐC HÀNH HUYỀN BÍ (BELL TREE)",
+        "victim": "Murobashi Etsuto - Bị bắn chết trong cabin khóa xích",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Chuyến tàu hơi nước cổ điển Bell Tree Express. <strong>Thời gian:</strong> Buổi trưa.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 78 | Anime Ep 701-704</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>11:30:</strong> Án mạng diễn tập tại Toa số 7; một hành khách bị bắn biến mất bí ẩn.</li><li><strong>13:00:</strong> Murobashi bị bắn chết thực sự trong cabin kín có khóa xích an ninh bên trong.</li><li><strong>15:30:</strong> Toa hàng đuôi tàu phát nổ; Bourbon đối mặt trực diện với Sherry.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Giữa những tiếng cười nói rộn rã của trò chơi giải đố, Tổ chức Áo Đen đã thâm nhập toàn bộ đoàn tàu với mục tiêu tiêu diệt tận gốc cựu nhà khoa học Sherry. Tại khoang hạng nhất Toa số 7, một tiếng nổ súng chát chúa vang lên. Murobashi Etsuto nằm gục trên ghế bọc nhung đỏ thẫm, máu tươi chảy đầm đìa. Cánh cửa khoang tàu vẫn được gài chặt bằng dây xích an ninh kiên cố từ bên trong. Cùng lúc đó, tại toa chở hàng biệt lập ở đuôi đoàn tàu, Bourbon đã dồn ép Sherry vào góc tường chứa đầy thuốc nổ C4...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Trò chơi diễn tập trinh thám khiến hành khách tưởng cái chết của Murobashi chỉ là giả.<br>- Sự săn lùng gắt gao của Tổ chức Áo Đen đan xen vụ án mạng thông thường.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Hành khách bí ẩn", 
+                "role": "Hành khách Toa 8", 
+                "psycho": {
+                    "trait": "Căm phẫn, ôm hận thù vụ hỏa hoạn do nạn nhân gây ra năm xưa.",
+                    "pronouns": "Xưng 'tôi' tỏ vẻ vô tội.",
+                    "behavior": "Làm ra vẻ bực bội vì trò chơi trinh thám của con tàu bị gián đoạn. *Nhíu mày, khoanh tay*"
+                },
+                "initial": "Tiếng súng đó chắc chỉ là một phần của trò chơi giải đố thôi, mọi người đừng làm quá lên. Cửa bị khóa xích bên trong mà!", 
+                "truth": "Sự thật: Kẻ này là HUNG THỦ giết Murobashi. TRICK KHÓA XÍCH: Hắn dùng sợi dây cước luồn qua thanh trượt của dây xích an ninh cabin; kéo dây từ ngoài qua khe cửa để chốt xích tự trượt vào rãnh khóa, tạo phòng kín giả.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Bourbon (Amuro Tooru)", 
+                "role": "Nhân viên phục vụ (Áo Đen)",
+                "psycho": {
+                    "trait": "Thông minh xuất chúng, sắc sảo, lịch lãm quyến rũ nhưng ánh mắt sắc lẹm nguy hiểm của một đặc vụ thâm nhập hàng đầu.",
+                    "pronouns": "Xưng 'tôi - cô' nhã nhặn, nụ cười ma mị.",
+                    "behavior": "Đĩnh đạc, tự tin, dùng câu hỏi gợi mở đầy thâm thúy dồn ép đối thủ vào thế bí. *Cười mỉm, ánh mắt sắc bén*"
+                },
+                "initial": "Rất vinh hạnh được diện kiến, tiểu thư Sherry... hay tôi nên gọi cô là cựu nhà khoa học Shiho Miyano nhỉ? Vụ án mạng ở toa 7 không phải việc của tôi.", 
+                "truth": "Sự thật: Bourbon vô tội trong vụ án mạng ở toa 7. Mục tiêu duy nhất của anh ta trên chuyến tàu này là bắt sống Sherry (Haibara) đem về tổ chức.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Vermouth (Chris Vineyard)", 
+                "role": "Người phụ nữ bí ẩn (Áo Đen)", 
+                "psycho": {
+                    "trait": "Bí ẩn, quyến rũ, tàn độc với kẻ thù nhưng mang lời thề bảo vệ những người cô ta trân trọng.",
+                    "pronouns": "Giọng điệu lạnh lùng, mỉa mai.",
+                    "behavior": "Điềm nhiên nhả khói thuốc, ánh mắt giễu cợt mọi suy luận của cảnh sát. *Cười khẩy, hút thuốc*"
+                },
+                "initial": "A secret makes a woman woman. Vụ bắn súng lặt vặt đó mấy thám tử nhí tự đi mà giải quyết đi.", 
+                "truth": "Sự thật: Vermouth vô tội trong cái chết của Murobashi. Bà ta chỉ lén đặt thuốc nổ C4 ở toa hành lý nhằm giết chết Sherry bất chấp mệnh lệnh bắt sống của Bourbon. (Kaito Kid cải trang thành Sherry đã dùng dù lượn thoát hiểm phút chót).", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-19",
+        "title": "ÁN MẠNG TRÊN MÁY BAY (VỤ ĐẦU TIÊN CỦA SHINICHI)",
+        "victim": "Odawara - Nhiếp ảnh gia nổi tiếng",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Khoang hạng thương gia Boeing 747. <strong>Thời gian:</strong> Chuyến bay đêm Thái Bình Dương.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 21 | Anime Ep 162</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>02:00:</strong> Đèn khoang máy bay mờ dần cho hành khách ngủ đêm.</li><li><strong>02:30:</strong> Nạn nhân Odawara vào nhà vệ sinh khoang thương gia.</li><li><strong>03:00:</strong> Tiếp viên phát hiện cửa nhà vệ sinh khóa trái có tiếng động lạ; phá cửa thấy Odawara bị đâm xuyên tim từ sau lưng.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Bên trong không gian chật hẹp nồng nặc mùi kim loại của máu tươi, nhiếp ảnh gia Odawara ngồi bất động trên nắp bồn cầu, đầu gục xuống lòng, chiếc áo sơ mi lụa trắng đẫm máu từ một vết đâm chí mạng xuyên thẳng qua lưng găm vào tâm thất. Điều làm các nhân viên an ninh hàng không hoang mang tột độ chính là sự biến mất hoàn toàn của hung khí: bốn bức tường nhựa phẳng lỳ, thùng rác inox trống rỗng. Mọi hành khách đều đã qua kiểm tra quét kim loại nghiêm ngặt trước khi lên máy bay. Không thể ném đồ vật sắc nhọn ra ngoài cửa sổ ở độ cao 10.000 mét!<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Hung khí tàng hình: Ở độ cao 10.000 mét, hung khí đã bốc hơi hoàn toàn khỏi hiện trường.</p>",
+        "killer_id": "s2",
+        "suspects": {
+            "s1": { 
+                "name": "Nữ tiếp viên trưởng", 
+                "role": "Tiếp viên hàng không", 
+                "psycho": {
+                    "trait": "Chuyên nghiệp, nhạy bén, giàu kinh nghiệm xử lý khủng hoảng trên các chuyến bay quốc tế.",
+                    "pronouns": "Xưng 'chúng tôi - quý khách' lịch sự, mực thước.",
+                    "behavior": "Giữ bình tĩnh trấn an hành khách nhưng nét mặt căng thẳng. *Hai tay chắp trước bụng, cúi chào*"
+                },
+                "initial": "Quý khách vui lòng giữ bình tĩnh. Chúng tôi đã lục soát mọi thùng rác trên máy bay, hoàn toàn không có bất kỳ vật sắc nhọn nào bị vứt lại.", 
+                "truth": "Sự thật: Cô ấy vô tội, chỉ đang làm đúng chức trách của phi hành đoàn.", 
+                "is_killer": false 
+            },
+            "s2": { 
+                "name": "Bạn gái cũ của nạn nhân", 
+                "role": "Hành khách thương gia",
+                "psycho": {
+                    "trait": "Uất ức, căm phẫn, lòng tự trọng bị chà đạp tàn nhẫn khi sự nghiệp người mẫu bị hủy hoại do nạn nhân tung ảnh nóng.",
+                    "pronouns": "Xưng 'tôi', lạnh lùng, xa cách khi nhắc đến nạn nhân.",
+                    "behavior": "Nén chặt đau đớn, ánh mắt kiên định nhìn thẳng vào người đối diện, cằm hơi hất lên. *Vuốt lại tóc, đáp trả lạnh lùng*"
+                },
+                "initial": "Tôi vào nhà vệ sinh dặm lại phấn son, việc anh ta chết thì liên quan gì đến tôi? Ai bảo anh ta sống lỗi quá làm gì.", 
+                "truth": "Sự thật: Cô ta là HUNG THỦ. TRICK HUNG KHÍ: Cô ta dùng chiếc gọng thép mài sắc được gia cố ẩn bên trong ÁO NGỰC PHỤ NỮ làm hung khí đâm nạn nhân lúc cả hai giả vờ âu yếm. Sau đó, ả nhét thanh kim loại siêu nhỏ đó sâu vào bên trong mút xốp của ghế ngồi máy bay để qua mặt các đợt khám xét. Lỗ hổng: Vết hằn gọng áo ngực trên vai và phản ứng chất chỉ thị máu dưới đèn huỳnh quang trong nhà vệ sinh.", 
+                "is_killer": true 
+            },
+            "s3": { 
+                "name": "Đồng nghiệp Odawara", 
+                "role": "Hành khách", 
+                "psycho": {
+                    "trait": "Ba hoa, thích buôn chuyện, hay nịnh bợ nạn nhân.",
+                    "pronouns": "Xưng 'tôi', nói năng nhanh nhảu.",
+                    "behavior": "Hay xoa tay vào nhau, tỏ ra hoảng hốt thái quá. *Ngó nghiêng xung quanh*"
+                },
+                "initial": "Tôi ngủ thiếp đi lúc nào không biết! Ông Odawara lúc nào chả thích trêu đùa phụ nữ, chắc bị cô nào thù oán rồi!", 
+                "truth": "Sự thật: Vô tội. Ông ta có thái độ đáng ghét nhưng không có gan giết người.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-20",
+        "title": "KỲ ÁN TÀU DU LỊCH SYMPHONY (20 NĂM)",
+        "victim": "Kanie và Kameda (Cựu thành viên băng cướp)",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Du thuyền Symphony di chuyển giữa Vịnh Tokyo. <strong>Thời gian:</strong> Đêm khuya.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 23 | Anime Ep 174 (Tập 2 giờ)</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>19:00:</strong> Bức thư của thủ lĩnh Kano Saizo (đã chết 20 năm) được đọc to.</li><li><strong>21:30:</strong> Tiếng súng nổ trên boong; Kanie bốc cháy ngùn ngụt rơi xuống biển.</li><li><strong>23:00:</strong> Heiji bị đánh lén rơi xuống biển giữa đêm tối.</li><li><strong>01:00:</strong> Thi thể Kameda được tìm thấy trong khoang áo phao; hệ thống lái tàu bị phá hủy.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Đúng 21 giờ 30 phút, một tiếng súng khô khốc xé toạc màn đêm trên boong tàu lộng gió. Khi thám tử Mori và Conan lao lên, một cảnh tượng kinh hãi tột cùng khiến tất cả chết lặng: Kanie toàn thân bốc cháy như một ngọn đuốc sống khổng lồ, giãy giụa điên dại rồi lộn nhào qua lan can sắt rơi thẳng xuống biển sâu đen ngòm biến mất tăm. Hệ thống bánh lái bị phá hủy, radio liên lạc bị cắt đứt, biến chiếc du thuyền Symphony thành một quan tài nổi bồng bềnh giữa biển khơi.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Bóng ma thủ lĩnh Kano Saizo trở về báo oán.<br>- Heiji bị đẩy xuống biển khiến Conan mất đi trợ thủ đắc lực nhất.</p>",
+        "killer_id": "s3",
+        "suspects": {
+            "s1": { 
+                "name": "Isogai Nagisa", 
+                "role": "Hành khách trẻ", 
+                "psycho": {
+                    "trait": "Dũng cảm, kiên cường, ánh mắt rực lửa quyết tâm tìm ra kẻ đã bắn chết cha mình hai mươi năm trước.",
+                    "pronouns": "Xưng 'tôi - các người' đanh thép với đám cướp; xưng 'cháu' với thám tử Mori.",
+                    "behavior": "Giọng run lên vì xúc động nhưng từng lời nói đều đanh thép. *Siết chặt nắm tay, nhìn trừng trừng*"
+                },
+                "initial": "Dù hai mươi năm hay bốn mươi năm, những kẻ nhúng chàm vào máu của người vô tội nhất định phải đền tội!", 
+                "truth": "Sự thật: Cô ấy vô tội. Nagisa lên tàu chỉ để điều tra về cái chết của cha mình do băng cướp này gây ra.", 
+                "is_killer": false 
+            },
+            "s2": { 
+                "name": "Kameda", 
+                "role": "Cựu đồng phạm (Nạn nhân 2)",
+                "psycho": {
+                    "trait": "Tham lam, xảo quyệt, hèn hạ, luôn sống trong sự nghi kỵ và nỗi ám ảnh tột cùng về bóng ma thủ lĩnh Kano Saizo.",
+                    "pronouns": "Xưng 'tao - mày' chửi bới, hoảng loạn.",
+                    "behavior": "Mặt cắt không còn giọt máu, lắp bắp cầu xin, đổ mồ hôi ướt sũng. *Quỳ rạp xuống, ôm đầu run rẩy*"
+                },
+                "initial": "Kano Saizo... hắn đã đội mồ sống dậy... hắn sẽ thiêu chết tất cả chúng ta mất! Cứu tao với!", 
+                "truth": "Sự thật: Hắn là nạn nhân thứ hai bị kẻ chủ mưu giết chết để bịt miệng và gom trọn số tiền 400 triệu yên.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Saeki (Kuroda)", 
+                "role": "Hành khách bí ẩn", 
+                "psycho": {
+                    "trait": "Lạnh lùng, tàn nhẫn, tính toán sâu xa. Đã phẫu thuật thay đổi toàn bộ diện mạo để thực hiện kế hoạch thanh trừng đồng bọn.",
+                    "pronouns": "Giả dạng hành khách trí thức, xưng 'tôi - các vị' từ tốn, hòa nhã.",
+                    "behavior": "Điềm tĩnh đến đáng sợ, thỉnh thoảng mỉm cười nhạt nhòa để che giấu thân phận. *Đẩy gọng kính, cười nhếch mép*"
+                },
+                "initial": "Tôi chỉ là một hành khách bình thường tham gia tour du lịch này. Chuyện ân oán của các người tôi không quan tâm.", 
+                "truth": "Sự thật: Saeki (tên thật là Kuroda) là HUNG THỦ. TRICK BỐC CHÁY: Kẻ bị đốt cháy ném xuống biển thực chất đã bị bắn chết từ nhiều giờ trước; Saeki mặc áo chống cháy, tẩm xăng thi thể rồi châm lửa kích hoạt từ xa tạo ảo giác án mạng vừa diễn ra để hắn có alibi. SƠ HỞ: Heiji được tàu cá cứu sống đã quay lại vạch trần vết bỏng do vỏ đạn nóng bắn vào cổ tay hắn khi nổ súng ở khoang máy.", 
+                "is_killer": true 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-21",
+        "title": "KẺ SÁT NHÂN HÀNG LOẠT Ở OSAKA",
+        "victim": "Ba người đàn ông - Bị đâm xuyên tim, kẹp ví tiền bằng dây cước",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Osaka. <strong>Thời gian:</strong> Một ngày mưa tầm tã.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 19 | Anime Ep 118 (Tập 1 giờ)</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>10:00:</strong> Nhóm Mori đến ga Osaka, được thanh tra Sakata và Heiji đón tiếp.</li><li><strong>13:00:</strong> Một thi thể rơi từ trên cầu vượt xuống nắp capo xe tuần tra đang chạy.</li><li><strong>15:30:</strong> Nạn nhân thứ ba bị phát hiện chết cháy trong căn nhà hoang ngoại ô.</li><li><strong>17:00:</strong> Heiji đối đầu kẻ thủ ác tại tháp lâu đài Osaka.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Chiếc xe tuần tra cảnh sát chở nhóm thám tử đang chầm chậm lăn bánh qua gầm cầu vượt thì một tiếng va chạm kinh thiên động địa giáng thẳng xuống mui xe! Kính chắn gió vỡ vụn, một thi thể nam giới rơi từ trên trời xuống, ngực bị đâm xuyên bởi một con dao găm dài, chiếc cán dao kẹp chặt một chiếc ví da bằng sợi dây dù. Án mạng giống hệt hai vụ trước đó. Mọi sự truy lùng đều hướng về tên sát nhân vượt ngục Numabuchi. Nhưng càng đuổi theo các dấu vết, Conan và Heiji càng nhận ra những mâu thuẫn kỳ lạ trong cách thức nạn nhân rơi xuống mui xe...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Heiji hoàn toàn tin cậy vào người đồng nghiệp cảnh sát mẫn cán lái xe chở mình.<br>- Tên tội phạm vượt ngục Numabuchi trở thành con dê thế tội hoàn hảo.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Sakata Yusuke", 
+                "role": "Viên cảnh sát trẻ Osaka", 
+                "psycho": {
+                    "trait": "Nhiệt tình, mẫn cán, luôn nở nụ cười hiền lành; nhưng bên trong là trái tim rỉ máu vì cái chết oan khiên của người cha 20 năm trước.",
+                    "pronouns": "Xưng 'tôi', gọi 'bác Mori / cậu Heiji' đầy nhiệt thành.",
+                    "behavior": "Sốt sắng giúp đỡ, hay cười xòa. Khi bị dồn ép thì bật khóc, giọng nghẹn ngào uất ức. *Cúi gầm mặt, nước mắt lăn dài*"
+                },
+                "initial": "Nhanh lên Heiji, chúng ta phải bắt bằng được tên ác thú Numabuchi! Hắn lại vừa giết người thả xuống xe chúng ta kìa!", 
+                "truth": "Sự thật: Sakata là HUNG THỦ. TRICK RƠI TỪ TRÊN KHÔNG: Hắn đã giết nạn nhân từ trước, giấu trên nóc cầu vượt và buộc dây cước nối ròng rọc. Khi cố tình lái xe chở nhóm thám tử đi qua đúng vị trí, hắn bấm nút mở chốt điều khiển từ xa giấu trong xe để thi thể rơi trúng mui xe, tự tạo bằng chứng ngoại phạm hoàn hảo cho mình. Lỗ hổng: Thói quen kẹp bằng lái vào ví tiền của người cha mà Sakata vô thức sao chép trên cán dao.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Numabuchi Kiichiro", 
+                "role": "Sát nhân vượt ngục",
+                "psycho": {
+                    "trait": "Hoang dại, đờ đẫn, thần kinh bất ổn vì bị Tổ chức Áo Đen thí nghiệm thuốc độc, sống bằng bản năng sinh tồn dã man.",
+                    "pronouns": "Gầm gừ xưng 'tao - chúng mày'.",
+                    "behavior": "Rít lên qua kẽ răng những âm thanh man dại, mắt trợn trừng vô hồn, hoảng loạn quẫy đạp. *Co rúm người, nhe răng nanh*"
+                },
+                "initial": "Tránh xa tao ra! Tao không giết bọn chúng... Bọn Áo Đen sẽ tìm đến tao mất! Grrr!", 
+                "truth": "Sự thật: Vô tội trong chuỗi án mạng này. Hắn bị Sakata lợi dụng để đổ vỏ.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-22",
+        "title": "ÁN MẠNG GIA TỘC HATAMOTO",
+        "victim": "Hatamoto Gouzo (Chủ gia tộc) & Tatsuo (Con rể)",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Du thuyền sang trọng của gia tộc Hatamoto. <strong>Thời gian:</strong> Đêm giông bão trên biển.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 3 | Anime Ep 22-23</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>19:00:</strong> Bữa tiệc cưới kết thúc; lão Gouzo mắng chửi con cháu rồi về phòng khóa cửa.</li><li><strong>20:00:</strong> Lão Gouzo bị đâm chết; bông hoa cài áo của chú rể Takeshi rơi lại cửa phòng.</li><li><strong>22:00:</strong> Con rể Tatsuo bị giết ném xác xuống biển; Takeshi mất tích khỏi nhà kho giam giữ.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Chưa đầy một giờ sau bữa tiệc cưới ồn ào, người phục vụ bàng hoàng phát hiện một vệt máu tươi đỏ thẫm đang rỉ qua khe cửa phòng lão Gouzo. Khi thám tử Mori phá cửa, lão Gouzo nằm gục trong vũng máu, một nhát dao chí mạng găm sâu vào bụng. Ngay trước ngưỡng cửa, một bông hoa cài áo chú rể màu trắng tinh khôi bị dẫm nát nằm chỏng chơ – bằng chứng thép tố cáo chú rể Takeshi, người vừa bị lật tẩy là con trai của kẻ thù không đội trời chung với gia tộc. Nhưng khi Takeshi bị tống giam vào hầm chứa, các vụ án mạng vẫn tiếp diễn đẫm máu...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Thân phận thật sự của chú rể Takeshi và bông hoa cài áo bị đánh rơi đánh lừa mọi suy luận ban đầu.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Hatamoto Ichiro", 
+                "role": "Cậu em họ (Sinh viên mỹ thuật)", 
+                "psycho": {
+                    "trait": "Tự ti, yếu đuối, u uất, si tình cô dâu Natsue mù quáng biến thành kẻ cuồng sát tàn nhẫn.",
+                    "pronouns": "Xưng 'cháu - ông nội' run rẩy cúi gầm mặt. Với chị Natsue thì giọng tha thiết, van lơn.",
+                    "behavior": "Luôn ôm chặt cuốn sổ phác thảo, né tránh ánh nhìn. Khi bị nghi ngờ thì ôm chặt đùi rên rỉ giả vờ đau. *Cắn môi dưới, ôm khư khư cuốn sổ*"
+                },
+                "initial": "Á á! Có kẻ lạ mặt đột nhập đâm tôi... Hắn định giết sạch cả nhà chúng ta mất! Cứu em với chị Natsue!", 
+                "truth": "Sự thật: Ichiro là HUNG THỦ. TRICK ĐÁNH LẠC HƯỚNG: Hắn nhặt hoa cài áo của Takeshi đánh rơi để gài bẫy vu oan cho chú rể. Sau khi giết 2 người, hắn vờ trốn trong phòng tối tự đâm vào đùi mình rồi la hét đóng vai nạn nhân thoát chết để xóa tên khỏi danh sách nghi phạm. Lỗ hổng: Vết thương ngược góc (soi gương tự đâm) và cuốn sổ ký họa toàn hình cô dâu chứng minh động cơ si tình.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Hatamoto Takeshi", 
+                "role": "Chú rể bị nghi oan",
+                "psycho": {
+                    "trait": "Chính trực, hiền lành, yêu Natsue tha thiết, mang mặc cảm là con trai của kẻ thù cũ.",
+                    "pronouns": "Xưng 'con - thưa ông', 'anh - em' với Natsue rất mực chân thành.",
+                    "behavior": "Tuyệt vọng đập cửa hầm tàu, đau đớn khi bị người yêu nghi ngờ. *Bám chặt song sắt, gào thét*"
+                },
+                "initial": "Natsue ơi, hãy tin anh! Anh không bao giờ giết ông nội! Anh kết hôn với em vì tình yêu chứ không phải để trả thù!", 
+                "truth": "Sự thật: Vô tội. Bị gia tộc định kiến và vu oan.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-23",
+        "title": "BÓNG MA NAM TƯỚC BÓNG ĐÊM",
+        "victim": "Ebara Tokio - Chuyên gia tin học, hacker",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Khách sạn Izu Princess Hotel. <strong>Thời gian:</strong> Ban đêm.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 8 | Anime Ep 68-70</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>20:00:</strong> Ebara say xỉn quậy phá trong quán bar khách sạn.</li><li><strong>21:30:</strong> Bóng đen trang phục Nam tước bóng đêm đẩy Conan từ ban công tầng 3.</li><li><strong>22:15:</strong> Ebara rơi từ tầng 21 xuống sân vườn, đâm xuyên ngực vào ngọn giáo tượng đồng hiệp sĩ.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Khoảng 22h15, một tiếng rít kinh hoàng của vật thể xé gió lao từ trên không trung xuống. Trước mắt hàng chục nhân chứng, một bóng đen trong trang phục dạ hội đen tuyền, đầu đội mũ phớt và đeo chiếc mặt nạ cười trắng toát của Nam tước bóng đêm rơi thẳng từ tầng 21 xuống, cắm phập vào ngọn giáo nhọn hoắt của bức tượng đồng hiệp sĩ. Kẻ sát nhân dường như đã sử dụng một thủ thuật ma quỷ để ném nạn nhân qua lan can ban công tầng cao mà không để lại bất kỳ dấu vết nào.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Maeda Satoru (nhà vô địch Karate) tự thú nhận tội khiến mọi người bàng hoàng, cản trở việc tìm hung thủ thật.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Sayama Akiko", 
+                "role": "Cô giáo Toán (Vợ sắp cưới Maeda)", 
+                "psycho": {
+                    "trait": "Thông minh, sắc sảo, bề ngoài điềm đạm nhưng nội tâm xé nát vì cái chết của anh trai do virus của nạn nhân gây ra.",
+                    "pronouns": "Xưng 'tôi - anh' khinh miệt khi bị nạn nhân quấy rối.",
+                    "behavior": "Giả vờ ngạc nhiên, khi chồng sắp cưới nhận tội thay thì sụp đổ khóc nức nở. *Bưng mặt khóc, lao tới ôm người yêu*"
+                },
+                "initial": "Trời ơi... sao Ebara lại mặc bộ đồ đó rồi rơi xuống? Lúc đó tôi đang ở trong phòng nghỉ mà...", 
+                "truth": "Sự thật: Akiko là HUNG THỦ. TRICK ÁO CHOÀNG BỌC GIÓ: Ả chuốc thuốc mê nạn nhân, mặc sẵn trang phục Nam Tước Bóng Đêm. Ả dùng chính chiếc áo choàng rộng làm thành một chiếc dù bọc gió nhỏ, đẩy thi thể lăn qua ban công tầng 21. Sức gió biển cực mạnh ban đêm đã thổi thi thể bay xa ra ngoài khoảng không, rơi trúng bức tượng hiệp sĩ thay vì rơi thẳng xuống sân. Lỗ hổng: Luồng gió thổi ngược từ dưới lên làm chiếc mũ phớt bay ngược vào bên trong ban công tầng dưới.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Maeda Satoru", 
+                "role": "Nhà vô địch Karate",
+                "psycho": {
+                    "trait": "Nghĩa hiệp, phong độ, bộc trực, sẵn sàng hy sinh sự nghiệp thể thao để che chở cho bạn gái phạm tội.",
+                    "pronouns": "Xưng 'tôi - ông Mori' đĩnh đạc, trầm giọng nhận tội.",
+                    "behavior": "Ánh mắt kiên định, chìa hai tay ra phía trước sẵn sàng chịu còng. *Gương mặt cương nghị, nhắm nghiền mắt*"
+                },
+                "initial": "Đừng điều tra nữa! Người đẩy Ebara xuống chính là tôi... các người hãy bắt tôi đi!", 
+                "truth": "Sự thật: Vô tội. Anh ta phát hiện Akiko làm nên đã cố tình tạo ra chứng cứ giả để nhận tội thay người yêu.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-24",
+        "title": "BỘ ÁO GIÁP BIẾT ĐI",
+        "victim": "Manaka - Tài phiệt, chủ sở hữu mới của Bảo tàng",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Phòng Địa Ngục - Bảo tàng Mỹ thuật. <strong>Thời gian:</strong> Chiều tối ngày mưa bão.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 4 | Anime Ep 8</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>16:30:</strong> Manaka hẹn gặp người mua bán tại căn phòng Địa Ngục.</li><li><strong>17:00:</strong> Camera an ninh ghi lại cảnh bộ áo giáp hiệp sĩ vung kiếm chém chết Manaka.</li><li><strong>17:30:</strong> Phát hiện thi thể Manaka bị găm chặt lên tường đá dưới bức tranh 'Sự trừng phạt của Chúa'.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Manaka nằm gục chết dưới chân bức tranh khổng lồ 'Sự trừng phạt của Chúa trời', cổ họng bị một nhát kiếm chém đứt lìa, thanh cự kiếm cắm ngập sâu vào bức tường đá sau lưng găm chặt thi thể. Khi tua lại cuộn băng ghi hình camera, tất cả đều rùng mình ớn lạnh: một bộ áo giáp sắt hiệp sĩ thời trung cổ tự chuyển động như có linh hồn quỷ dữ, vung thanh kiếm khổng lồ chém gục Manaka. Trước khi trút hơi thở cuối cùng, nạn nhân đã lén vò nát một mẩu giấy nhắn có ghi nguệch ngoạc dòng chữ 'Kubota'.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Lời trăn trối viết bằng giấy của nạn nhân ghi tên nhân viên Kubota hướng mọi nghi ngờ vào gã nhân viên trộm cắp.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Giám đốc Ochiai", 
+                "role": "Giám đốc Bảo tàng", 
+                "psycho": {
+                    "trait": "Nho nhã, trầm mặc, gắn bó cả đời với các tác phẩm nghệ thuật, sẵn sàng biến mình thành ác quỷ để bảo vệ thánh đường nghệ thuật.",
+                    "pronouns": "Xưng 'tôi - ngài chủ tịch' nhẫn nhịn nhưng ánh mắt chứa phẫn nộ.",
+                    "behavior": "Giọng trầm ấm, nói chuyện triết lý. Đi lại thong thả. *Vuốt ve các bức tranh, thở dài tĩnh lặng*"
+                },
+                "initial": "Nghệ thuật là linh hồn của nhân loại... kẻ dám chà đạp lên nó sẽ phải chịu sự trừng phạt thảm khốc nhất! Nhưng việc này tôi không rõ.", 
+                "truth": "Sự thật: Giám đốc là HUNG THỦ. TRICK LỜI TRĂN TRỐI GIẢ: Ông ta mặc áo giáp chém chết Manaka. Trước đó, ông ta đã gài mẩu giấy có chữ 'Kubota' vào tay nạn nhân. Cây bút bi ném cho nạn nhân tự vệ đã bị ông ta bấm 'thụt ngòi' từ trước, nên nạn nhân cào trên giấy trắng trong tuyệt vọng chứ không hề viết ra chữ Kubota. Lỗ hổng: Ngòi bút thụt vào trong và vết máu trên bộ giáp bị vứt trong nhà vệ sinh.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Nhân viên Kubota", 
+                "role": "Nhân viên bảo tàng",
+                "psycho": {
+                    "trait": "Hám tiền, lén lút, thiếu tự trọng, quen thói trộm cắp vặt các cổ vật bán ra chợ đen.",
+                    "pronouns": "Xưng 'tôi - các chú cảnh sát' sợ sệt.",
+                    "behavior": "Toát mồ hôi hột, hai tay xua lia lịa, lắp bắp chối tội. *Nuốt nước bọt, lùi lại*"
+                },
+                "initial": "Tôi chỉ bán trộm đồ cũ thôi chứ tôi có điên đâu mà mặc nguyên bộ giáp sắt đi chém chết ông chủ! Dòng chữ đó là vu oan!", 
+                "truth": "Sự thật: Vô tội việc giết người. Hắn bị Giám đốc ghét bỏ vì bán trộm tranh, nên bị gài bẫy làm con dê thế tội.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-25",
+        "title": "BÍ ẨN CĂN HẦM RƯỢU VANG",
+        "victim": "Chủ tịch CLB Rượu vang - Chết ngạt trong hầm",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Hầm rượu vang ngầm dưới dinh thự. <strong>Thời gian:</strong> Đêm tiệc nếm rượu vang.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 26 | Anime Ep 199-200</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>20:00:</strong> Chủ tịch xuống hầm rượu lấy chai vang quý và khóa trái cửa.</li><li><strong>21:00:</strong> Tiếng đổ vỡ kinh hoàng của các chai rượu vang vọng lên từ tầng hầm.</li><li><strong>22:00:</strong> Phá cửa thép hầm rượu: Chủ tịch đã chết ngạt dưới sàn đá giữa dòng sông rượu đỏ.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Cánh cửa thép kiên cố mở ra, một luồng không khí lạnh buốt hòa cùng mùi rượu vang nồng nặc đến nghẹt thở xộc thẳng vào mặt: hàng chục chai vang đắt giá bị đập vỡ tan tành dưới sàn đá, tạo thành một dòng sông rượu đỏ thẫm như máu tươi. Ngay giữa vũng rượu đỏ rực ấy, ngài chủ tịch nằm bất động, cần cổ bị siết chặt bởi sợi dây bện, khuôn mặt tím tái. Căn hầm hoàn toàn không có lối thoát hiểm, và chìa khóa cơ khí duy nhất nằm trong túi áo vest nạn nhân.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Tiếng vỡ lúc 21:00 khiến pháp y lầm tưởng án mạng vừa diễn ra.<br>- Nhiệt độ 12 độ C của hầm rượu làm chậm quá trình co cứng tử thi, đánh lừa khám nghiệm thời gian chết.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Chuyên gia Sommelier", 
+                "role": "Người nếm rượu", 
+                "psycho": {
+                    "trait": "Thanh lịch, cầu toàn, kiêu hãnh về vị giác nhạy bén nhưng ôm hận thù sâu sắc vì bị nạn nhân hủy hoại vị giác.",
+                    "pronouns": "Xưng 'tôi - ngài chủ tịch' cung kính, nhưng ánh mắt khinh bỉ.",
+                    "behavior": "Đĩnh đạc, ung dung phân tích mùi hương của rượu, rất tự tin vào Alibi của mình. *Lắc nhẹ ly rượu vang, nhếch mép*"
+                },
+                "initial": "Ngài chủ tịch bị ám sát lúc 21 giờ sao? Thật đáng tiếc, lúc đó tôi đang ở sảnh chính rót rượu biểu diễn cho hàng chục vị khách chiêm ngưỡng mà.", 
+                "truth": "Sự thật: Sommelier là HUNG THỦ. TRICK ĐÁ KHÔ HẸN GIỜ: Hắn đã siết cổ nạn nhân từ chiều. Hắn xếp các chai rượu vang lên một khối đá khô (CO2 rắn) rồi kê sát cửa sắt. Đá khô thăng hoa (bốc hơi) theo thời gian, khiến khối chai rượu mất thăng bằng đổ sụp xuống sàn tạo tiếng vỡ lúc 21:00 đúng lúc hắn đang ở bữa tiệc. Khí CO2 bốc hơi cũng nén đầy trong hầm. Lỗ hổng: Vết rượu vang bắn lên ve áo của hắn chứng minh hắn có mặt lúc chai rượu đầu tiên bị đập vỡ.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Chủ tịch CLB", 
+                "role": "Nạn nhân (Hồi tưởng)",
+                "psycho": {
+                    "trait": "Khoe của, độc đoán, keo kiệt, xem rượu vang như chiến lợi phẩm khoe mẽ hơn là nghệ thuật.",
+                    "pronouns": "Xưng 'ta - các vị' trịch thượng, khoe khoang.",
+                    "behavior": "Luôn miệng khoe về chai Chateau Latour 1961. *Vỗ bụng cười lớn*"
+                },
+                "initial": "Bọn dân đen các người làm sao hiểu được giá trị của chai rượu chục ngàn đô này! Chờ đó ta xuống hầm lấy lên cho xem!", 
+                "truth": "Sự thật: Kẻ độc đoán đã chết vì chính thú vui xa xỉ và những nghiệp chướng mình gây ra cho người làm.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-26",
+        "title": "BUỔI HÒA NHẠC KHAO QUÂN (NHÓM NHẠC LEX)",
+        "victim": "Kimura Tatsuya (21 tuổi) - Ca sĩ hát chính nhóm Lex",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Phòng tiệc Karaoke VIP ở Tokyo. <strong>Thời gian:</strong> Đêm mừng chiến thắng sau buổi diễn.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 9 | Anime Ep 42</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>20:00:</strong> Tiệc mừng bắt đầu sau live-concert rực rỡ.</li><li><strong>21:15:</strong> Tatsuya hát bài tủ 'Bloody Venus', cởi áo khoác da ném sang bên cạnh.</li><li><strong>21:20:</strong> Tatsuya ăn một miếng cơm nắm và ngã gục sùi bọt mép chết vì xyanua.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Giữa những tiếng vỗ tay rền vang của Ran và Sonoko, Tatsuya khẽ mỉm cười nhặt một miếng cơm nắm trên chiếc đĩa đặt giữa bàn đưa lên miệng cắn. Chỉ trong tích tắc, khuôn mặt rạng rỡ của anh biến dạng kinh hoàng; Tatsuya ôm chặt lấy cổ họng, ngã quỵ xuống thảm, hai mắt trợn ngược và bọt mép trào ra trắng xóa trước khi trút hơi thở cuối cùng. Chất kịch độc kali xyanua đã kết liễu cuộc đời ngôi sao trẻ tuổi ngay trước mắt hàng chục nhân chứng. Thế nhưng, đĩa thức ăn và các ly nước ngọt trên bàn đều hoàn toàn vô hại khi được cảnh sát kiểm tra.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Cả phòng cùng ăn chung đĩa cơm nắm và uống chung chai nước ngọt nhưng chỉ một mình Tatsuya trúng độc, khiến cảnh sát nghi ngờ người giao hàng.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Terahara Mie", 
+                "role": "Nữ quản lý ban nhạc", 
+                "psycho": {
+                    "trait": "Tự ti về nhan sắc, chấp nhận phẫu thuật thẩm mỹ; chịu nhiều tổn thương và uất hận khi bị người yêu cũ (Tatsuya) sỉ nhục ngoại hình.",
+                    "pronouns": "Xưng 'tôi - cậu' nhẫn nhịn trước mặt mọi người nhưng sâu bên trong là nỗi nghẹn ngào uất ức.",
+                    "behavior": "Nước mắt lưng tròng khi bưng đĩa thức ăn. Hay cúi đầu trốn tránh ánh mắt. *Rơm rớm nước mắt, giọng nức nở*"
+                },
+                "initial": "Tôi lo việc tổ chức tiệc cho cả ban nhạc, làm sao tôi biết miếng cơm nắm đó có độc được chứ! Các người nghi ngờ tôi sao?", 
+                "truth": "Sự thật: Mie là HUNG THỦ. TRICK ĐỘC TRÊN ÁO: Cô bôi chất độc xyanua vào mặt trong cổ tay áo khoác da của Tatsuya từ trước tiệc. Khi cởi áo khoác trước khi hát, ngón tay anh ta vô tình quẹt qua lớp thuốc độc ở tay áo. Khi bốc ăn cơm nắm bằng chính bàn tay đó, Tatsuya đã tự đưa chất độc vào miệng mình. Động cơ: Vì sự sỉ nhục ngoại hình. Lỗ hổng: Tatsuya sỉ nhục vì anh thực chất yêu vẻ đẹp tự nhiên của Mie, sự thật này khiến Mie sụp đổ.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Kimura Tatsuya", 
+                "role": "Nạn nhân (Hồi tưởng)",
+                "psycho": {
+                    "trait": "Kiêu ngạo, ngông cuồng; dùng vỏ bọc cay nghiệt để che giấu nỗi đau đớn khi người yêu biến mình thành bản sao showbiz nhân tạo.",
+                    "pronouns": "Xưng 'tao - chúng mày' ngạo mạn; xưng 'tôi - cô' châm chọc Mie.",
+                    "behavior": "Hát say sưa, vứt áo khoác thô bạo, liên tục buông lời mỉa mai. *Nhếch mép cười khinh khỉnh*"
+                },
+                "initial": "Nhìn lại cái mặt sửa nát bét của cô đi, giả tạo phát gớm! Đừng có đứng trước mặt tôi!", 
+                "truth": "Sự thật: Là nạn nhân. Cố tình sỉ nhục để cô nhận ra giá trị bản thân, nhưng lại tự rước lấy cái chết oan uổng.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-27",
+        "title": "ÁN MẠNG PHIM TRƯỜNG QUÁI VẬT GOMERA",
+        "victim": "Giám đốc sản xuất Kamei",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Phim trường Daiei Films, Tokyo. <strong>Thời gian:</strong> Chiều tà.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 13 | Anime Ep 63</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>16:00:</strong> Nhóm nhí tham quan phim trường và chụp ảnh cùng quái vật Gomera.</li><li><strong>17:00:</strong> Kamei bị quái vật Gomera đâm chết trong phòng nghỉ.</li><li><strong>17:05:</strong> Quái vật Gomera chạy trốn, bay qua tòa nhà đối diện 10 mét.</li><li><strong>17:15:</strong> Matsui xuất hiện với vết rách sâu ở đùi tại phòng thay đồ.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Khi lũ trẻ lao tới, một cảnh tượng kinh hoàng đập thẳng vào mắt: con quái vật Gomera khổng lồ với lớp da sần sùi màu xanh xám đang lăm lăm con dao đẫm máu cắm phập vào ngực Giám đốc Kamei. Con quái vật rống lên rồi quay đầu chạy thục mạng lên sân thượng. Khi lên đến đỉnh tháp, quái vật Gomera đã nhảy một cú nhảy không tưởng qua khoảng cách mười mét sang mái tòa nhà đối diện và biến mất vào màn đêm. Thế nhưng, tại phòng thay đồ, diễn viên đóng thế Matsui đang nằm rên rỉ với một vết thương sâu hoắm ở đùi, hoàn toàn không thể di chuyển hay thực hiện cú nhảy phi thường đó.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Đội thám tử nhí tận mắt chứng kiến Gomera bằng xương bằng thịt cầm dao giết người rồi bay qua nóc nhà.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Matsui", 
+                "role": "Diễn viên đóng thế Gomera", 
+                "psycho": {
+                    "trait": "Tận tụy, đam mê nghệ thuật cháy bỏng, không chấp nhận biểu tượng tuổi thơ bị khai tử vì đồng tiền.",
+                    "pronouns": "Xưng 'tôi - thưa giám đốc' nhẫn nhục van xin; bị hỏi cung thì ôm đùi đau đớn.",
+                    "behavior": "Ôm vết thương rách đùi giả tạo, nhăn nhó nhễ nhại mồ hôi. *Nắm chặt đùi, rên rỉ đau đớn*"
+                },
+                "initial": "Chân tôi rách toạc thế này, đi lại không nổi thì làm sao mặc bộ giáp nặng năm mươi cân đi đâm chết giám đốc được chứ? Tôi là nạn nhân!", 
+                "truth": "Sự thật: Matsui là HUNG THỦ. TRICK BAY QUA TÒA NHÀ: Hắn lén may bộ giáp Gomera thứ hai bằng vật liệu siêu nhẹ. Sau khi đâm nạn nhân, hắn chạy lên nóc nhà, móc dây cáp kỹ xảo tàng hình trượt sang nóc tòa nhà bên kia (ảo giác bay). Sang tới nơi, cởi bỏ bộ giáp rồi tự dùng dao rạch đùi mình tạo alibi tàn phế. Lỗ hổng: Vết mỡ bò bôi trơn dây cáp trên găng tay và mẩu tàn thuốc lá rơi bên trong chiếc mũ quái vật.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Kamei", 
+                "role": "Giám đốc (Nạn nhân)",
+                "psycho": {
+                    "trait": "Thực dụng, hám lợi, coi thường diễn viên đóng thế và giá trị nghệ thuật.",
+                    "pronouns": "Xưng 'tao - chúng mày', quát tháo.",
+                    "behavior": "Kênh kiệu, vung tay đuổi người khác đi. *Hất tay, cười khẩy*"
+                },
+                "initial": "Bọn diễn viên quèn hết thời chúng mày thì biết cái gì! Tao sẽ khai tử con quái vật rác rưởi này để quay phim thương mại!", 
+                "truth": "Sự thật: Nạn nhân bị giết do chà đạp lên tâm huyết 10 năm của người đóng thế.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-28",
+        "title": "KẺ RẠCH MẶT HÀNG LOẠT Ở BÃI ĐỖ XE",
+        "victim": "Ba cô gái trẻ phong cách Ganguro",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Bãi đỗ xe ngầm B2, TT Thương mại Beika. <strong>Thời gian:</strong> Chiều tối mưa bão.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 28-29 | Anime Ep 217-218</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>17:00:</strong> Vụ tấn công thứ ba xảy ra tại bãi đỗ xe tầng hầm B2.</li><li><strong>18:30:</strong> Sonoko đi bốt cao gót tìm xe bị tên cuồng sát tấn công.</li><li><strong>18:32:</strong> Thanh tra Megure lấy thân mình đỡ đòn cứu Sonoko; Conan đá bóng hạ gục hung thủ.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Dưới tầng hầm bãi đỗ xe ẩm ướt và thiếu ánh sáng, Suzuki Sonoko – cô tiểu thư vừa sắm cho mình một đôi bốt cao gót lênh khênh cùng mái tóc nhuộm vàng hoe – đang một mình lần mò tìm chiếc xe hơi. Tiếng giày gõ cộc cộc trên sàn bê tông bỗng nhiên hòa lẫn với một tiếng bước chân nặng nề, dồn dập bám sát phía sau. Khi Sonoko vừa mở cửa xe, một gã đàn ông với đôi mắt long sòng sọc điên dại vung thanh cọc sắt nặng trịch giáng thẳng xuống đầu cô! Khoảnh khắc ngàn cân treo sợi tóc, Thanh tra Megure đã lấy chính thân mình để đỡ trọn cú đập chí mạng...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Tên sát nhân không chọn nạn nhân quen biết mà chọn ngẫu nhiên các cô gái trang điểm Ganguro đi bốt cao gót lảo đảo trong bóng tối.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Sadakane", 
+                "role": "Kẻ cuồng sát", 
+                "psycho": {
+                    "trait": "Hèn nhát, lệch lạc tâm lý, mang nỗi uất hận mù quáng vì con trai bị tai nạn chết, trút căm phẫn lên những cô gái vô tội.",
+                    "pronouns": "Thở hổn hển lẩm bẩm xưng 'tao - chúng mày'.",
+                    "behavior": "Lăm lăm thanh cọc sắt, mắt đỏ ngầu, gầm rít điên cuồng. *Vung thanh sắt, thở hổn hển*"
+                },
+                "initial": "Lũ con gái bôi mặt đen đi giày cao gót... chúng mày chỉ là lũ rác rưởi gây tai nạn chết người! Chết đi! Tất cả phải đền mạng cho con tao!", 
+                "truth": "Sự thật: Sadakane là HUNG THỦ. Hắn rình rập ở các góc chết bãi đỗ xe ngầm, dùng chiều cao đôi bốt (những cô gái đi lảo đảo) để nhận diện con mồi trong bóng tối. Lỗ hổng: Vết sơn xe màu đỏ từ xe giao hàng của hắn dính trên vạt áo các nạn nhân.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Thanh tra Megure Juzo", 
+                "role": "Cảnh sát bảo vệ",
+                "psycho": {
+                    "trait": "Trực tính, kiên định, giàu lòng nhân ái, sẵn sàng hy sinh tính mạng bảo vệ người dân.",
+                    "pronouns": "Xưng 'chú - cháu Sonoko' ấm áp; xưng 'ta - tên tội đồ kia' uy nghiêm.",
+                    "behavior": "Máu tuôn đỏ trán vẫn gầm lên đanh thép, dang tay che chở. *Đứng thẳng lưng, bất chấp vết thương máu chảy*"
+                },
+                "initial": "Chừng nào Megure này còn đứng đây, đừng hòng chạm vào một sợi tóc của người dân vô tội!", 
+                "truth": "Sự thật: Thanh tra Megure đã xả thân cứu Sonoko vì gợi nhớ ký ức cứu người vợ Midori thời trẻ (lý do ông luôn đội mũ phớt che vết sẹo trên đầu).", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-29",
+        "title": "HỌP LỚP THÁM TỬ MORI (ÁN MẠNG NHÀ TRỌ)",
+        "victim": "Horikoshi Yumi - Hoa khôi Judo bị bắn xuyên thái dương",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Nhà trọ suối nước nóng Beniya. <strong>Thời gian:</strong> Đêm hè oi ả.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 9 | Anime Ep 27-28</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>15:00:</strong> Chơi bóng bàn xong; Yumi về phòng ngủ sớm vì đau đầu.</li><li><strong>18:30:</strong> Xem bắn pháo hoa bờ sông; Nakamichi luôn có mặt cạnh Mori.</li><li><strong>21:00:</strong> Phá cửa phòng Yumi: Khẩu súng trong tay, đạn xuyên thái dương chết trên nệm.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Sau khi Yumi rời bàn tiệc về phòng ngủ sớm, cả nhóm rủ nhau ra bờ sông ngắm pháo hoa. Nakamichi luôn đứng cạnh Mori, tươi cười bình luận về từng đợt pháo sáng. Thế nhưng, khi cả nhóm quay trở về nhà trọ lúc chín giờ tối, căn phòng của Yumi bị khóa chốt từ bên trong buộc Mori phải dùng thế võ Judo phá tung then cài. Ánh đèn chiếu vào một cảnh tượng xé lòng: Yumi nằm bất động trên tấm nệm trắng muốt, một vết đạn bắn xuyên qua thái dương phải đẫm máu, khẩu súng ngắn nằm ngay bên cạnh bàn tay buông thõng của cô. Cảnh sát địa phương nhanh chóng kết luận đây là một vụ tự sát do trầm cảm.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Nạn nhân chết với phát đạn xuyên thái dương, súng nằm cạnh tay và cửa phòng khóa chốt bên trong hoàn hảo.<br>- Bằng chứng ngoại phạm thép của Nakamichi khi đứng cạnh Mori suốt lúc bắn pháo hoa.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Nakamichi Kazushi", 
+                "role": "Sĩ quan cảnh sát (Bạn của Mori)", 
+                "psycho": {
+                    "trait": "Điềm đạm, phong độ, sĩ quan mẫu mực nhưng bị dồn vào chân tường vì danh dự gia đình, sẵn sàng giết người bạn cũ.",
+                    "pronouns": "Với Yumi xưng 'tôi - cô' van lơn; với Mori xưng 'tao - mày' sảng khoái ôn kỷ niệm.",
+                    "behavior": "Cười nói tự nhiên trước mặt Mori. Khi bị vạch trần thì tự tin cãi lý, nhưng khi bị quật ngã thì gục đầu khóc nấc. *Cắn chặt môi, cúi gầm mặt*"
+                },
+                "initial": "Mày say rồi à Kogoro? Khẩu súng nằm trong tay Yumi, phòng thì khóa kín bên trong, đó rõ ràng là tự sát mà!", 
+                "truth": "Sự thật: Nakamichi là HUNG THỦ. TRICK THÂN NHIỆT: Hắn bắn chết Yumi từ 15:00 chiều lúc giả vờ đi vệ sinh khi đang đánh bóng bàn. Sau đó hắn bật máy sưởi mức tối đa giữ thân nhiệt thi thể ấm để đánh lừa pháp y kết luận giờ chết là 18:30 (lúc bắn pháo hoa, khi hắn đang đứng cạnh Mori). Lỗ hổng: Ngón chân cái nạn nhân bị co cứng tử thi giật cong do bị bắn bất ngờ chứ không phải tư thế thả lỏng của người tự sát.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Horikoshi Yumi", 
+                "role": "Nạn nhân (Hồi tưởng)",
+                "psycho": {
+                    "trait": "Cố chấp, ghen tuông điên cuồng, tính chiếm hữu độc hại.",
+                    "pronouns": "Xưng 'tôi - anh' cay nghiệt.",
+                    "behavior": "Cười nhếch mép đe dọa, giơ tấm ảnh cũ ra uy hiếp. *Trợn mắt, giơ bức ảnh lên*"
+                },
+                "initial": "Nếu tôi không có được anh, thì đừng hòng con nào có được anh! Tôi sẽ gửi bức ảnh này cho nhà vợ sắp cưới của anh!", 
+                "truth": "Sự thật: Cô ta bị giết do tống tiền tình cảm, hủy hoại tiền đồ của Nakamichi.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-30",
+        "title": "SỰ HỒI SINH CỦA HIỆP SĨ ĐEN",
+        "victim": "Kameda Kohei - Sinh viên đại học vô lại",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Sân khấu kịch Trường cấp 3 Teitan. <strong>Thời gian:</strong> Lễ hội văn hóa.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 26 | Anime Ep 190-193</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>14:00:</strong> Vở kịch 'Trái tim Hiệp sĩ' bắt đầu; Ran đóng vai Công chúa.</li><li><strong>14:30:</strong> Hiệp sĩ Đen bí ẩn bước ra sân khấu ôm chầm lấy Ran.</li><li><strong>14:35:</strong> Kameda ngã vật ra sàn sùi bọt mép chết vì xyanua dưới hàng ghế khán giả.</li><li><strong>14:40:</strong> Hiệp sĩ Đen gỡ mũ giáp: Kudo Shinichi tái xuất bằng xương bằng thịt.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Giữa những giai điệu hùng tráng của dàn nhạc, nam thanh niên ngã bật ngửa ra khỏi ghế ngồi VIP, toàn thân co giật dữ dội, chiếc cốc nước ngọt bằng giấy rơi xuống sàn làm đổ lênh láng dòng nước có ga sủi bọt trắng xóa. Cậu ta dùng hai tay cào xé cổ họng trong đau đớn cùng cực trước khi bất động hoàn toàn. Mùi hạnh nhân đắng bốc lên trong không khí: chất kịch độc xyanua. Giữa sự hỗn loạn, chàng Hiệp sĩ Đen trên sân khấu chậm rãi bước xuống, gỡ chiếc mũ giáp sắt nặng nề. Gương mặt khôi ngô của thám tử trung học Kudo Shinichi lộ diện trong sự bàng hoàng của Ran Mori và thanh tra Megure...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Cốc nước của nạn nhân được truyền qua tay 4 người bạn trước khi đến tay hắn khiến ai cũng có cơ hội bỏ độc xyanua.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Nữ sinh Mai", 
+                "role": "Bạn gái cũ của nạn nhân", 
+                "psycho": {
+                    "trait": "Nhỏ nhắn, dịu dàng, nội tâm khép kín nhưng chứa sự căm thù tận cùng khi bị lừa gạt tình tiền.",
+                    "pronouns": "Xưng 'em - anh/cảnh sát' nhẫn nhịn, yếu đuối.",
+                    "behavior": "Run rẩy khóc lóc, lấy hai tay ôm mặt sợ hãi. *Lắp bắp, nước mắt lưng tròng*"
+                },
+                "initial": "Em... em chỉ đi mua nước ngọt giùm anh ấy thôi, mọi người cùng uống chung một khay mà, sao lại nghi ngờ em bỏ độc được chứ?", 
+                "truth": "Sự thật: Mai là HUNG THỦ. TRICK ĐÁ ĐỘC (Poison Ice): Cô ta làm đông lạnh xyanua vào tâm của viên đá, bọc màng gelatin mỏng rồi bỏ vào đáy cốc. Khi nạn nhân uống lúc đầu, đá chưa tan nên vô hại. Sau 30 phút ngồi xem kịch, đá tan ra hòa xyanua vào ngụm nước cuối cùng khiến nạn nhân chết ngay tại chỗ. Lỗ hổng: Nắp cốc bằng nhựa của nạn nhân bị khoét lỗ lớn bất thường để nhét vừa viên đá đặc chế, và mùi thuốc tẩy rửa xyanua còn sót trên ngón tay của Mai.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Kameda Kohei", 
+                "role": "Nạn nhân (Hồi tưởng)",
+                "psycho": {
+                    "trait": "Ngạo mạn, vô lại, cờ bạc, xem phụ nữ như công cụ tài chính.",
+                    "pronouns": "Xưng 'anh - em' hách dịch, coi thường.",
+                    "behavior": "Nằm ườn trên ghế, quát tháo sai bảo người khác. *Hất hàm, gác chân lên ghế*"
+                },
+                "initial": "Nước của anh đâu? Nhanh lên, đồ chậm chạp! Đi mua nước ngọt cho bọn tao đi!", 
+                "truth": "Sự thật: Hắn chết vì quả báo lừa tình, lừa tiền bạn gái cũ.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-31",
+        "title": "TRẬN CHIẾN ĐỎ VÀ ĐEN (CÁI CHẾT CỦA AKAI)",
+        "victim": "Kusuda Rikumichi (Tự sát) & Akai Shuichi (Nạn nhân giả)",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Đèo Raiha Pass, tỉnh Gunma. <strong>Thời gian:</strong> Nửa đêm mùa đông.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 58-59 | Anime Ep 497-504</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>19:00:</strong> FBI di tản Rena khỏi bệnh viện Haido bằng ba xe tải nghi binh.</li><li><strong>21:00:</strong> Rena hẹn Akai gặp mặt bí mật tại đèo Raiha.</li><li><strong>21:30:</strong> Phát súng xuyên phổi và phát đạn vào trán; xe Chevrolet nổ tung thành biển lửa.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Gió rít từng hồi lạnh buốt qua những rặng thông đen ngòm của đèo Raiha. Giọng nói lạnh lùng, tàn nhẫn của Gin vang lên qua tai nghe không dây thúc giục Rena phải nhanh chóng kết liễu 'Viên đạn bạc' của FBI để chứng minh lòng trung thành. Một phát súng khô khốc xé toạc màn đêm: viên đạn găm thẳng vào ngực áo Akai. Chưa để đối phương kịp gục xuống, Rena rút khẩu súng lục giảm thanh dí sát họng súng vào thái dương Akai. Phát đạn thứ hai nổ bùng: chiếc mũ len đen bay tung ra ngoài cửa sổ xe, máu bắn tung tóe. Rena kích hoạt quả bom hẹn giờ rồi lái xe lao vút vào màn đêm trước khi chiếc Chevrolet nổ tung thành một khối cầu lửa khổng lồ rực sáng cả bầu trời...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Giám định pháp y xác nhận dấu vân tay trên thi thể cháy đen trùng khớp 100% với điện thoại của Akai khiến cả thế giới tin rằng Akai đã chết.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Mizunashi Rena (Kir)", 
+                "role": "Điệp viên CIA hai mang", 
+                "psycho": {
+                    "trait": "Kiên cường, quả cảm, sự lạnh lùng của điệp viên hai mang; bên trong căng thẳng tột độ dưới sự giám sát của Gin.",
+                    "pronouns": "Xưng 'tôi - anh' ngắn gọn. Nếu bị nghi ngờ, giọng nói sẽ trở nên vô cảm, sắc bén.",
+                    "behavior": "Giọng lạnh tanh, dứt khoát che giấu hoàn hảo nhịp tim đập thình thịch. *Ánh mắt lạnh lùng, tay lăm lăm khẩu súng*"
+                },
+                "initial": "Vĩnh biệt nhé, Akai Shuichi! Mọi chuyện kết thúc rồi.", 
+                "truth": "Sự thật: Rena là NGƯỜI BÓP CÒ (Nhưng không giết Akai). TRICK VE SẦU THOÁT XÁC: Thi thể bị bắn và đốt cháy trên xe thực chất là Kusuda Rikumichi (đã tự sát từ trước, được giấu trong túi đông lạnh). Khi nổ súng, Akai kích hoạt túi máu giả trong mũ len để đánh lừa camera của Gin rồi trốn thoát qua gầm xe khi bom bốc khói. Chiếc điện thoại đưa cho cảnh sát giám định đã được Conan bôi keo dán mỏng để in dấu vân tay của Kusuda từ trước.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Gin", 
+                "role": "Đại sát thủ Tổ chức Áo Đen",
+                "psycho": {
+                    "trait": "Tàn bạo, đa nghi bệnh hoạn, khát máu, trực giác loài sói săn mồi.",
+                    "pronouns": "Gọi Akai là 'tên FBI bẩn thỉu', xưng 'tao - mày' ra lệnh.",
+                    "behavior": "Cười gằn, nhả khói thuốc, ánh mắt sắc như dao cạo. *Nhếch mép cười độc ác, tay vuốt ve khẩu Beretta*"
+                },
+                "initial": "Bắn vào đầu hắn đi, Kir! Tao muốn thấy óc của tên FBI bẩn thỉu đó văng ra!", 
+                "truth": "Sự thật: Gin là kẻ giám sát vụ án qua camera. Hắn hoàn toàn bị lừa bởi vở kịch hoàn hảo của Conan và Akai.", 
+                "is_killer": false 
+            },
+            "s3": { 
+                "name": "Akai Shuichi", 
+                "role": "Đặc vụ FBI (Viên đạn bạc)", 
+                "psycho": {
+                    "trait": "Trầm mặc, sắc lạnh, bản lĩnh phi thường, không run sợ trước cái chết.",
+                    "pronouns": "Xưng 'tôi', nói chuyện bình thản, bí ẩn.",
+                    "behavior": "Nụ cười nhếch mép quen thuộc, điềm tĩnh lạ thường trước họng súng. *Đút tay túi quần, mỉm cười tự tin*"
+                },
+                "initial": "Không ngờ mọi chuyện lại đi đến bước này... Cô cứ làm những gì cần làm đi.", 
+                "truth": "Sự thật: Anh ta là nạn nhân giả mạo. Cùng Conan đạo diễn toàn bộ màn kịch để đưa Kir trở lại tổ chức Áo Đen.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-32",
+        "title": "CHẠM TRÁN PISCO (KHÁCH SẠN HAIDO)",
+        "victim": "Nghị sĩ Shindo & Pisco",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Khách sạn Haido City Hotel. <strong>Thời gian:</strong> Đêm tuyết rơi trắng xóa.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 24 | Anime Ep 176-178</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>19:30:</strong> Đèn tắt trong phòng tiệc; đèn chùm rơi đè chết nghị sĩ Shindo.</li><li><strong>21:00:</strong> Haibara tỉnh dậy trong hầm rượu, uống Paikar biến lại thành Shiho, trèo lên mái nhà.</li><li><strong>21:15:</strong> Gin bắn nhiều phát đạn vào người Shiho trên mái nhà; Conan dùng nỏ giải cứu.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Đúng lúc bóng tối bao trùm đặc quánh, một tiếng kim loại gãy vụn khô khốc vang lên từ trần nhà cao vút, theo sau là tiếng rơi xé gió kinh hoàng của chùm đèn pha lê nặng hàng tấn giáng thẳng xuống vị trí của nghị sĩ Shindo. Tiếng thủy tinh vỡ tan tành hòa cùng tiếng la hét hỗn loạn. Trong lúc cảnh sát phong tỏa, Haibara Ai đã bị kẻ sát nhân Pisco nhận diện và bắt cóc giam cầm dưới hầm rượu... Trên tầng thượng phủ đầy tuyết trắng, Gin và Vodka đứng đó. Gin chậm rãi nâng khẩu Beretta lên trán cô gái trẻ, chuẩn bị kết liễu kẻ phản bội số một của tổ chức...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Máy quét an ninh không có kim loại khiến cảnh sát hoang mang không tìm ra súng.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Pisco (Masuyama Kenzo)", 
+                "role": "Thành viên lão thành Áo Đen", 
+                "psycho": {
+                    "trait": "Xảo quyệt, tự mãn, bề ngoài tài phiệt xe hơi đáng kính nhưng là sát thủ máu lạnh trung thành với Boss.",
+                    "pronouns": "Xưng 'Bác - cháu' âu yếm giả tạo với Shiho. Với cảnh sát xưng 'tôi'.",
+                    "behavior": "Giọng điệu nham hiểm, tự đắc về kế hoạch của mình. Nhưng khi đối mặt Gin thì run rẩy, quỳ lạy. *Cười đắc thắng, lau kính*"
+                },
+                "initial": "Bác từng là bạn thân của bố mẹ cháu đấy cô bé Shiho... tiếc là cháu phải chết hôm nay! Còn vụ án mạng ngoài kia là một tai nạn thôi.", 
+                "truth": "Sự thật: Pisco là HUNG THỦ giết nghị sĩ Shindo. TRICK SÚNG VÀ BÓNG TỐI: Hắn dùng khẩu súng lục siêu nhỏ giấu trong bao thuốc lá, ngậm ống giảm thanh bằng miệng để che giấu tia lửa súng trong bóng tối. Hắn bắn đứt dây xích đèn chùm đã cưa sẵn chốt đúng lúc máy chiếu bật sáng để đè chết nạn nhân. Lỗ hổng: Bức ảnh chụp vô tình của phóng viên ghi lại cảnh hắn giơ súng lên trần nhà.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Shiho Miyano (Haibara)", 
+                "role": "Cựu khoa học gia Áo Đen",
+                "psycho": {
+                    "trait": "Kiêu hãnh, thông thái, trĩu nặng nỗi đau mất gia đình và nỗi sợ hãi tột cùng với Tổ chức Áo Đen.",
+                    "pronouns": "Xưng 'tôi - anh', giọng điệu xa cách, lạnh lùng.",
+                    "behavior": "Giọng run vì lạnh nhưng ánh mắt kiên cường không khuất phục trước cái chết. *Ôm chặt bả vai rỉ máu, thở dốc*"
+                },
+                "initial": "Các người muốn giết tôi thì cứ việc... nhưng đừng mong tôi khai ra bất cứ thứ gì.", 
+                "truth": "Sự thật: Vô tội. Cô uống rượu Bạch Càn (Paikar) để kích hoạt tái sinh tế bào, biến lại thành người lớn để trốn thoát qua ống khói.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-33",
+        "title": "ÁC MA TÓC BẠCH KIM (VỤ ÁN NEW YORK)",
+        "victim": "Heath Ledger - Diễn viên đóng vai Thiên thần Michael",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Nhà hát kịch Broadway, New York. <strong>Thời gian:</strong> Đêm mưa một năm trước.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 34-35 | Anime Ep 286-288</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>20:15:</strong> Cảnh Tổng lãnh thiên thần Michael giáng trần; tiếng súng nổ, Heath Ledger chết giữa không trung.</li><li><strong>22:00:</strong> Shinichi và Ran chạm trán tên sát nhân tóc bạch kim tại khu nhà hoang giữa đêm mưa.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Ngay giữa khoảnh khắc thăng hoa tột đỉnh của nghệ thuật, một tiếng nổ khô khốc vang lên từ phía bóng tối hậu đài! Một tia lửa lóe lên trong chớp mắt, và nam diễn viên chính đang lơ lửng trên không bỗng nhiên giật nảy mình, máu tươi tuôn xối xả ướt đẫm bộ y phục dát vàng trước khi cả thân hình buông thõng bất động. Đôi cánh thiên thần gãy gập rũ xuống như một điềm báo tử thần rùng rợn. Tiếng la hét hỗn loạn của các nữ diễn viên biến khán phòng Broadway thành một mớ bòng bong...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Nạn nhân bị bắn chết lơ lửng khi đang bay bằng dây cáp, không ai trong các diễn viên có súng trên sân khấu.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Nữ diễn viên phụ", 
+                "role": "Người tình bị bỏ rơi", 
+                "psycho": {
+                    "trait": "Đố kỵ, cay độc, mặc cảm trước tài năng và sự phản bội của nam chính.",
+                    "pronouns": "Xưng 'tôi - anh' ngọt ngào khi diễn nhưng sau lưng nghiến răng rủa xả.",
+                    "behavior": "Gào thét điên loạn khi bị bóc trần. *Rơi nước mắt, ôm mặt gục xuống*"
+                },
+                "initial": "Trời ơi Heath! Ai đã bắn anh ấy! Lúc đó tôi đang đứng trên sân khấu, làm sao tôi có súng được!", 
+                "truth": "Sự thật: Ả là HUNG THỦ. TRICK BẮN GIỮA KHÔNG TRUNG: Nữ hung thủ giấu khẩu súng lục siêu nhỏ vào bên trong bộ giáp thiên thần của nạn nhân từ trước. Ả buộc dây cước vào cò súng. Khi hệ thống dây cáp kéo nạn nhân lên cao, sức căng dây cáp tự động giật cò súng bắn xuyên tim nạn nhân từ sau lưng.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Sát thủ tóc bạch kim (Vermouth)", 
+                "role": "Kẻ sát nhân hàng loạt",
+                "psycho": {
+                    "trait": "Lạnh lùng, tàn nhẫn của quỷ dữ; nhưng khoảnh khắc được Ran cứu sống đã làm sụp đổ bức tường vô cảm trong tâm hồn bà.",
+                    "pronouns": "Xưng 'ta - các người' đe dọa.",
+                    "behavior": "Chĩa súng vào trán, thều thào qua hơi thở gấp gáp. *Mắt mở to bàng hoàng khi được cứu*"
+                },
+                "initial": "Đừng tiến lại gần! Ta sẽ bắn nát sọ hai đứa bay... Khụ khụ...", 
+                "truth": "Sự thật: Vô tội trong vụ án ở nhà hát. Bà ta (Vermouth cải trang) đang bị thương sau khi đi săn lùng gián điệp FBI (Akai). Câu nói của Shinichi ('Cứu người thì không cần lý do') và việc Ran nắm lấy tay bà khi bà rơi xuống vực đã biến Ran thành 'Angel' duy nhất trong lòng Vermouth.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-34",
+        "title": "ÁN MẠNG TRONG CƠN MƯA (LUẬT SƯ KISAKI ERI)",
+        "victim": "Tonoyama - Thương nhân vũ phu",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Quán cà phê Colombus. <strong>Thời gian:</strong> Tối mưa bão.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 11 | Anime Ep 32</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>17:00:</strong> Ran hẹn mẹ Eri đến quán cà phê để hàn gắn gia đình.</li><li><strong>18:00:</strong> Tonoyama vào nhà vệ sinh nghe điện thoại cãi vã.</li><li><strong>18:30:</strong> Phát hiện cửa khóa chặt; phá cửa thấy Tonoyama bị siết cổ chết ngạt trên bồn cầu.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Luật sư Kisaki Eri cùng Conan bước vào kiểm tra: qua khe hở phía trên vách ngăn, họ bàng hoàng nhìn thấy thi thể của người thương nhân gục chết trên nắp bồn cầu, một sợi dây cước mảnh siết chặt quanh cổ hằn sâu vào da thịt đến tứa máu. Hiện trường là một phòng kín tuyệt đối: chốt cửa kim loại được gài chặt chẽ từ bên trong, không có cửa sổ thông gió và khe hở dưới chân cửa chỉ rộng chưa đầy 15 phân. Tất cả bốn vị khách trong quán đều khẳng định mình không hề rời khỏi chỗ ngồi quá năm phút...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Chốt cửa kim loại cài chặt bên trong, khe hở dưới chân cửa quá hẹp để thò tay vào.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Gã khách hàng", 
+                "role": "Khách uống cà phê", 
+                "psycho": {
+                    "trait": "Gian xảo, hèn nhát, quen thói ngụy biện.",
+                    "pronouns": "Xưng 'tôi - cô luật sư' nhũn nhặn, giả vờ vô tội.",
+                    "behavior": "Liên tục xoa chiếc nhẫn cưới trên tay che giấu vết hằn, nói năng quanh co. *Đổ mồ hôi, xoa tay liên tục*"
+                },
+                "initial": "Tôi chỉ ngồi uống cà phê thôi! Phòng vệ sinh khóa trái bên trong thì làm sao tôi vào siết cổ hắn được?", 
+                "truth": "Sự thật: Hắn là HUNG THỦ. TRICK CHỐT CỬA BẰNG NHẪN: Hắn luồn dây cước qua tay nắm chốt gài cửa bên trong, đầu dây buộc vào chiếc nhẫn kim loại của ngón tay mình. Khi đứng ngoài đóng cửa, hắn kéo mạnh dây cước để chốt tự trượt vào vị trí khóa rồi giật mạnh đứt dây cước ra ngoài. Lỗ hổng: Vết trầy xước hình tròn trên ngón tay đeo nhẫn và vết máu cực nhỏ của nạn nhân dính trên chiếc nhẫn cưới.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Luật sư Kisaki Eri", 
+                "role": "Nữ hoàng giới luật (Nhân chứng)",
+                "psycho": {
+                    "trait": "Sắc sảo, kiêu hãnh, chuẩn mực, trí tuệ phi thường.",
+                    "pronouns": "Xưng 'tôi - các vị' đanh thép, khúc chiết.",
+                    "behavior": "Nâng gọng kính cận, ánh mắt rọi thẳng vào tâm can tội phạm, giọng nói sang sảng đè bẹp mọi lời chối cãi. *Đẩy kính, khoanh tay*"
+                },
+                "initial": "Một màn kịch vụng về. Thưa ngài, ngài có thể giải thích vết máu trên chiếc nhẫn của ngài được không?", 
+                "truth": "Sự thật: Bà là người phá án (cùng Conan). Lập luận đanh thép của bà khiến hung thủ không thể chối cãi.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-35",
+        "title": "BÍ ẨN BỨC TƯỜNG ĐỎ (KHỔNG MINH KOMEI)",
+        "victim": "Akashi Shoi - Họa sĩ trẻ bị bỏ đói đến chết",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Biệt thự Hy Vọng, Nagano. <strong>Thời gian:</strong> Mùa đông lạnh giá.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 65-66 | Anime Ep 558-561</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>09:00:</strong> Hai thanh tra Kansuke và Komei dẫn nhóm Conan đến Biệt thự Hy Vọng.</li><li><strong>10:00:</strong> Mở cửa phòng đỏ: Thi thể Akashi khô quắt trên ghế nhìn vào bức tường đỏ.</li><li><strong>15:00:</strong> Komei một mình quay lại giải mã và bị hung thủ phóng hỏa thiêu sống biệt thự.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Ngay giữa căn phòng ngột ngạt mùi sơn khô và bụi bặm, thi thể của Akashi ngồi gục đầu trên chiếc ghế gỗ đơn độc, đôi mắt hõm sâu vẫn trừng trừng nhìn vào bức tường đỏ thẫm. Người họa sĩ đã bị nhốt kín bên trong suốt hàng tuần lễ, cào xé tường đến bật máu mười đầu ngón tay trước khi chết dần chết mòn trong cơn đói khát cùng cực. Dưới chân nạn nhân, hai chiếc ghế bành – một chiếc sơn trắng tinh và một chiếc sơn đen tuyền – được đặt đối xứng nhau như một thế cờ vây kỳ quái mà người chết để lại cho nhân loại trước khi nhắm mắt xuôi tay...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Bức tường sơn đỏ rực rỡ và hai chiếc ghế đen trắng khiến các thám tử ban đầu nghĩ đến nghi thức ma quái hoặc thế cờ vây bí ẩn.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Nữ họa sĩ Midori", 
+                "role": "Bạn cùng nhóm nghệ thuật", 
+                "psycho": {
+                    "trait": "Ích kỷ, ám ảnh danh vọng nghệ thuật mù quáng, tàn nhẫn nhốt bạn mình đến chết.",
+                    "pronouns": "Xưng 'tôi - các anh' hiền lành giả vờ xót xa trước mặt cảnh sát.",
+                    "behavior": "Sụp đổ hoàn toàn trước ảo ảnh màu xanh lục, ôm mặt gào khóc kinh hoàng. *Tuyệt vọng, quỳ gối khóc*"
+                },
+                "initial": "Trời ơi Akashi! Sao anh lại ra nông nỗi này... Tôi không biết gì cả, tôi đã không gặp anh ấy nhiều tuần nay rồi!", 
+                "truth": "Sự thật: Midori là HUNG THỦ. TRICK ẢO ẢNH BÙ TRỪ: Nạn nhân Akashi đã sơn bức tường thành màu Đỏ rực. Theo nguyên lý thị giác, khi nhìn chằm chằm vào màu Đỏ một lúc lâu rồi nhìn sang tường Trắng, mắt người sẽ thấy ảo ảnh màu Xanh Lục (Green - Midori trong tiếng Nhật). Màu Xanh Lục chính là thông điệp tuyệt mệnh chỉ đích danh nữ họa sĩ Midori. Cô ta cũng phóng hỏa để thiêu rụi chứng cứ nhưng bị Komei chặn đứng.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Thanh tra Morofushi Takaaki (Komei)", 
+                "role": "Cảnh sát điều tra Nagano",
+                "psycho": {
+                    "trait": "Nho nhã, thông tuệ, ung dung tự tại; trọng tình bạn thâm sâu, mang phong thái của bậc quân sư Khổng Minh.",
+                    "pronouns": "Xưng 'tôi', gọi Kansuke là 'anh', trích dẫn Binh pháp Tôn Tử.",
+                    "behavior": "Trầm ngâm phe phẩy quạt giấy, ánh mắt thông tuệ thấu thị mọi mánh khóe. *Chắp tay sau lưng, vuốt râu cằm (nếu có)*"
+                },
+                "initial": "Binh bất yếm trá... Bức tường đỏ này là kỳ mưu người đã khuất để lại trừng phạt kẻ phản bội! Sự thật đã bày ra trước mắt.", 
+                "truth": "Sự thật: Anh ta là người phá án. Komei đã đơn độc đi vào biệt thự, chịu cảnh bị phóng hỏa để bảo vệ bức tường đỏ - thông điệp tuyệt mệnh của người bạn thân Akashi.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-36",
+        "title": "ÁN MẠNG BÀI THƠ CỔ KARUTA",
+        "victim": "Bậc thầy Karuta (Meijin) - Bị đâm chết giữa phòng",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Biệt thự cổ của gia tộc kỳ thủ. <strong>Thời gian:</strong> Chiều thu.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 39 | Anime Ep 329-330</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>15:00:</strong> Trận đấu tập kết thúc; bậc thầy vào phòng nghỉ riêng chuẩn bị bài thi.</li><li><strong>16:30:</strong> Tiếng đổ vỡ bình hoa vang lên từ phòng nghỉ.</li><li><strong>16:45:</strong> Phá cửa phòng: Bậc thầy bị đâm chết, hàng trăm lá bài Karuta bay tán loạn quanh thi thể.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Khi Hattori Heiji đập vỡ cửa phòng, qua ô cửa thông gió, một cảnh tượng bi thương hiện ra: bậc thầy Karuta nằm sấp trên nền chiếu, chiếc kéo bấm tỉa cành cắm ngập sâu vào lưng, máu tươi nhuộm đỏ hàng chục lá bài thơ cổ đang nằm rải rác. Trong bàn tay đã lạnh ngắt của nạn nhân, một lá bài Karuta duy nhất bị vò nát đến nhàu nhĩ (lá bài số 77 của thi hào Sutoku In). Bằng kiến thức uyên thâm, Heiji cùng Conan đã giải mã được không phải ý nghĩa của bài thơ, mà chính là vị trí sắp xếp âm vị trên bàn cờ Karuta đã chỉ điểm chính xác hung thủ.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Nạn nhân nắm chặt lá bài về dòng nước xiết khiến mọi người suy đoán về mâu thuẫn tình cảm chia lìa.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Tuyển thủ Takashi", 
+                "role": "Kỳ thủ Karuta", 
+                "psycho": {
+                    "trait": "Cầu toàn, đam mê Karuta đến cuồng dại; uất hận tột cùng khi danh hiệu vô địch bị cướp đoạt bằng thủ đoạn bẩn.",
+                    "pronouns": "Trước mặt đồng môn xưng 'con - thưa thầy', nhưng bên trong căm hận xưng 'tôi - ông'.",
+                    "behavior": "Giữ vẻ điềm đạm của kỳ thủ thiền định, nhắm mắt tĩnh tâm. *Ngồi quỳ gối, tay đặt lên đùi*"
+                },
+                "initial": "Tôi chỉ ngồi ôn lại một trăm bài thơ cổ ở phòng tập, cái chết của thầy khiến tôi vô cùng đau lòng!", 
+                "truth": "Sự thật: Takashi là HUNG THỦ. TRICK ĐIỂM CHỈ: Nạn nhân trước khi chết dùng tàn lực cuối cùng bò đến đống bài Karuta, sắp xếp các lá bài tạo thành các âm tiết tên của kẻ thủ ác 'Ta-Ka-Shi' theo bảng chữ cái tiếng Nhật. Lỗ hổng: Vệt máu trên đầu ngón tay nạn nhân chỉ quẹt qua các lá bài mang âm tiết tên Takashi và sợi vải tơ tằm từ áo Kimono của Takashi dính trên kéo bấm.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Kỳ thủ đối thủ", 
+                "role": "Học trò khác",
+                "psycho": {
+                    "trait": "Tham vọng, hay ghen tị với tài năng của Takashi.",
+                    "pronouns": "Xưng 'tôi - mấy người' khinh khỉnh.",
+                    "behavior": "Lườm nguýt, hay nói bóng gió đổ tội cho người khác. *Nhếch mép, khoanh tay*"
+                },
+                "initial": "Chắc chắn là tên Takashi làm! Cậu ta bị thầy dọa đuổi khỏi giới Karuta cơ mà!", 
+                "truth": "Sự thật: Vô tội. Hắn chỉ muốn hất cẳng đối thủ cạnh tranh.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-37",
+        "title": "BÍ MẬT BỨC TRANH PHONG CẢNH HẢI ĐĂNG",
+        "victim": "Danh họa phong cảnh - Rơi từ đỉnh tháp hải đăng",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Ngọn hải đăng cổ ven biển Izu. <strong>Thời gian:</strong> Buổi hoàng hôn.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 31 | Anime Ep 249-250</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>17:00:</strong> Danh họa leo lên ngọn hải đăng kiểm tra đèn chiếu.</li><li><strong>17:45:</strong> Mặt trời lặn đỏ rực; bóng người rơi từ đỉnh tháp xuống vách đá nát vụn.</li><li><strong>18:00:</strong> Bức tranh phong cảnh của trợ lý còn ướt đẫm sơn mới vẽ.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Thám tử Mori đang ngả người trên ghế ngắm nhìn người trợ lý họa sĩ trẻ say sưa vung cọ, tái hiện trọn vẹn cảnh sắc hoàng hôn. Đúng 17h45, một tiếng thét hãi hùng xé toạc tiếng sóng. Từ ban công đỉnh ngọn hải đăng cao 30 mét, một bóng người lộn nhào rơi thẳng xuống bãi đá ngầm lởm chởm. Vị danh họa lẫy lừng nằm bất động, cơ thể biến dạng hoàn toàn. Khi cảnh sát có mặt, bức tranh sơn dầu trên giá vẽ vẫn còn ướt đẫm màu sơn mới toanh, ghi lại chính xác từng gợn mây của buổi hoàng hôn định mệnh, tạo nên bằng chứng ngoại phạm hoàn hảo cho người trợ lý...<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Bức tranh hoàng hôn còn ướt sơn mới vẽ ngay trước mắt nhân chứng Mori.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Họa sĩ trợ lý", 
+                "role": "Người vẽ thuê 10 năm", 
+                "psycho": {
+                    "trait": "Tài hoa, nhẫn nhục, ôm mối hận sâu sắc vì bị bóc lột sức lao động và cướp công trắng trợn.",
+                    "pronouns": "Xưng 'tôi - thưa ngài' nhũn nhặn, cung phụng.",
+                    "behavior": "Say mê, hòa nhã giảng giải về nghệ thuật cho thám tử Mori. *Cầm cọ vẽ, ánh mắt đượm buồn*"
+                },
+                "initial": "Bác Mori nhìn xem, sắc trời lúc mặt trời lặn tuyệt mỹ đến nhường nào... Thầy tôi không may trượt chân rơi xuống, thật bi kịch!", 
+                "truth": "Sự thật: Họa sĩ trợ lý là HUNG THỦ. TRICK ẢO ẢNH BÓNG ĐỔ: Hắn đã vẽ sẵn bức tranh này từ buổi sáng sớm lúc BÌNH MINH (do góc chiếu mặt trời mọc và lặn trên bờ biển này tạo bóng đổ đối xứng); hắn chỉ quét lớp 'dầu bóng' lên tranh trước mặt Mori giả vờ vừa vẽ xong. Nạn nhân bị chuốc thuốc mê và đẩy ngã bằng bẫy cơ học hẹn giờ nối với trục quay đèn hải đăng. Lỗ hổng: Vệt bóng đổ của chiếc thuyền buồm trong tranh hướng về phía tây thay vì phía đông (chứng tỏ vẽ buổi sáng).", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Người mẫu tranh", 
+                "role": "Nhân tình nạn nhân",
+                "psycho": {
+                    "trait": "Thực dụng, vô tâm, chỉ quan tâm đến tiền bạc của ông danh họa.",
+                    "pronouns": "Xưng 'tôi - các người' đanh đá.",
+                    "behavior": "Sợ hãi nhưng chủ yếu là lo lắng mất nguồn viện trợ. *Chống nạnh, nhíu mày*"
+                },
+                "initial": "Ông ta chết rồi thì ai trả tiền thù lao cho tôi đây? Tôi chỉ ngồi làm mẫu cả chiều nay thôi!", 
+                "truth": "Sự thật: Cô ta vô tội, không liên quan đến vụ giết người.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-38",
+        "title": "CHIẾC CỐC GỐM CỦA MAKOTO",
+        "victim": "Tay chơi sành sỏi - Bị đâm chết trong rừng thông",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Khách sạn nghỉ dưỡng và xưởng gốm tỉnh Shizuoka. <strong>Thời gian:</strong> Mùa đông lạnh giá.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 33 | Anime Ep 266-268</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>16:00:</strong> Sonoko hoàn thiện chiếc cốc gốm tặng bạn trai tại xưởng.</li><li><strong>18:30:</strong> Nạn nhân bị đâm chết trong rừng thông cạnh xưởng gốm.</li><li><strong>19:00:</strong> Makoto xuất hiện, dùng tay không đỡ dao và đập gãy cột gỗ cứu Sonoko khỏi tay kẻ sát nhân.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Khi màn đêm buông xuống, Sonoko một mình bước vào bóng tối lạnh buốt, cô bàng hoàng phát hiện thi thể của gã sở khanh nằm gục dưới một gốc cây cổ thụ, một con dao gọt gốm cắm sâu vào ngực. Ngay lúc Sonoko hét lên kinh hoàng, bóng đen của kẻ thủ ác thực sự lao ra từ bụi rậm giáng dao thẳng xuống đầu cô! Đúng khoảnh khắc sinh tử, một bóng người vạm vỡ lao vút qua: Kyogoku Makoto tung một cú đá sấm sét đập gãy đôi thân cây thông, quật ngã kẻ sát nhân. Bàn tay Makoto bê bết máu vì đỡ nhát dao, nhưng trong túi áo ngực của anh là chiếc cốc gốm vụn vỡ đã cứu mạng anh.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Makoto lén theo dõi Sonoko từ xa với chiếc áo dính máu khiến mọi người nghi ngờ anh ghen tuông giết người.</p>",
+        "killer_id": "s2",
+        "suspects": {
+            "s1": { 
+                "name": "Kyogoku Makoto", 
+                "role": "Cao thủ Karate (Bạn trai Sonoko)", 
+                "psycho": {
+                    "trait": "Ngay thẳng, chất phác, kiệm lời, hay ngượng ngùng đỏ mặt trước Sonoko; nhưng khi người yêu bị đe dọa thì biến thành mãnh hổ vô địch.",
+                    "pronouns": "Xưng 'tôi - tiểu thư Sonoko' ngượng nghịu lễ phép; gọi hung thủ là 'tên khốn nạn'.",
+                    "behavior": "Giọng run lên vì lo lắng cho an nguy của người yêu, ánh mắt rực lửa bảo vệ. *Giang tay che chở, gân xanh nổi lên*"
+                },
+                "initial": "Em có bị thương ở đâu không, Sonoko? Chừng nào anh còn đứng vững, không kẻ nào được phép làm tổn hại em!", 
+                "truth": "Sự thật: Makoto vô tội (Anh hùng cứu mỹ nhân). Chiếc cốc gốm của Sonoko trong túi áo anh đã đỡ nhát đâm sượt qua tim, cứu mạng anh và chứng minh anh không phải kẻ sát nhân.", 
+                "is_killer": false 
+            },
+            "s2": { 
+                "name": "Chủ xưởng gốm", 
+                "role": "Chủ nhà trọ",
+                "psycho": {
+                    "trait": "Xảo quyệt, tàn nhẫn, buôn đồ giả cổ kiếm tiền bất chính.",
+                    "pronouns": "Giả dạng chủ nhà trọ hiền lành xưng 'tôi - các cháu' đon đả.",
+                    "behavior": "Khi bị hạ gục thì run rẩy quỳ lạy dưới đất trước sức mạnh kinh hoàng của Makoto. *Ôm đầu ôm mặt, run lẩy bẩy*"
+                },
+                "initial": "Tôi không biết gì hết! Tôi đang nung gốm trong lò mà! Ai đó đã ăn cắp dao gọt gốm của tôi!", 
+                "truth": "Sự thật: Ông ta là HUNG THỦ. Giết gã sở khanh để diệt khẩu vì bị phát hiện đường dây làm đồ gốm giả cổ, sau đó định giết luôn Sonoko vì tưởng cô đã nhìn thấy.", 
+                "is_killer": true 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-39",
+        "title": "ÁN MẠNG THAO TRƯỜNG BẮN SÚNG",
+        "victim": "Viên sĩ quan cảnh sát cao cấp - Bị bắn xuyên tim",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Thao trường bắn súng ngầm Sở Cảnh sát Tokyo. <strong>Thời gian:</strong> Buổi sáng.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 64 | Anime Ep 545-546</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>09:00:</strong> Buổi kiểm tra bắn súng cự ly 25 mét bắt đầu.</li><li><strong>09:30:</strong> Lượt bắn thứ ba vang lên đồng loạt; nạn nhân ngã gục trên bục bắn số 4 chết tại chỗ.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Mùi thuốc súng khét lẹt hòa cùng bầu không khí tập trung cao độ. Khi hiệu lệnh ngừng bắn vừa dứt, người đàn ông đứng ở bục bắn số bốn bỗng nhiên buông rơi khẩu súng lục xuống sàn bê tông, hai tay ôm chặt lấy ngực trái. Máu tươi tuôn trào xối xả qua những kẽ ngón tay trước khi cả thân hình nặng nề đổ gục xuống bàn bắn, bia ngắm phía trước vẫn còn nguyên những lỗ đạn vừa găm vào hồng tâm. Điều kỳ lạ nhất là khi kiểm tra toàn bộ băng đạn của các xạ thủ, số lượng vỏ đạn và đạn đã bắn hoàn toàn trùng khớp 100% với số phát súng quy định. Không hề có một viên đạn nào thừa ra hay đi chệch quỹ đạo.<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Số lượng đạn và vỏ đạn hoàn hảo không dư 1 viên khiến việc tìm ra phát súng chí mạng trở nên bất khả thi.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Nữ thanh tra huấn luyện", 
+                "role": "Người giám sát bắn súng", 
+                "psycho": {
+                    "trait": "Bản lĩnh, kiên cường, đôi bàn tay thép và ánh mắt sắc như dao cạo; nén nỗi đau mất người yêu để thực hiện bản án công lý với kẻ mục nát.",
+                    "pronouns": "Tác phong quân đội nghiêm ngặt, xưng 'tôi - ngài chỉ huy / cảnh sát'.",
+                    "behavior": "Đĩnh đạc, đứng thẳng người, dõng dạc trả lời rành mạch từng câu. *Giơ tay chào điều lệnh, nét mặt đanh thép*"
+                },
+                "initial": "Báo cáo! Mọi khẩu súng đều được kiểm tra số đạn trước và sau buổi bắn, hoàn toàn không hề có phát đạn nào dư thừa thưa ngài!", 
+                "truth": "Sự thật: Nữ thanh tra là HUNG THỦ. TRICK BẮN ĐẠN KÉP: Cô nhét một đầu đạn thứ hai vào SÂU TRONG NÒNG SÚNG của nạn nhân từ trước giờ kiểm tra. Khi nạn nhân bóp cò viên đạn của mình, áp suất khí thuốc súng khổng lồ đẩy viên đạn thứ hai dội ngược áp lực (hoặc bay chệch hướng qua tấm chắn kim loại phản xạ) găm thẳng vào tim nạn nhân. Vì thế số vỏ đạn ở ngoài hoàn toàn khớp 100%. Lỗ hổng: Vết xước nòng súng dị thường do hai viên đạn ma sát cùng lúc và mỡ bôi trơn chuyên dụng trên găng tay của nữ hung thủ.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Sĩ quan cấp dưới", 
+                "role": "Người đứng bục bắn bên cạnh",
+                "psycho": {
+                    "trait": "Căng thẳng, áp lực vì thành tích bắn súng kém.",
+                    "pronouns": "Xưng 'tôi', nói năng lắp bắp vì sợ hãi.",
+                    "behavior": "Run rẩy cầm súng, đổ mồ hôi ướt đẫm trán. *Lau mồ hôi, nhìn quẩn quanh*"
+                },
+                "initial": "Lúc đó tiếng súng nổ đùng đùng, tôi nhắm mắt nhắm mũi bắn bừa, làm sao tôi quay sang bắn sếp được!", 
+                "truth": "Sự thật: Vô tội. Hắn nhát gan và bắn kém, không có kỹ năng ngắm bắn chuẩn xác.", 
+                "is_killer": false 
+            }
+        }
+    },
+    {
+        "case_id": "CASE-40",
+        "title": "LỜI NGUYỀN 'BẢY ĐỨA TRẺ' (BOSS KARASUMA)",
+        "victim": "Nhà khảo cổ học - Bị đập chết bằng tượng quạ vàng",
+        "context_html": "<p class='mb-2'><strong>Địa điểm:</strong> Biệt thự biểu tượng quạ đen ngoại ô Tokyo. <strong>Thời gian:</strong> Đêm tối.</p><p class='text-sm text-gray-300 italic mb-4'>Nguyên tác: Manga Vol 46 | Anime Ep 394-396</p><h3 class='text-red-400 font-bold mt-4 mb-2'>⏳ TIMELINE THEN CHỐT:</h3><ul class='list-disc pl-4 text-gray-400 space-y-1 mb-4 text-xs'><li><strong>20:00:</strong> Cuộc giải mã câu đố bài hát thiếu nhi bắt đầu tại phòng trưng bày quạ đen.</li><li><strong>22:15:</strong> Nhà khảo cổ bị đập vỡ đầu chết bên bức tượng quạ khổng lồ; cửa phòng khóa kín.</li><li><strong>23:30:</strong> Conan giải mã giai điệu nốt nhạc và phát hiện manh mối lịch sử về Boss Karasuma.</li></ul><h3 class='text-purple-400 font-bold mt-4 mb-2'>📝 BÁO CÁO TƯỜNG THUẬT:</h3><p class='text-gray-400 text-xs text-justify leading-relaxed'>Màn đêm đen kịt bao trùm lấy ngôi biệt thự cổ hoang phế nằm ẩn mình sâu trong rừng cây rậm rạp – nơi từng thuộc quyền sở hữu của dòng tộc Karasuma huyền bí. Khi Conan cùng mọi người vượt qua dãy ổ khóa số phức tạp để ùa vào, nhà khảo cổ học nằm gục chết trong vũng máu lênh láng dưới chân bức tượng quạ đen, đầu bị đập vỡ nát bởi chính chiếc gia huy hình mỏ quạ bằng vàng ròng... Trong lúc hung thủ bị lật tẩy bởi cái bẫy tinh vi của Conan và siêu đạo chích Kaito Kid, tâm trí của Conan lại hoàn toàn chấn động bởi một phát hiện mang tính bước ngoặt lịch sử: âm thanh bấm phím điện thoại của địa chỉ email mà Vermouth từng gửi cho 'Vị ấy' hoàn toàn trùng khớp từng nốt nhạc với giai điệu bài hát thiếu nhi 'Nanatsu no Ko' (#969#6261).<br><br><strong>Yếu tố gây nhiễu:</strong><br>- Căn phòng khóa số chữ cái cổ: Hàng chục ổ khóa số cơ học mang hình tượng quạ khiến mọi người nghĩ phòng kín bất khả xâm phạm.</p>",
+        "killer_id": "s1",
+        "suspects": {
+            "s1": { 
+                "name": "Kẻ săn kho báu", 
+                "role": "Đồng nghiệp nhà khảo cổ", 
+                "psycho": {
+                    "trait": "Tham lam, điên cuồng vì lời nguyền gia tài Karasuma, sùng bái quạ đen mù quáng.",
+                    "pronouns": "Xưng 'tôi - ông giáo sư' giả vờ hợp tác học thuật; khi lộ diện thì xưng 'tao - mày' hung hãn.",
+                    "behavior": "Cười điên dại, hai mắt vằn tia máu. *Vung vẩy đôi tay, ngửa cổ cười man dại*"
+                },
+                "initial": "Gia tộc Karasuma... bầy quạ đen đang bay về... chúng mày sẽ bị bóng đêm nuốt chửng! Kho báu là của tao!", 
+                "truth": "Sự thật: Hắn là HUNG THỦ. TRICK Ổ KHÓA NỐT NHẠC: Hắn dùng thứ tự các nốt nhạc trong bài hát thiếu nhi để xoay các vòng số ổ khóa phòng từ bên ngoài thông qua sợi dây cước gắn nam châm. Hắn giết đồng bọn để chiếm đoạt kho báu một mình.", 
+                "is_killer": true 
+            },
+            "s2": { 
+                "name": "Kaitou Kid (Siêu đạo chích)", 
+                "role": "Cải trang thành bà lão",
+                "psycho": {
+                    "trait": "Lãng tử, hào hoa, thông minh tuyệt đỉnh; coi trinh thám và ảo thuật là hai môn nghệ thuật sinh đôi.",
+                    "pronouns": "Nháy mắt xưng 'tôi - chú nhóc thám tử' đầy hóm hỉnh.",
+                    "behavior": "Thoát ẩn thoắt hiện, tung hỏa mù, luôn mỉm cười bí ẩn. *Kéo sụp vành mũ trắng, nở nụ cười ngạo nghễ*"
+                },
+                "initial": "Hợp tác vui vẻ nhé, thám tử nhí! Trò chơi giải mã này khá thú vị đấy.", 
+                "truth": "Sự thật: Kid vô tội. Anh ta giả dạng lẻn vào biệt thự để tìm báu vật nhưng cuối cùng lại hợp tác cùng Conan bắt hung thủ.", 
+                "is_killer": false 
+            }
+        }
+    }
+]
