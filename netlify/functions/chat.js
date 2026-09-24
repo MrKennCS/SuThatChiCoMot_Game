@@ -45,12 +45,16 @@ exports.handler = async function(event, context) {
 
         // Gọi đồng thời các model nhanh nhất bằng Promise.any (Song song)
         // Model nào trả lời nhanh nhất (thường < 1-2s) sẽ được trả về ngay lập tức, triệt tiêu hoàn toàn lỗi Timeout 504.
+        /*
         const models = [
             "gemini-1.5-flash",
             "gemini-2.0-flash",
             "gemini-1.5-flash-latest",
             "gemini-pro"
         ];
+        */
+
+        const models = ["gemini-3.5-flash", "gemini-3.5-flash-lite"];
 
         const fetchPromises = models.map(async (model) => {
             const controller = new AbortController();
