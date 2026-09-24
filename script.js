@@ -126,10 +126,10 @@ document.getElementById('btnStartGame').onclick = async () => {
         screens.menu.classList.add('hidden');
         screens.loading.classList.remove('hidden'); screens.loading.classList.add('flex');
         
-        // [ĐÃ FIX LOGIC 1]: Bật lại animation chạy 5 giây cho thanh Progress
-        setTimeout(() => { 
-            progressBar.style.transitionDuration = '5s';
-            progressBar.style.width = '100%'; 
+        // [ĐÃ FIX LOGIC 1]: Bật lại animation chạy 2 giây đồng bộ với màn hình loading
+        setTimeout(() => {
+            progressBar.style.transitionDuration = '2s';
+            progressBar.style.width = '100%';
         }, 50);
         
         setupRandomScenario();
@@ -181,7 +181,10 @@ function selectSuspect(suspectId, btnElement) {
     UI.currentSuspectName.innerText = currentSuspect.name; UI.initialStatementTooltip.innerText = `"${currentSuspect.initial}"`;
     document.querySelectorAll('#suspectList button').forEach(b => b.classList.remove('border-purple-500', 'bg-gray-700/80', 'border-l-[6px]'));
     btnElement.classList.add('border-purple-500', 'bg-gray-700/80', 'border-l-[6px]');
-    updateAttemptUI(); renderChat(suspectId); 
+    updateAttemptUI(); renderChat(suspectId);
+    if (!UI.userInput.disabled) {
+        UI.userInput.focus();
+    }
 }
 
 function renderChat(suspectId) {
@@ -265,12 +268,22 @@ function updateAttemptUI() {
     }
 }
 
+function getCleanContext(scenario) {
+    if (scenario.context) return scenario.context;
+    if (scenario.context_html) {
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = scenario.context_html;
+        return tempDiv.textContent || tempDiv.innerText || "";
+    }
+    return "Hiện trường vụ án mạng";
+}
+
 // ==========================================
 // GỌI API THÔNG QUA NETLIFY FUNCTION MẬT
 // ==========================================
 async function askAI(question, targetId) {
     const targetSuspect = currentScenario.suspects[targetId];
-    isTyping[targetId] = true; 
+    isTyping[targetId] = true;
 
     setTimeout(() => {
         if (isTyping[targetId] && currentSuspect && currentSuspect.id === targetId) {
@@ -279,10 +292,44 @@ async function askAI(question, targetId) {
         }
     }, 600);
 
-    const prompt = `Trò chơi trinh thám. NHẬP VAI 100%. KHÔNG HÉ LỘ LÀ AI.
-Tên bạn: ${targetSuspect.name} (${targetSuspect.role}). Bối cảnh: ${currentScenario.context}. Nạn nhân: ${currentScenario.victim}. Lời khai giả: "${targetSuspect.initial}". Sự thật: "${targetSuspect.truth}".
-LUẬT: 1. Trả lời dưới 50 chữ. LẠNH LÙNG, MỈA MAI. 2. Cáo buộc suông: Cười nhạo, đòi bằng chứng. 3. VÔ TỘI: Giấu bí mật, ép logic mới thú nhận bí mật phụ (KHÔNG GIẾT NGƯỜI). 4. HUNG THỦ: Chỉ khi bắt thóp ĐÚNG thủ thuật vật lý/tâm lý, mới hoảng sợ chửi thề.
-Câu hỏi: "${question}"`;
+    const cleanContext = getCleanContext(currentScenario);
+    let psychoPrompt = "";
+    if (targetSuspect.psycho) {
+        const p = targetSuspect.psycho;
+        psychoPrompt = `Tính cách: ${p.trait || ""}. Đại từ xưng hô: ${p.pronouns || ""}. Cử chỉ/Hành vi đặc trưng: ${p.behavior || ""}. `;
+    }
+
+    // Trích xuất lịch sử thẩm vấn trước đó (bỏ qua câu hỏi mới nhất vừa thêm)
+    const recentHistory = (chatHistories[targetId] || [])
+        .slice(0, -1)
+        .filter(m => m.sender === "thanh tra" || m.sender === "nghi phạm")
+        .map(m => m.sender === "thanh tra" ? `Thám tử: "${m.text}"` : `Bạn (${targetSuspect.name}): "${m.text}"`)
+        .join("\n");
+    const historyBlock = recentHistory ? `\n[LỊCH SỬ THẨM VẤN TRƯỚC ĐÓ VỚI THÁM TỬ]:\n${recentHistory}\n` : "";
+
+    const prompt = `Bạn đang tham gia một trò chơi trinh thám suy luận. Hãy NHẬP VAI 100% vào nhân vật, TUYỆT ĐỐI KHÔNG hé lộ bạn là AI hay nói chuyện ngoài vai diễn.
+
+THÔNG TIN NHÂN VẬT CỦA BẠN:
+- Họ tên & Vai trò: ${targetSuspect.name} (${targetSuspect.role})
+- ${psychoPrompt}
+- Lời khai ban đầu của bạn: "${targetSuspect.initial}"
+- Sự thật / Bí mật thực tế của bạn: "${targetSuspect.truth}"
+
+BỐI CẢNH HIỆN TRƯỜNG & VỤ ÁN:
+- Nạn nhân: ${currentScenario.victim}
+- Bối cảnh: ${cleanContext}
+${historyBlock}
+CÂU HỎI MỚI CỦA THÁM TỬ: "${question}"
+
+QUY TẮC PHẢN HỒI (RẤT QUAN TRỌNG):
+1. ĐỘ DÀI & PHONG CÁCH: Trả lời tự nhiên, độ dài khoảng 50 - 80 chữ. Luôn giữ đúng đại từ xưng hô và cử chỉ hành vi đặc trưng của bạn.
+2. HỢP TÁC & CUNG CẤP LỜI KHAI:
+   - Khi được hỏi về lịch trình / alibi: Hãy kể lại bạn đã ở đâu, làm gì vào các thời điểm liên quan dựa theo bối cảnh và lời khai ban đầu.
+   - Khi được hỏi về người khác / đồ vật / hiện trường: Hãy chia sẻ những điều bạn nhìn thấy, nghe thấy hoặc nhận xét về người khác trong vụ án để thám tử có manh mối điều tra.
+   - TUYỆT ĐỐI TRÁNH kiểu trả lời cùn máy móc như "Bằng chứng đâu", "Không có bằng chứng thì đừng nói". Nếu bị nghi ngờ, hãy dùng cảm xúc, lý lẽ và chứng cứ ngoại phạm của nhân vật để thanh minh.
+3. PHÂN HÓA HUNG THỦ VÀ NGƯỜI VÔ TỘI:
+   - NẾU BẠN VÔ TỘI: Bạn hoàn toàn không giết người. Nếu có bí mật phụ (lén lút, giấu đồ, việc riêng...), bạn có thể ngập ngừng ban đầu nhưng khi bị thám tử hỏi dồn logic sẽ thành thật kể ra để tự minh oan.
+   - NẾU BẠN LÀ HUNG THỦ: Hãy tỏ ra tự tin, ngụy tạo bằng chứng ngoại phạm khéo léo và có thể đánh lạc hướng sang người khác; chỉ khi thám tử chỉ ra đúng mâu thuẫn thời gian, cơ học hay vật chứng then chốt thì mới bối rối, hoảng sợ hoặc lỡ lời.`;
 
     let success = false;
     let aiResponse = "";

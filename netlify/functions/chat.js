@@ -15,8 +15,14 @@ exports.handler = async function(event, context) {
             };
         }
 
-        // Gọi Google Gemini API từ phía server (hoàn toàn bảo mật)
-        const models = ["gemini-3.5-flash", "gemini-3.5-flash-lite"];
+        // Gọi Google Gemini API từ phía server (hoàn toàn bảo mật) với các model fallback chính thức
+        const models = [
+            "gemini-2.5-flash",
+            "gemini-2.0-flash",
+            "gemini-1.5-flash",
+            "gemini-1.5-flash-8b",
+            "gemini-2.5-flash-lite"
+        ];
         let aiResponse = "";
         let success = false;
         let lastError = "";
