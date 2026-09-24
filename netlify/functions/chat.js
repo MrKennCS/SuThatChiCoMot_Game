@@ -43,44 +43,56 @@ exports.handler = async function(event, context) {
             };
         }
 
-        // Gọi đồng thời các model nhanh nhất bằng Promise.any (Song song)
-        // Model nào trả lời nhanh nhất (thường < 1-2s) sẽ được trả về ngay lập tức, triệt tiêu hoàn toàn lỗi Timeout 504.
-        /*
+        // Danh sách các model đa dạng thuộc nhiều cụm máy chủ khác nhau của Google để triệt tiêu lỗi quá tải (High Demand)
         const models = [
+            "gemini-1.5-flash-8b", // Cụm 8B siêu nhẹ, phản hồi cực nhanh, gần như không bao giờ quá tải
             "gemini-1.5-flash",
             "gemini-2.0-flash",
-            "gemini-1.5-flash-latest",
-            "gemini-pro"
+            "gemini-3.5-flash-lite",
+            "gemini-3.5-flash",
+            "gemini-1.5-pro"
         ];
-        */
 
-        const models = ["gemini-3.5-flash", "gemini-3.5-flash-lite"];
+        // Hàm gọi Google Gemini với cơ chế tự động thử lại (Retry) nhanh khi gặp lỗi High Demand (503/429)
+        async function fetchModelWithRetry(model, maxRetries = 1) {
+            for (let attempt = 0; attempt <= maxRetries; attempt++) {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 7000);
+                try {
+                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+                    const res = await fetch(url, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+                        signal: controller.signal
+                    });
+                    clearTimeout(timeoutId);
 
-        const fetchPromises = models.map(async (model) => {
-            const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 7500); // 7.5s hard timeout
+                    const data = await res.json();
+                    if (res.ok && data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
+                        return data.candidates[0].content.parts[0].text;
+                    }
 
-            try {
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-                const res = await fetch(url, {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
-                    signal: controller.signal
-                });
-
-                clearTimeout(timeoutId);
-                const data = await res.json();
-
-                if (res.ok && data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
-                    return data.candidates[0].content.parts[0].text;
+                    const errMsg = data.error?.message || `Lỗi HTTP ${res.status}`;
+                    // Nếu gặp lỗi quá tải (High demand / 503 / 429) và còn lượt retry
+                    if (attempt < maxRetries && (res.status === 503 || res.status === 429 || errMsg.toLowerCase().includes("high demand") || errMsg.toLowerCase().includes("overloaded"))) {
+                        await new Promise(r => setTimeout(r, 400)); // Đợi 400ms rồi thử lại
+                        continue;
+                    }
+                    throw new Error(errMsg);
+                } catch (err) {
+                    clearTimeout(timeoutId);
+                    if (attempt < maxRetries && err.name !== "AbortError") {
+                        await new Promise(r => setTimeout(r, 300));
+                        continue;
+                    }
+                    throw err;
                 }
-                throw new Error(data.error?.message || `Model ${model} trả về lỗi ${res.status}`);
-            } catch (err) {
-                clearTimeout(timeoutId);
-                throw err;
             }
-        });
+        }
+
+        // Chạy song song các model đa cụm, lấy phản hồi từ model thành công đầu tiên
+        const fetchPromises = models.map(m => fetchModelWithRetry(m));
 
         try {
             const aiResponse = await Promise.any(fetchPromises);
@@ -90,11 +102,10 @@ exports.handler = async function(event, context) {
                 body: JSON.stringify({ reply: aiResponse })
             };
         } catch (aggregateErr) {
-            const errorDetails = aggregateErr.errors ? aggregateErr.errors.map(e => e.message).join(" ; ") : aggregateErr.message;
             return {
                 statusCode: 500,
                 headers,
-                body: JSON.stringify({ error: errorDetails || "Tất cả các model AI đều không phản hồi." })
+                body: JSON.stringify({ error: "Máy chủ Google Gemini đang quá tải cục bộ trong giây lát. Vui lòng bấm gửi lại câu hỏi!" })
             };
         }
     } catch (err) {
