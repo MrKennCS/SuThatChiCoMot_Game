@@ -322,7 +322,7 @@ ${historyBlock}
 CÂU HỎI MỚI CỦA THÁM TỬ: "${question}"
 
 QUY TẮC PHẢN HỒI (RẤT QUAN TRỌNG):
-1. ĐỘ DÀI & PHONG CÁCH: Trả lời tự nhiên, độ dài khoảng 50 - 80 chữ. Luôn giữ đúng đại từ xưng hô và cử chỉ hành vi đặc trưng của bạn.
+1. ĐỘ DÀI & ĐỊNH DẠNG: Trả lời tự nhiên, độ dài khoảng 50 - 80 chữ. CHỈ TRẢ LỜI LỜI THOẠI TRỰC TIẾP của nhân vật (có thể kèm cử chỉ trong dấu sao *...*). TUYỆT ĐỐI KHÔNG lặp lại câu hỏi, không thêm tiền tố như "Input:", "'s input:", "Trả lời:"... Nếu thám tử chỉ chào hỏi ngắn gọn (như "hello", "chào bạn"), hãy đáp lại tự nhiên theo tính cách nhân vật.
 2. HỢP TÁC & CUNG CẤP LỜI KHAI:
    - Khi được hỏi về lịch trình / alibi: Hãy kể lại bạn đã ở đâu, làm gì vào các thời điểm liên quan dựa theo bối cảnh và lời khai ban đầu.
    - Khi được hỏi về người khác / đồ vật / hiện trường: Hãy chia sẻ những điều bạn nhìn thấy, nghe thấy hoặc nhận xét về người khác trong vụ án để thám tử có manh mối điều tra.
@@ -352,7 +352,9 @@ QUY TẮC PHẢN HỒI (RẤT QUAN TRỌNG):
         }
 
         if (response.ok && data.reply) {
-            aiResponse = data.reply;
+            // Loại bỏ các tiền tố format lạ nếu có
+            let cleanedReply = data.reply.trim().replace(/^('s\s*input:?|input:?|trả\s*lời:?|output:?)\s*(\*{1,2})?\s*(".*?")?/i, "").trim();
+            aiResponse = cleanedReply || data.reply;
             success = true;
         } else {
             lastErrorMsg = data.error || "Không thể kết nối máy chủ AI";
