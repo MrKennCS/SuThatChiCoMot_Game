@@ -43,14 +43,12 @@ exports.handler = async function(event, context) {
             };
         }
 
-        // Gọi Google Gemini API từ phía server (hoàn toàn bảo mật) với các model fallback
+        // Các model chính thức, ổn định và nhanh nhất của Google Gemini API
         const models = [
-            "gemini-2.5-flash",
-            "gemini-2.0-flash",
             "gemini-1.5-flash",
+            "gemini-2.0-flash",
             "gemini-1.5-flash-8b",
-            "gemini-3.5-flash-lite",
-            "gemini-3.5-flash"
+            "gemini-1.5-pro"
         ];
         let aiResponse = "";
         let success = false;
@@ -58,12 +56,18 @@ exports.handler = async function(event, context) {
 
         for (const model of models) {
             try {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 7000); // 7s timeout mỗi model
+
                 const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
                 const res = await fetch(url, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+                    body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+                    signal: controller.signal
                 });
+
+                clearTimeout(timeoutId);
 
                 const data = await res.json();
                 if (res.ok && data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
@@ -71,10 +75,14 @@ exports.handler = async function(event, context) {
                     success = true;
                     break;
                 } else {
-                    lastError = data.error?.message || `Lỗi từ model ${model}`;
+                    lastError = data.error?.message || `Lỗi phản hồi từ ${model}`;
+                    // Nếu lỗi do sai API key thì dừng ngay không cần thử model khác
+                    if (res.status === 400 || res.status === 403 || lastError.toLowerCase().includes("api key")) {
+                        break;
+                    }
                 }
             } catch (fetchErr) {
-                lastError = fetchErr.message;
+                lastError = fetchErr.name === "AbortError" ? `Quá thời gian phản hồi từ ${model}` : fetchErr.message;
             }
         }
 
