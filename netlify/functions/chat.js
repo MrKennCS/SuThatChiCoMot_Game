@@ -43,107 +43,54 @@ exports.handler = async function(event, context) {
             };
         }
 
-        // 1. Danh sách các model ứng viên phổ biến nhất
-        let candidateModels = [
-            "gemini-1.5-flash-latest",
+        // Gọi đồng thời các model nhanh nhất bằng Promise.any (Song song)
+        // Model nào trả lời nhanh nhất (thường < 1-2s) sẽ được trả về ngay lập tức, triệt tiêu hoàn toàn lỗi Timeout 504.
+        const models = [
             "gemini-1.5-flash",
-            "gemini-2.0-flash-exp",
-            "gemini-pro",
-            "gemini-2.0-flash"
+            "gemini-2.0-flash",
+            "gemini-1.5-flash-latest",
+            "gemini-pro"
         ];
 
-        let aiResponse = "";
-        let success = false;
-        let lastError = "";
-
-        // Hàm thử gọi generateContent với 1 model cụ thể
-        async function callGemini(modelName) {
+        const fetchPromises = models.map(async (model) => {
             const controller = new AbortController();
-            const timeoutId = setTimeout(() => controller.abort(), 6000);
+            const timeoutId = setTimeout(() => controller.abort(), 7500); // 7.5s hard timeout
+
             try {
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
                 const res = await fetch(url, {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
                     signal: controller.signal
                 });
-                clearTimeout(timeoutId);
 
+                clearTimeout(timeoutId);
                 const data = await res.json();
+
                 if (res.ok && data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
-                    return { success: true, reply: data.candidates[0].content.parts[0].text };
-                } else {
-                    return { success: false, status: res.status, error: data.error?.message || `Lỗi từ ${modelName}` };
+                    return data.candidates[0].content.parts[0].text;
                 }
+                throw new Error(data.error?.message || `Model ${model} trả về lỗi ${res.status}`);
             } catch (err) {
                 clearTimeout(timeoutId);
-                return { success: false, error: err.message };
+                throw err;
             }
-        }
+        });
 
-        // Thử nhanh các model ứng viên đầu tiên
-        for (const model of candidateModels) {
-            const result = await callGemini(model);
-            if (result.success) {
-                aiResponse = result.reply;
-                success = true;
-                break;
-            } else {
-                lastError = result.error;
-                // Nếu sai API key (400, 403) thì dừng ngay
-                if (result.status === 400 || result.status === 403 || lastError.toLowerCase().includes("api key")) {
-                    break;
-                }
-            }
-        }
-
-        // 2. Nếu các model mặc định không khớp, tự động hỏi API của Google để lấy đúng danh sách model hỗ trợ cho API Key này
-        if (!success && !lastError.toLowerCase().includes("api key")) {
-            try {
-                const listRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${apiKey}`);
-                const listData = await listRes.json();
-                if (listRes.ok && listData.models && Array.isArray(listData.models)) {
-                    const supportedModels = listData.models
-                        .filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes("generateContent"))
-                        .map(m => m.name.replace(/^models\//, ""));
-
-                    // Ưu tiên flash -> pro -> bất kỳ model nào còn lại
-                    const sorted = supportedModels.sort((a, b) => {
-                        if (a.includes("flash") && !b.includes("flash")) return -1;
-                        if (!a.includes("flash") && b.includes("flash")) return 1;
-                        return 0;
-                    });
-
-                    for (const autoModel of sorted) {
-                        if (!candidateModels.includes(autoModel)) {
-                            const result = await callGemini(autoModel);
-                            if (result.success) {
-                                aiResponse = result.reply;
-                                success = true;
-                                break;
-                            } else {
-                                lastError = result.error;
-                            }
-                        }
-                    }
-                }
-            } catch (listErr) {
-                // Giữ lại lastError trước đó
-            }
-        }
-
-        if (success) {
+        try {
+            const aiResponse = await Promise.any(fetchPromises);
             return {
                 statusCode: 200,
                 headers,
                 body: JSON.stringify({ reply: aiResponse })
             };
-        } else {
+        } catch (aggregateErr) {
+            const errorDetails = aggregateErr.errors ? aggregateErr.errors.map(e => e.message).join(" ; ") : aggregateErr.message;
             return {
                 statusCode: 500,
                 headers,
-                body: JSON.stringify({ error: lastError })
+                body: JSON.stringify({ error: errorDetails || "Tất cả các model AI đều không phản hồi." })
             };
         }
     } catch (err) {
