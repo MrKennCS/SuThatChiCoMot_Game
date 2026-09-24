@@ -1,0 +1,15 @@
+{
+  "name": "game-ai-detective",
+  "version": "1.0.0",
+  "description": "Detective OS: Interrogation - AI Game",
+  "main": "script.js",
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

@@ -336,19 +336,26 @@ QUY TẮC PHẢN HỒI (RẤT QUAN TRỌNG):
     let lastErrorMsg = "";
 
     try {
-// [ĐÃ FIX]: Gọi thẳng vào thư mục ẩn của Netlify Function
         const response = await fetch("/.netlify/functions/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ prompt: prompt })
         });
-        
-        const data = await response.json();
+
+        let data = {};
+        const contentType = response.headers.get("content-type") || "";
+        if (contentType.includes("application/json")) {
+            data = await response.json();
+        } else {
+            const rawText = await response.text();
+            throw new Error(`Máy chủ trả về trạng thái ${response.status} (${response.statusText}). Vui lòng kiểm tra Netlify Functions / GEMINI_API_KEY.`);
+        }
+
         if (response.ok && data.reply) {
             aiResponse = data.reply;
             success = true;
         } else {
-            lastErrorMsg = data.error || "Không thể kết nối máy chủ";
+            lastErrorMsg = data.error || "Không thể kết nối máy chủ AI";
         }
     } catch (error) {
         lastErrorMsg = error.message;
