@@ -58,14 +58,12 @@ exports.handler = async function(event, context) {
             }
         };
 
-        // Danh sách các model đa dạng thuộc nhiều cụm máy chủ khác nhau của Google để triệt tiêu lỗi quá tải (High Demand)
+        // Danh sách các model chính thức theo chuẩn mới nhất của Google API (đã được Google xác nhận)
         const models = [
-            "gemini-1.5-flash-8b",
-            "gemini-1.5-flash",
-            "gemini-2.0-flash",
-            "gemini-1.5-flash-latest",
-            "gemini-1.5-pro",
-            "gemini-pro"
+            "gemini-3.6-flash",
+            "gemini-3.5-flash-lite",
+            "gemini-3.5-flash",
+            "gemini-2.5-flash"
         ];
 
         // Hàm gọi Google Gemini với cơ chế tự động thử lại (Retry) nhanh khi gặp lỗi High Demand (503/429)
