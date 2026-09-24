@@ -43,14 +43,29 @@ exports.handler = async function(event, context) {
             };
         }
 
+        // Payload gửi đến Gemini với safetySettings mở cho nội dung trinh thám
+        const requestPayload = {
+            contents: [{ parts: [{ text: prompt }] }],
+            safetySettings: [
+                { category: "HARM_CATEGORY_HARASSMENT", threshold: "BLOCK_NONE" },
+                { category: "HARM_CATEGORY_HATE_SPEECH", threshold: "BLOCK_NONE" },
+                { category: "HARM_CATEGORY_SEXUALLY_EXPLICIT", threshold: "BLOCK_NONE" },
+                { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
+            ],
+            generationConfig: {
+                temperature: 0.7,
+                maxOutputTokens: 250
+            }
+        };
+
         // Danh sách các model đa dạng thuộc nhiều cụm máy chủ khác nhau của Google để triệt tiêu lỗi quá tải (High Demand)
         const models = [
-            "gemini-1.5-flash-8b", // Cụm 8B siêu nhẹ, phản hồi cực nhanh, gần như không bao giờ quá tải
+            "gemini-1.5-flash-8b",
             "gemini-1.5-flash",
             "gemini-2.0-flash",
-            "gemini-3.5-flash-lite",
-            "gemini-3.5-flash",
-            "gemini-1.5-pro"
+            "gemini-1.5-flash-latest",
+            "gemini-1.5-pro",
+            "gemini-pro"
         ];
 
         // Hàm gọi Google Gemini với cơ chế tự động thử lại (Retry) nhanh khi gặp lỗi High Demand (503/429)
@@ -63,7 +78,7 @@ exports.handler = async function(event, context) {
                     const res = await fetch(url, {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] }),
+                        body: JSON.stringify(requestPayload),
                         signal: controller.signal
                     });
                     clearTimeout(timeoutId);
@@ -73,13 +88,20 @@ exports.handler = async function(event, context) {
                         return data.candidates[0].content.parts[0].text;
                     }
 
+                    // Nếu bị chặn bởi Safety filter
+                    if (data.candidates && data.candidates[0]?.finishReason === "SAFETY") {
+                        return "Tôi... tôi không có gì để nói thêm về việc này!";
+                    }
+
                     const errMsg = data.error?.message || `Lỗi HTTP ${res.status}`;
+                    console.log(`[${model}] Attempt ${attempt} Error:`, errMsg);
+
                     // Nếu gặp lỗi quá tải (High demand / 503 / 429) và còn lượt retry
                     if (attempt < maxRetries && (res.status === 503 || res.status === 429 || errMsg.toLowerCase().includes("high demand") || errMsg.toLowerCase().includes("overloaded"))) {
-                        await new Promise(r => setTimeout(r, 400)); // Đợi 400ms rồi thử lại
+                        await new Promise(r => setTimeout(r, 400));
                         continue;
                     }
-                    throw new Error(errMsg);
+                    throw new Error(`[${model}]: ${errMsg}`);
                 } catch (err) {
                     clearTimeout(timeoutId);
                     if (attempt < maxRetries && err.name !== "AbortError") {
@@ -102,10 +124,12 @@ exports.handler = async function(event, context) {
                 body: JSON.stringify({ reply: aiResponse })
             };
         } catch (aggregateErr) {
+            const errorDetails = aggregateErr.errors ? aggregateErr.errors.map(e => e.message).filter(Boolean).join(" | ") : aggregateErr.message;
+            console.error("All models failed:", errorDetails);
             return {
                 statusCode: 500,
                 headers,
-                body: JSON.stringify({ error: "Máy chủ Google Gemini đang quá tải cục bộ trong giây lát. Vui lòng bấm gửi lại câu hỏi!" })
+                body: JSON.stringify({ error: errorDetails || "Không thể kết nối đến các model AI của Google." })
             };
         }
     } catch (err) {
