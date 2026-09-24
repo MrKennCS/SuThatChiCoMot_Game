@@ -58,76 +58,69 @@ exports.handler = async function(event, context) {
             }
         };
 
-        // Danh sách các model chính thức theo chuẩn mới nhất của Google API (đã được Google xác nhận)
+        // Chỉ gọi tuần tự từng model để TIẾT KIỆM QUOTA (Google Free Tier giới hạn 5 request/phút)
+        // 1 tin nhắn = đúng 1 request duy nhất (không bắn song song làm cạn quota)
         const models = [
             "gemini-3.6-flash",
             "gemini-3.5-flash-lite",
-            "gemini-3.5-flash",
-            "gemini-2.5-flash"
+            "gemini-3.5-flash"
         ];
 
-        // Hàm gọi Google Gemini với cơ chế tự động thử lại (Retry) nhanh khi gặp lỗi High Demand (503/429)
-        async function fetchModelWithRetry(model, maxRetries = 1) {
-            for (let attempt = 0; attempt <= maxRetries; attempt++) {
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 7000);
-                try {
-                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
-                    const res = await fetch(url, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(requestPayload),
-                        signal: controller.signal
-                    });
-                    clearTimeout(timeoutId);
+        let aiResponse = "";
+        let lastError = "";
 
-                    const data = await res.json();
-                    if (res.ok && data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
-                        return data.candidates[0].content.parts[0].text;
-                    }
+        for (const model of models) {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), 6500); // 6.5s timeout
 
-                    // Nếu bị chặn bởi Safety filter
-                    if (data.candidates && data.candidates[0]?.finishReason === "SAFETY") {
-                        return "Tôi... tôi không có gì để nói thêm về việc này!";
-                    }
+            try {
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+                const res = await fetch(url, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(requestPayload),
+                    signal: controller.signal
+                });
+                clearTimeout(timeoutId);
 
-                    const errMsg = data.error?.message || `Lỗi HTTP ${res.status}`;
-                    console.log(`[${model}] Attempt ${attempt} Error:`, errMsg);
+                const data = await res.json();
 
-                    // Nếu gặp lỗi quá tải (High demand / 503 / 429) và còn lượt retry
-                    if (attempt < maxRetries && (res.status === 503 || res.status === 429 || errMsg.toLowerCase().includes("high demand") || errMsg.toLowerCase().includes("overloaded"))) {
-                        await new Promise(r => setTimeout(r, 400));
-                        continue;
-                    }
-                    throw new Error(`[${model}]: ${errMsg}`);
-                } catch (err) {
-                    clearTimeout(timeoutId);
-                    if (attempt < maxRetries && err.name !== "AbortError") {
-                        await new Promise(r => setTimeout(r, 300));
-                        continue;
-                    }
-                    throw err;
+                if (res.ok && data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
+                    aiResponse = data.candidates[0].content.parts[0].text;
+                    break;
                 }
+
+                // Nếu bị chặn bởi Safety filter
+                if (data.candidates && data.candidates[0]?.finishReason === "SAFETY") {
+                    aiResponse = "Tôi... tôi không có gì để nói thêm về việc này!";
+                    break;
+                }
+
+                const errMsg = data.error?.message || `Lỗi HTTP ${res.status}`;
+                lastError = errMsg;
+
+                // Nếu gặp lỗi quá giới hạn Quota Free Tier (429 Rate Limit)
+                if (res.status === 429 || errMsg.toLowerCase().includes("quota")) {
+                    lastError = "Bạn đang gửi câu hỏi quá nhanh! Google Free Tier giới hạn lượt gọi, vui lòng đợi 10-15 giây rồi gửi lại nhé.";
+                    break; // Dừng ngay không thử model khác để tránh bị phạt rate limit
+                }
+            } catch (err) {
+                clearTimeout(timeoutId);
+                lastError = err.name === "AbortError" ? "Quá thời gian phản hồi từ máy chủ AI." : err.message;
             }
         }
 
-        // Chạy song song các model đa cụm, lấy phản hồi từ model thành công đầu tiên
-        const fetchPromises = models.map(m => fetchModelWithRetry(m));
-
-        try {
-            const aiResponse = await Promise.any(fetchPromises);
+        if (aiResponse) {
             return {
                 statusCode: 200,
                 headers,
                 body: JSON.stringify({ reply: aiResponse })
             };
-        } catch (aggregateErr) {
-            const errorDetails = aggregateErr.errors ? aggregateErr.errors.map(e => e.message).filter(Boolean).join(" | ") : aggregateErr.message;
-            console.error("All models failed:", errorDetails);
+        } else {
             return {
                 statusCode: 500,
                 headers,
-                body: JSON.stringify({ error: errorDetails || "Không thể kết nối đến các model AI của Google." })
+                body: JSON.stringify({ error: lastError || "Không thể kết nối đến máy chủ AI." })
             };
         }
     } catch (err) {
