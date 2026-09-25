@@ -88,16 +88,13 @@ exports.handler = async function(event, context) {
                 { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
             ],
             generationConfig: {
-                temperature: 0.7,
-                maxOutputTokens: 250
+                temperature: 0.8,
+                maxOutputTokens: 350
             }
         };
 
         // Danh sách các model Gemini chính thức của Google (sắp xếp theo độ ưu tiên)
         const geminiModels = [
-            "gemini-3.6-flash",
-            "gemini-3.5-flash-lite",
-            "gemini-3.5-flash",
             "gemini-2.0-flash",
             "gemini-2.0-flash-lite-preview-02-05",
             "gemini-1.5-flash",
@@ -130,12 +127,18 @@ exports.handler = async function(event, context) {
                     const data = await res.json();
 
                     if (res.ok && data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
-                        aiReply = data.candidates[0].content.parts[0].text;
+                        const rawText = data.candidates[0].content.parts[0].text.trim();
+                        // Nếu bị ngắt cụt giữa chừng do Safety filter (chỉ ra vài ký tự đầu)
+                        if (data.candidates[0]?.finishReason === "SAFETY" && rawText.length < 25) {
+                            aiReply = "Tôi không muốn đôi co với những lời lẽ như vậy. Xin thám tử hãy giữ lịch sự và tập trung vào vụ án!";
+                        } else {
+                            aiReply = rawText;
+                        }
                         break;
                     }
 
                     if (data.candidates && data.candidates[0]?.finishReason === "SAFETY") {
-                        aiReply = "Tôi... tôi không có gì để nói thêm về việc này!";
+                        aiReply = "Tôi không muốn đôi co với những lời lẽ như vậy. Xin thám tử hãy giữ lịch sự và tập trung vào vụ án!";
                         break;
                     }
 

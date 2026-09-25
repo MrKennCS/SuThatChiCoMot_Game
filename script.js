@@ -592,14 +592,20 @@ ${historyBlock}
 CÂU HỎI MỚI CỦA THÁM TỬ: "${question}"
 
 QUY TẮC PHẢN HỒI (RẤT QUAN TRỌNG):
-1. ĐỘ DÀI & ĐỊNH DẠNG: Trả lời tự nhiên, độ dài khoảng 50 - 80 chữ. CHỈ TRẢ LỜI LỜI THOẠI TRỰC TIẾP của nhân vật (có thể kèm cử chỉ trong dấu sao *...*). TUYỆT ĐỐI KHÔNG lặp lại câu hỏi, không thêm tiền tố như "Input:", "'s input:", "Trả lời:"... Nếu thám tử chỉ chào hỏi ngắn gọn (như "hello", "chào bạn"), hãy đáp lại tự nhiên theo tính cách nhân vật.
-2. HỢP TÁC & CUNG CẤP LỜI KHAI:
-   - Khi được hỏi về lịch trình / alibi: Hãy kể lại bạn đã ở đâu, làm gì vào các thời điểm liên quan dựa theo bối cảnh và lời khai ban đầu.
-   - Khi được hỏi về người khác / đồ vật / hiện trường: Hãy chia sẻ những điều bạn nhìn thấy, nghe thấy hoặc nhận xét về người khác trong vụ án để thám tử có manh mối điều tra.
-   - TUYỆT ĐỐI TRÁNH kiểu trả lời cùn máy móc như "Bằng chứng đâu", "Không có bằng chứng thì đừng nói". Nếu bị nghi ngờ, hãy dùng cảm xúc, lý lẽ và chứng cứ ngoại phạm của nhân vật để thanh minh.
+1. ĐỘ DÀI & ĐỊNH DẠNG:
+   - Trả lời tự nhiên, độ dài khoảng 50 - 90 chữ.
+   - CHỈ TRẢ LỜI LỜI THOẠI TRỰC TIẾP của nhân vật. TUYỆT ĐỐI KHÔNG lặp lại câu hỏi, không thêm tiền tố như "Input:", "Trả lời:", "output:"...
+   - CỬ CHỈ & HÀNH ĐỘNG: Phải ĐA DẠNG, biến chuyển tự nhiên theo ngữ cảnh (ví dụ: *nhíu mày*, *thở dài*, *nhìn đồng hồ*, *cười nhạt*, *ngập ngừng cúi mặt*...). TUYỆT ĐỐI KHÔNG lặp đi lặp lại một hành vi duy nhất ở mọi câu trả lời.
+
+2. DIỄN BIẾN THẨM VẤN & TRÁNH LẶP NỘI DUNG:
+   - Mỗi câu trả lời phải mang đến thông tin, chi tiết hoặc sắc thái cảm xúc MỚI dựa trên lịch sử trò chuyện.
+   - Khi được hỏi về alibi/lịch trình: Kể lại chi tiết những gì đã làm, ở đâu theo bối cảnh.
+   - Khi được hỏi về người khác/vật chứng: Chia sẻ những gì nhìn thấy hoặc nhận xét về các nghi phạm khác để thám tử có thêm manh mối.
+   - NẾU THÁM TỬ DÙNG TỪ NGỮ THÔ TỤC / KHIÊU KHÍCH: Hãy nhập vai phản ứng lại một cách chân thực (yêu cầu thám tử giữ lịch sự, bày tỏ sự phẫn nộ hoặc bị xúc phạm).
+
 3. PHÂN HÓA HUNG THỦ VÀ NGƯỜI VÔ TỘI:
-   - NẾU BẠN VÔ TỘI: Bạn hoàn toàn không giết người. Nếu có bí mật phụ (lén lút, giấu đồ, việc riêng...), bạn có thể ngập ngừng ban đầu nhưng khi bị thám tử hỏi dồn logic sẽ thành thật kể ra để tự minh oan.
-   - NẾU BẠN LÀ HUNG THỦ: Hãy tỏ ra tự tin, ngụy tạo bằng chứng ngoại phạm khéo léo và có thể đánh lạc hướng sang người khác; chỉ khi thám tử chỉ ra đúng mâu thuẫn thời gian, cơ học hay vật chứng then chốt thì mới bối rối, hoảng sợ hoặc lỡ lời.`;
+   - NẾU BẠN VÔ TỘI: Bạn không giết người. Khi bị dồn ép logic, hãy thành thật kể ra các bí mật phụ để tự minh oan.
+   - NẾU BẠN LÀ HUNG THỦ: Tự tin ngụy tạo bằng chứng ngoại phạm, hướng nghi ngờ sang người khác; chỉ bối rối hoặc hoảng sợ khi thám tử chỉ trúng mâu thuẫn thời gian hay thủ thuật.`;
 
     let success = false;
     let aiResponse = "";
