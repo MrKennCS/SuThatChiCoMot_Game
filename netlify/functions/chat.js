@@ -88,18 +88,17 @@ exports.handler = async function(event, context) {
                 { category: "HARM_CATEGORY_DANGEROUS_CONTENT", threshold: "BLOCK_NONE" }
             ],
             generationConfig: {
-                temperature: 0.8,
-                maxOutputTokens: 350
+                temperature: 0.7,
+                maxOutputTokens: 250
             }
         };
 
         // Danh sách các model Gemini chính thức của Google (sắp xếp theo độ ưu tiên)
         const geminiModels = [
-            "gemini-3.5-flash",
             "gemini-2.0-flash",
-            "gemini-2.0-flash-lite-preview-02-05",
             "gemini-1.5-flash",
-            "gemini-1.5-flash-8b"
+            "gemini-1.5-flash-latest",
+            "gemini-1.5-pro"
         ];
 
         let aiReply = "";
