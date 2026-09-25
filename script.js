@@ -208,6 +208,24 @@ window.addEventListener('resize', () => {
 // ==========================================
 // THIẾT LẬP MENU & CÀI ĐẶT
 // ==========================================
+let customApiKey = localStorage.getItem('detective_custom_api_key') || '';
+const apiKeyInput = document.getElementById('customApiKeyInput');
+if (apiKeyInput && customApiKey) {
+    apiKeyInput.value = customApiKey;
+}
+const btnSaveApiKey = document.getElementById('btnSaveApiKey');
+if (btnSaveApiKey && apiKeyInput) {
+    btnSaveApiKey.onclick = () => {
+        customApiKey = apiKeyInput.value.trim();
+        localStorage.setItem('detective_custom_api_key', customApiKey);
+        if (customApiKey) {
+            alert('Đã lưu API Key riêng thành công! Các câu hỏi thẩm vấn sẽ dùng Key này.');
+        } else {
+            alert('Đã chuyển về sử dụng Key mặc định của máy chủ.');
+        }
+    };
+}
+
 const openSettings = () => {
     screens.settings.classList.remove('hidden');
     setTimeout(() => screens.settings.children[0].classList.remove('scale-95'), 50);
@@ -591,7 +609,10 @@ QUY TẮC PHẢN HỒI (RẤT QUAN TRỌNG):
         const response = await fetch("/.netlify/functions/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ prompt: prompt })
+            body: JSON.stringify({
+                prompt: prompt,
+                customApiKey: customApiKey
+            })
         });
 
         let data = {};
